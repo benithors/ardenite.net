@@ -12,7 +12,15 @@ module.exports = {
         fontFamily: {
             sans: ['Raleway', ...fontFamily.sans]
         },
-        extend: {},
+        extend: {
+            blur: {
+                xs: '0.8px',
+            },
+            dropShadow: {
+                md : '0 0 3px rgba(253, 196, 240, 1)',
+                xl : '0px 0px 15px rgba(253, 196, 240, 1)',
+            }
+        },
     },
     variants: {
         extend: {},

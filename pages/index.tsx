@@ -3,15 +3,15 @@ import Image from 'next/image'
 import insta from "/public/static/images/insta.png";
 const IndexPage = () => (
     <div className={"flex flex-col justify-center items-center"}>
-        <div className={"text-turquoise text-7xl"}>
+        <div className={"text-turquoise text-7xl filter drop-shadow-xl font-semibold"}>
             ARDENITE
         </div>
 
-        <div className={"text-pink leading-normal"}>
-            Dark synth Pop Rock Duo from Vienna
+        <div className={"text-pink leading-normal filter drop-shadow-md font-semibold"}>
+            DARK SYNTH POP ROCK DUO FROM VIENNA
         </div>
 
-        <div className={"text-pink leading-normal"}>
+        <div className={"text-pink leading-normal filter drop-shadow-md font-semibold"}>
             WORK IN PROGRESS / SOON NEW WEBSITE
         </div>
         <div className={"text-pink leading-normal"}>
@@ -28,3 +28,4 @@ const IndexPage = () => (
 )
 
 export default IndexPage
+
