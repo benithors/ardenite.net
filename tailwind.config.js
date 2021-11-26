@@ -6,7 +6,8 @@ module.exports = {
     theme: {
         colors: {
             pink: '#EA88C9',
-            turkoise: '#80FFEC'
+            turquoise: '#80FFEC',
+            black: '#000000',
         },
         fontFamily: {
             sans: ['Raleway', ...fontFamily.sans]
