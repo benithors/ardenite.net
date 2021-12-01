@@ -13,3 +13,7 @@ X
 (public/static/favicons/browserconfig.xml,6\3\63497d1bfe6ba69f59872a7c32dc444c7ea75c9b
 <
 package.json,7\0\7030d0b2f71b999ff89a343de08c414af32fc93a
+U
+%public/static/svgs/ardenite-insta.svg,e\a\ea619199de5f8a27421ffa127105904448adcb38
+W
+'public/static/svgs/ardenite-youtube.svg,f\9\f9625d4e3c3e3f6d16531780e52f002714fc766a

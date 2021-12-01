@@ -31,8 +31,8 @@ module.exports = {
         extend: {
             blur: {
                 xs: '0.842546px',
-                md: '1.68509px',
-                xl: '5px',
+                md: '2.5px',
+                xl: '10px',
                 xxl: '20px',
             },
             dropShadow: {
