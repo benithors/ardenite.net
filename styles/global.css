@@ -9,7 +9,7 @@
     font-style: italic;
     font-weight: 100 900;
     font-display: optional;
-    src: url(/fonts/raleway-v22-latin-regular.woff2) format('woff2');
+    src: url(public/fonts/raleway-v22-latin-regular.woff2) format('woff2');
 }
 
 
@@ -17,12 +17,16 @@
 h1 {
     border: 0.1rem solid #ED9CCF;
     border-radius: 0.4rem;
-    padding: 0.4em;
+    padding: 1em;
     box-shadow: 0 0 .2rem #fff,
-    0 0 .2rem #fff,
-    0 0 .5rem #F00699,
-    0 0 0.8rem #FB37FF,
-    0 0 2.8rem #F00699,
-    inset 0 0 1.3rem #FB37FF;
+    0 0 .1rem #fff,
+    0 0 1rem #F00699,
+    0 0 0.5rem #FB37FF,
+    0 0 0.1rem #F00699,
+    inset 0 0 0.5rem #FB37FF;
     text-align: center;
+
 }
+
+
+

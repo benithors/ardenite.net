@@ -28,7 +28,14 @@ const IndexPage = () => (
                         objectPosition={"left"}
                     />
 
-                <ArdeniteOutlineButton/>
+                <div className={"flex flex-col px-8 "}
+                    >
+                    <ArdeniteOutlineButton title={"LISTEN NOW"}/>
+                    <ArdeniteOutlineButton title={"WATCH NOW"}/>
+                    <ArdeniteOutlineButton title={"BUY NOW"}/>
+
+
+                </div>
 
 
             </div>
