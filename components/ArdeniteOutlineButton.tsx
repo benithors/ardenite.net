@@ -3,15 +3,17 @@ import React from 'react'
 
 interface IProps {
 
-    title:string
+    title: string
 }
 
 const ArdeniteOutlineButton = (props: IProps) => {
 
     return (
-        <div className={"pt-7 text-pink leading-normal filter drop-shadow-md font-semibold whitespace-pre"}>
-            <h1>{props.title}</h1>
 
+
+        <div className={"lightBox text-center text-pink filter drop-shadow-xs font-semibold mt-8 p-5 text-3xl"}>
+
+            <h1 className={"card"}>{props.title}</h1>
 
         </div>
 

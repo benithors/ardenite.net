@@ -1,23 +1,20 @@
 import React from 'react'
 
 
-interface IProps {
 
-}
-
-const ArdeniteMenu = (props: IProps) => {
+const ArdeniteMenu = () => {
 
     return (
-        <div className={"hidden sm:flex flex-row md:text-lg justify-between"}>
+        <div className={"hidden xl:flex flex-row md:text-lg xl:text-2xl justify-between"}>
 
             <div className={"text-pink leading-normal filter drop-shadow-md font-semibold"}>
-             Home
+             HOME
             </div>
             <div className={"text-pink leading-normal filter drop-shadow-md font-semibold pl-8 "}>
-             Merch
+             MERCH
             </div>
             <div className={"text-pink leading-normal filter drop-shadow-md font-semibold pl-8 "}>
-                Contact
+                CONTACT
             </div>
         </div>
 

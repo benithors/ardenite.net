@@ -12,21 +12,26 @@
     src: url(/fonts/raleway-v22-latin-regular.woff2) format('woff2');
 }
 
+@layer components {
+    .lightBox {
+        border: 0.2px solid #ED9CCF;
+        border-radius: 0.4rem;
+        box-shadow: 0 0 .2rem #fff,
+        0 0 .1rem #fff,
+        0 0 1rem #F00699,
+        0 0 0.5rem #FB37FF,
+        0 0 0.1rem #F00699,
+        inset 0 0 1.5rem #FB37FF;
+    }
 
-
-h1 {
-    border: 0.1rem solid #ED9CCF;
-    border-radius: 0.4rem;
-    padding: 1em;
-    box-shadow: 0 0 .2rem #fff,
-    0 0 .1rem #fff,
-    0 0 1rem #F00699,
-    0 0 0.5rem #FB37FF,
-    0 0 0.1rem #F00699,
-    inset 0 0 0.5rem #FB37FF;
-    text-align: center;
 
 }
+
+
+
+
+
+
 
 
 
