@@ -39,10 +39,10 @@ const IndexPage = () => (
                             <ArdeniteHeading/>
                         </div>
 
-                        <div className={""}>
-                            <ArdeniteOutlineButton title={"LISTEN NOW"}/>
-                            <ArdeniteOutlineButton title={"WATCH NOW"}/>
-                            <ArdeniteOutlineButton title={"BUY NOW"}/>
+                        <div className={"flex flex-col"}>
+                            <ArdeniteOutlineButton link={"https://open.spotify.com/artist/3GXo8euWCGsniO8H7MrU9B?si=cp7j2zyHQjuXC9fhwq6z2g"} title={"LISTEN NOW"}/>
+                            <ArdeniteOutlineButton link={"https://www.youtube.com/c/ARDENITE"} title={"WATCH NOW"}/>
+                            <ArdeniteOutlineButton link={"https://ardenite.bandcamp.com/"} title={"BUY NOW"}/>
                         </div>
 
 
