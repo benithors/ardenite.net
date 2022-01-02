@@ -20,7 +20,7 @@ const IndexPage = () => (
                     <div className={"absolute z-10 px-4 sm:invisible"}>
                         <ArdeniteHeading/>
                     </div>
-                    <div className={"pl-16 pt-7 sm:pl-5 sm:basis-1/2 sm:order-2 flex flex-col-reverse "}>
+                    <div className={"pl-16 pt-7 sm:pl-5 sm:grow sm:order-2 flex flex-col-reverse "}>
 
                         <Image
                             src={ardeniteDuo}
