@@ -14,14 +14,14 @@ const ArdeniteOutlineButton = (props: IProps) => {
     return (
 
 
-        <Link href={props.link} passHref={true}
-        >
+
             <button className={"lightBox text-center text-pink filter drop-shadow-xs font-semibold mt-8 p-5 text-3xl"}>
-
-                <h1 className={"card"}>{props.title}</h1>
-
+                <Link href={props.link}
+                >
+                <a className={"card"} target="_blank">{props.title}</a>
+                </Link>
             </button>
-        </Link>
+
 
 
     );
