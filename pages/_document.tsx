@@ -43,7 +43,7 @@ export default function Document(props) {
                     name="msapplication-config"
                 />
             </Head>
-            <body className="bg-black h-screen w-screen">
+            <body className="bg-black min-w-full h-screen min-w-max">
             <Main />
             <NextScript />
             </body>
