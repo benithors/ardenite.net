@@ -12,11 +12,11 @@ const Header = () => {
         <nav className={"flex flex-row items-center justify-between h-24 sm:h-36 sm:mt-8 md:mt-16 lg:mt:pt-72 mb-18 md:mb-12 "}>
             <ArdeniteText/>
             <ArdeniteMenu/>
-            <div>
+
+            <div >
                 <MobileMenu/>
 
             </div>
-
 
         </nav>
 

@@ -1,12 +1,12 @@
 import cn from 'classnames';
 import Link from 'next/link';
 import useDelayedRender from 'use-delayed-render';
-import { useState, useEffect } from 'react';
+import {useEffect, useState} from 'react';
 import styles from 'styles/mobile-menu.module.css';
 
 export default function MobileMenu() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const { mounted: isMenuMounted, rendered: isMenuRendered } = useDelayedRender(
+    const {mounted: isMenuMounted, rendered: isMenuRendered} = useDelayedRender(
         isMenuOpen,
         {
             enterDelay: 20,
@@ -38,54 +38,39 @@ export default function MobileMenu() {
                 type="button"
                 onClick={toggleMenu}
             >
-                <MenuIcon data-hide={isMenuOpen} />
-                <CrossIcon data-hide={!isMenuOpen} />
+                <MenuIcon data-hide={isMenuOpen}/>
+                <CrossIcon data-hide={!isMenuOpen}/>
             </button>
             {isMenuMounted && (
                 <ul
                     className={cn(
                         styles.menu,
-                        'flex flex-col absolute bg-black',
+                        'flex flex-col fixed  bg-black text-pink filter drop-shadow-xs font-semibold',
                         isMenuRendered && styles.menuRendered
                     )}
                 >
-                    <li
-                        className="border-b border-b-pink text-gray-900  text-sm font-semibold"
-                        style={{ transitionDelay: '150ms' }}
-                    >
+                    <li className={"flex w-auto pb-4"} style={{transitionDelay: '150ms'}}>
                         <Link href="/">
-                            <a className="flex w-auto pb-4">HOME</a>
+                            <a className="flex ">HOME</a>
                         </Link>
                     </li>
-                    <li
-                        className="border-b border-b-pink  text-gray-900 dark:text-gray-100 text-sm font-semibold"
-                        style={{ transitionDelay: '175ms' }}
-                    >
-                        <Link href="/guestbook">
+                    <li style={{transitionDelay: '175ms'}}>
+                        <Link href="/merch">
                             <a className="flex w-auto pb-4">MERCH</a>
                         </Link>
                     </li>
-                    <li
-                        className="border-b border-b-pink  text-gray-900 dark:text-gray-100 text-sm font-semibold"
-                        style={{ transitionDelay: '200ms' }}
-                    >
-                        <Link href="/dashboard">
+                    <li style={{transitionDelay: '200ms'}}>
+                        <Link href="/contact">
                             <a className="flex w-auto pb-4">CONTACT</a>
                         </Link>
                     </li>
-                    <li
-                        className="border-b border-b-pink  text-gray-900 dark:text-gray-100 text-sm font-semibold"
-                        style={{ transitionDelay: '250ms' }}
-                    >
-                        <Link href="/blog">
+                    <li style={{transitionDelay: '250ms'}}>
+                        <Link href="/privacy">
                             <a className="flex w-auto pb-4">PRIVACY POLICY</a>
                         </Link>
                     </li>
-                    <li
-                        className="border-b border-b-pink  text-gray-900 dark:text-gray-100 text-sm font-semibold"
-                        style={{ transitionDelay: '275ms' }}
-                    >
-                        <Link href="/snippets">
+                    <li style={{transitionDelay: '275ms'}}>
+                        <Link href="/imprint">
                             <a className="flex w-auto pb-4">IMPRINT</a>
                         </Link>
                     </li>
@@ -138,8 +123,8 @@ function CrossIcon(props: JSX.IntrinsicElements['svg']) {
             shapeRendering="geometricPrecision"
             {...props}
         >
-            <path d="M18 6L6 18" />
-            <path d="M6 6l12 12" />
+            <path d="M18 6L6 18"/>
+            <path d="M6 6l12 12"/>
         </svg>
     );
 }

@@ -5,10 +5,12 @@ import ardeniteDuo from "/public/static/images/ardenite-duo.png";
 import Header from "../components/Header";
 import ArdeniteOutlineButton from "../components/ArdeniteOutlineButton";
 import ArdeniteHeading from "../components/ArdeniteHeading";
+import React from "react";
 
 const IndexPage = () => (
 
     <div className={"flex  flex-col min-w-full h-screen min-w-max "}>
+
 
         <Header/>
         <div className={"flex px-8 sm:px-16 justify-center min-w-full h-screen min-w-max "}>
@@ -34,7 +36,6 @@ const IndexPage = () => (
                         </div>
 
 
-
                         <div className={"flex flex-col justify-between sm:basis-2/5 px-8 sm:px-0  sm:px-4 "}
                         >
                             <div className={"hidden sm:flex"}>
@@ -56,8 +57,7 @@ const IndexPage = () => (
                 </div>
 
             </div>
-    </div>
-
+        </div>
 
 
     </div>
