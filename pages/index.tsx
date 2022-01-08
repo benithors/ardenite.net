@@ -6,6 +6,7 @@ import Header from "../components/Header";
 import ArdeniteOutlineButton from "../components/ArdeniteOutlineButton";
 import ArdeniteHeading from "../components/ArdeniteHeading";
 import React from "react";
+import ArdeniteLogo from "../components/ArdeniteLogo";
 
 const IndexPage = () => (
 
@@ -14,11 +15,10 @@ const IndexPage = () => (
 
         <Header/>
         <div className={"flex px-8 sm:px-16 justify-center min-w-full h-screen min-w-max "}>
-            <div className={"flex flex-col   w-full max-w-screen-xl"}>
+            <div className={"flex flex-col w-full max-w-screen-xl"}>
 
                 <div>
-                    <div className={"flex flex-col sm:flex-row "}
-                    >
+                    <div className={"flex flex-col sm:flex-row "}>
 
 
                         <div className={"absolute z-10 px-4 sm:invisible"}>
@@ -36,8 +36,7 @@ const IndexPage = () => (
                         </div>
 
 
-                        <div className={"flex flex-col justify-between sm:basis-2/5 px-8 sm:px-0  sm:px-4 "}
-                        >
+                        <div className={"flex flex-col justify-between sm:basis-2/5 px-8 sm:px-0  sm:px-4 "}>
                             <div className={"hidden sm:flex"}>
                                 <ArdeniteHeading/>
                             </div>
@@ -51,10 +50,27 @@ const IndexPage = () => (
 
                         </div>
 
+
+
                     </div>
 
 
                 </div>
+
+                <div className={"flex flex-col w-1/2 self-center mt-16"}>
+                    <ArdeniteLogo/>
+
+                </div>
+
+                <div className={"text-2xl md:text-2xl leading-6 text-turquoise w-3/4 self-center text-center"}>
+                    Would you like to reach out or book us for your event?
+
+                </div>
+
+                <div className={"px-8 sm:px-0  sm:w-2/4 sm:self-center   flex flex-col "}>
+                    <ArdeniteOutlineButton link={"https://open.spotify.com/artist/3GXo8euWCGsniO8H7MrU9B?si=cp7j2zyHQjuXC9fhwq6z2g"} title={"CONTACT US"}/>
+                </div>
+
 
             </div>
         </div>
