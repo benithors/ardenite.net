@@ -7,6 +7,8 @@ import ArdeniteOutlineButton from "../components/ArdeniteOutlineButton";
 import ArdeniteHeading from "../components/ArdeniteHeading";
 import React from "react";
 import ArdeniteLogo from "../components/ArdeniteLogo";
+import ArdeniteSocial from "../components/ArdeniteSocial";
+import Footer from "../components/Footer";
 
 const IndexPage = () => (
 
@@ -36,12 +38,12 @@ const IndexPage = () => (
                         </div>
 
 
-                        <div className={"flex flex-col justify-between sm:basis-2/5 px-8 sm:px-0  sm:px-4 "}>
+                        <div className={"flex flex-col justify-between sm:basis-2/5 px-8 sm:px-0  sm:px-4 min-w-fit"}>
                             <div className={"hidden sm:flex"}>
                                 <ArdeniteHeading/>
                             </div>
 
-                            <div className={"flex flex-col"}>
+                            <div className={"flex flex-col "}>
                                 <ArdeniteOutlineButton link={"https://open.spotify.com/artist/3GXo8euWCGsniO8H7MrU9B?si=cp7j2zyHQjuXC9fhwq6z2g"} title={"LISTEN NOW"}/>
                                 <ArdeniteOutlineButton link={"https://www.youtube.com/c/ARDENITE"} title={"WATCH NOW"}/>
                                 <ArdeniteOutlineButton link={"https://ardenite.bandcamp.com/"} title={"BUY NOW"}/>
@@ -71,9 +73,15 @@ const IndexPage = () => (
                     <ArdeniteOutlineButton link={"https://open.spotify.com/artist/3GXo8euWCGsniO8H7MrU9B?si=cp7j2zyHQjuXC9fhwq6z2g"} title={"CONTACT US"}/>
                 </div>
 
+                <ArdeniteSocial/>
+
+
+                <Footer/>
 
             </div>
         </div>
+
+
 
 
     </div>

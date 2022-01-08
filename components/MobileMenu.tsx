@@ -33,7 +33,7 @@ export default function MobileMenu() {
     return (
         <>
             <button
-                className={cn(styles.burger, 'visible md:hidden')}
+                className={cn(styles.burger, 'visible xl:hidden')}
                 aria-label="Toggle menu"
                 type="button"
                 onClick={toggleMenu}
@@ -143,8 +143,8 @@ function CrossIcon(props: JSX.IntrinsicElements['svg']) {
                 <rect x="5.92356" y="4.22772" width="45.4631" height="3" rx="1.5" transform="rotate(39.8804 5.92356 4.22772)" fill="#FDC4F0"/>
             </g>
             <defs>
-                <filter id="filter0_d_1_143" x="1.52586" y="0.615417" width="42.8557" height="38.4241" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                <filter id="filter0_d_1_143" x="1.52586" y="0.615417" width="42.8557" height="38.4241" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                    <feFlood floodOpacity="0" result="BackgroundImageFix"/>
                     <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
                     <feOffset/>
                     <feGaussianBlur stdDeviation="2"/>
@@ -153,8 +153,8 @@ function CrossIcon(props: JSX.IntrinsicElements['svg']) {
                     <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1_143"/>
                     <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1_143" result="shape"/>
                 </filter>
-                <filter id="filter1_d_1_143" x="0.612816" y="0.840515" width="43.5855" height="38.2269" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                <filter id="filter1_d_1_143" x="0.612816" y="0.840515" width="43.5855" height="38.2269" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                    <feFlood floodOpacity="0" result="BackgroundImageFix"/>
                     <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
                     <feOffset/>
                     <feGaussianBlur stdDeviation="2"/>
