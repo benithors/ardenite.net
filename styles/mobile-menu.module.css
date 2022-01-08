@@ -48,7 +48,7 @@
 }
 
 .menuRendered li {
-    @apply lightBox w-3/4;
+    @apply  w-3/4;
     transform: translateX(0);
     opacity: 1;
 }

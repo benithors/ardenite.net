@@ -45,33 +45,33 @@ export default function MobileMenu() {
                 <ul
                     className={cn(
                         styles.menu,
-                        'flex flex-col fixed  bg-black text-pink filter drop-shadow-xs font-semibold',
+                        'flex flex-col fixed  bg-black text-pink filter drop-shadow-xs font-semibold ',
                         isMenuRendered && styles.menuRendered
                     )}
                 >
-                    <li className={"flex w-auto pb-4"} style={{transitionDelay: '150ms'}}>
+                    <li  style={{transitionDelay: '150ms'}}>
                         <Link href="/">
-                            <a className="flex ">HOME</a>
+                            <a className="flex w-auto pb-4 pl-4 mt-16">HOME</a>
                         </Link>
                     </li>
                     <li style={{transitionDelay: '175ms'}}>
                         <Link href="/merch">
-                            <a className="flex w-auto pb-4">MERCH</a>
+                            <a className="flex w-auto pb-4 pl-4">MERCH</a>
                         </Link>
                     </li>
                     <li style={{transitionDelay: '200ms'}}>
                         <Link href="/contact">
-                            <a className="flex w-auto pb-4">CONTACT</a>
+                            <a className="flex w-auto pb-4 pl-4">CONTACT</a>
                         </Link>
                     </li>
                     <li style={{transitionDelay: '250ms'}}>
                         <Link href="/privacy">
-                            <a className="flex w-auto pb-4">PRIVACY POLICY</a>
+                            <a className="flex w-auto pb-4 pl-4">PRIVACY POLICY</a>
                         </Link>
                     </li>
                     <li style={{transitionDelay: '275ms'}}>
                         <Link href="/imprint">
-                            <a className="flex w-auto pb-4">IMPRINT</a>
+                            <a className="flex w-auto pb-4 pl-4">IMPRINT</a>
                         </Link>
                     </li>
                 </ul>
