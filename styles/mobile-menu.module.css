@@ -22,38 +22,44 @@
 }
 
 .menu {
-    padding: 0 28px 0 4px;
-    margin: 0;
+
     width: 100%;
     height: 100%;
     z-index: 500;
     opacity: 0;
+    top: 0;
     left: 0;
-    top:0;
     transition: opacity 300ms ease, transform 300ms ease;
 }
 
 .menu li {
+    width: 100%;
+
     transform: translateX(-16px);
     opacity: 0;
     transition: opacity 300ms ease, transform 300ms ease, width 300ms ease,
     border-color 300ms ease;
-    width: 0px;
     white-space: nowrap;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+
 }
+
 
 .menuRendered {
     opacity: 1;
+
 }
 
 .menuRendered li {
-    @apply  w-3/4;
     transform: translateX(0);
     opacity: 1;
 }
 
 .menu > * + * {
     margin-top: 24px;
+
 }
 
 @keyframes grow {
