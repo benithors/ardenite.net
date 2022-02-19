@@ -29,27 +29,6 @@
 
 
 
-    .arrow {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        -webkit-transform: translateY(-50%);
-        cursor: pointer;
-    }
-
-    .arrow--left {
-        left: 0px;
-    }
-
-    .arrow--right {
-        right: 0px;
-    }
-
-    .arrow--disabled {
-        display: none;
-    }
-
-
 
 
 }

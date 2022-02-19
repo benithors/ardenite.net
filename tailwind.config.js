@@ -9,6 +9,7 @@ module.exports = {
             turquoise: '#80FFEC',
             black: '#000000',
             debug: '#ec0707',
+            shopPink: '#FF01B8'
         },
         opacity: {
             '0': '0',

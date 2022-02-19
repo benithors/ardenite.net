@@ -60,8 +60,11 @@ const IndexPage = () => (
 
                 </div>
 
-                <div className={"h-full flex flex-row justify-center lightBox mt-16 "}>
+                <div className={"h-full relative  mt-16"}>
                     <ArdeniteSlider/>
+                    <div className={"absolute bg-black w-fit h-fit z-50 right-14 top-0 text-turquoise text-center text-6xl p-4"}>
+                        MERCH
+                    </div>
                 </div>
 
                 <div className={"flex flex-col w-1/2 self-center mt-16 overflow-clip "}>
