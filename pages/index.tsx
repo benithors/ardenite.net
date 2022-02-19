@@ -9,6 +9,7 @@ import React from "react";
 import ArdeniteLogo from "../components/ArdeniteLogo";
 import ArdeniteSocial from "../components/ArdeniteSocial";
 import Footer from "../components/Footer";
+import ArdeniteSlider from "../components/ArdeniteSlider";
 
 const IndexPage = () => (
 
@@ -59,7 +60,11 @@ const IndexPage = () => (
 
                 </div>
 
-                <div className={"flex flex-col w-1/2 self-center mt-16"}>
+                <div className={"h-full flex flex-row justify-center lightBox mt-16 "}>
+                    <ArdeniteSlider/>
+                </div>
+
+                <div className={"flex flex-col w-1/2 self-center mt-16 overflow-clip "}>
                     <ArdeniteLogo/>
 
                 </div>
