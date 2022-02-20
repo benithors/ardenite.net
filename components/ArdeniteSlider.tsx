@@ -27,7 +27,6 @@ const ArdeniteSlider = (props: IProps) => {
     const [currentSlide, setCurrentSlide] = React.useState(0)
     const [loaded, setLoaded] = useState(false)
     const [sliderRef, instanceRef] = useKeenSlider<HTMLDivElement>({
-            renderMode: "performance",
             initial: 5,
             slideChanged(slider) {
                 setCurrentSlide(slider.track.details.rel);
