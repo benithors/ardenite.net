@@ -49,20 +49,14 @@ export default function MobileMenu() {
                         isMenuRendered && styles.menuRendered
                     )}
                 >
-                    <li  style={{transitionDelay: '0ms'}}>
-                        <Link href="/">
-                            <a className="flex w-auto pb-4 pl-4 mt-48 mr-6">HOME</a>
-                        </Link>
+                    <li  style={{transitionDelay: '0ms'}} >
+                            <a href="#home" onClick={toggleMenu} className="flex w-auto pb-4 pl-4 mt-48 mr-6">HOME</a>
                     </li>
                     <li style={{transitionDelay: '175ms'}}>
-                        <Link href="/merch">
-                            <a className="flex w-auto pb-4 pl-4 mr-6">MERCH</a>
-                        </Link>
+                            <a href="#merch" onClick={toggleMenu} className="flex w-auto pb-4 pl-4 mr-6">MERCH</a>
                     </li>
                     <li style={{transitionDelay: '200ms'}}>
-                        <Link href="/contact">
-                            <a className="flex w-auto pb-4 pl-4 mr-6">CONTACT</a>
-                        </Link>
+                            <a href="#contact" onClick={toggleMenu} className="flex w-auto pb-4 pl-4 mr-6">CONTACT</a>
                     </li>
                     <li style={{transitionDelay: '250ms'}}>
                         <Link href="/privacy">

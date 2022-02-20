@@ -13,11 +13,12 @@ import ArdeniteSlider from "../components/ArdeniteSlider";
 
 const IndexPage = () => (
 
-    <div className={"flex  flex-col min-w-full h-screen min-w-max "}>
+    <div id={"home"} className={"flex  flex-col min-w-full h-screen min-w-max "}>
 
 
         <Header/>
         <div className={"flex px-8 sm:px-16 justify-center min-w-full h-screen min-w-max "}>
+
             <div className={"flex flex-col w-full max-w-screen-xl"}>
 
                 <div>
@@ -45,9 +46,9 @@ const IndexPage = () => (
                             </div>
 
                             <div className={"flex flex-col "}>
-                                <ArdeniteOutlineButton link={"https://open.spotify.com/artist/3GXo8euWCGsniO8H7MrU9B?si=cp7j2zyHQjuXC9fhwq6z2g"} title={"LISTEN NOW"}/>
-                                <ArdeniteOutlineButton link={"https://www.youtube.com/c/ARDENITE"} title={"WATCH NOW"}/>
-                                <ArdeniteOutlineButton link={"https://ardenite.bandcamp.com/"} title={"BUY NOW"}/>
+                                <ArdeniteOutlineButton className={"lightBoxPink filter text-pink drop-shadow-xsPink "} link={"https://open.spotify.com/artist/3GXo8euWCGsniO8H7MrU9B?si=cp7j2zyHQjuXC9fhwq6z2g"} title={"LISTEN NOW"}/>
+                                <ArdeniteOutlineButton className={"lightBoxPink filter text-pink drop-shadow-xsPink "} link={"https://www.youtube.com/c/ARDENITE"} title={"WATCH NOW"}/>
+                                <ArdeniteOutlineButton className={"lightBoxPink filter text-pink drop-shadow-xsPink "} link={"https://ardenite.bandcamp.com/"} title={"BUY NOW"}/>
                             </div>
 
 
@@ -56,20 +57,17 @@ const IndexPage = () => (
 
 
                     </div>
-
-
                 </div>
 
-                <div className={"h-full relative  mt-16"}>
+                <div className={"px-8 h-full relative mt-16 max"}>
                     <ArdeniteSlider/>
                     <div className={"absolute bg-black w-fit h-fit z-50 right-14 top-0 text-turquoise text-center text-6xl p-4"}>
                         MERCH
                     </div>
                 </div>
 
-                <div className={"flex flex-col w-1/2 self-center mt-16 overflow-clip "}>
+                <div className={"flex flex-col w-1/2 self-center mt-16"}>
                     <ArdeniteLogo/>
-
                 </div>
 
                 <div className={"text-2xl md:text-2xl leading-6 text-turquoise w-3/4 self-center text-center"}>
@@ -77,8 +75,8 @@ const IndexPage = () => (
 
                 </div>
 
-                <div className={"px-8 sm:px-0  sm:w-2/4 sm:self-center   flex flex-col "}>
-                    <ArdeniteOutlineButton link={"https://open.spotify.com/artist/3GXo8euWCGsniO8H7MrU9B?si=cp7j2zyHQjuXC9fhwq6z2g"} title={"CONTACT US"}/>
+                <div id={"contact"} className={"px-8 sm:px-0  sm:w-2/4 sm:self-center   flex flex-col "}>
+                    <ArdeniteOutlineButton className={"lightBoxPink filter text-pink drop-shadow-xsPink "} link={"mailto:office@ardenite.net"} title={"CONTACT US"}/>
                 </div>
 
                 <ArdeniteSocial/>

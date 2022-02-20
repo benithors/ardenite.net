@@ -6,18 +6,21 @@ const ArdeniteMenu = () => {
 
     return (
         <div className={"hidden xl:flex flex-row md:text-lg xl:text-2xl justify-between"}>
-
-            <button className={"text-pink leading-normal filter drop-shadow-md font-semibold"}>
+            <Link href="#home">
+            <a className={"text-pink leading-normal filter drop-shadow-md font-semibold"}>
                 HOME
-            </button>
-            <Link href="/merch">
-                <button className={"text-pink leading-normal filter drop-shadow-md font-semibold pl-8 "}>
-                    MERCH
-                </button>
+            </a>
             </Link>
-            <button className={"text-pink leading-normal filter drop-shadow-md font-semibold pl-8 "}>
+            <Link href="#merch">
+                <a className={"text-pink leading-normal filter drop-shadow-md font-semibold pl-8 "}>
+                    MERCH
+                </a>
+            </Link>
+            <Link href="#contact">
+            <a className={"text-pink leading-normal filter drop-shadow-md font-semibold pl-8 "}>
                 CONTACT
-            </button>
+            </a>
+            </Link>
         </div>
 
 

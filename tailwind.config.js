@@ -37,7 +37,8 @@ module.exports = {
                 xxl: '20px',
             },
             dropShadow: {
-                xs : '0 0 3px rgba(255, 0, 181, 1)',
+                xsPink : '0 0 3px rgba(255, 0, 181, 1)',
+                xsGreen : '0 0 3px rgba(128, 255, 236, 1)',
                 md : '0 0 4px rgba(253, 196, 240, 1)',
                 xl : '0px 0px 15px rgba(253, 196, 240, 1)',
                 xxl : '0px 2px 20px rgba(128, 255, 236, 1)',
