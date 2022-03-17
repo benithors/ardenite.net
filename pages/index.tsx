@@ -59,12 +59,12 @@ const IndexPage = () => (
                     </div>
                 </div>
 
-                <div className={"px-8 h-full relative mt-16 max"}>
+           {/*     <div className={"px-8 h-full relative mt-16 max"}>
                     <ArdeniteSlider/>
                     <div className={"absolute bg-black w-fit h-fit z-50 right-14 top-0 text-turquoise text-center text-6xl p-4"}>
                         MERCH
                     </div>
-                </div>
+                </div>*/}
 
                 <div className={"flex flex-col w-1/2 self-center mt-16"}>
                     <ArdeniteLogo/>
