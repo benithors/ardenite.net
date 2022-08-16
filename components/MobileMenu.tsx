@@ -1,27 +1,13 @@
 import cn from 'classnames';
 import Link from 'next/link';
-import useDelayedRender from 'use-delayed-render';
 import React, {useEffect, useState} from 'react';
-import styles from 'styles/mobile-menu.module.css';
 
 export default function MobileMenu() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const {mounted: isMenuMounted, rendered: isMenuRendered} = useDelayedRender(
-        isMenuOpen,
-        {
-            enterDelay: 20,
-            exitDelay: 300
-        }
-    );
+
 
     function toggleMenu() {
-        if (isMenuOpen) {
-            setIsMenuOpen(false);
-            document.body.style.overflow = '';
-        } else {
-            setIsMenuOpen(true);
-            document.body.style.overflow = 'hidden';
-        }
+
     }
 
     useEffect(() => {
@@ -41,12 +27,12 @@ export default function MobileMenu() {
                 <MenuIcon data-hide={isMenuOpen}/>
                 <CrossIcon data-hide={!isMenuOpen}/>
             </button>
-            {isMenuMounted && (
+
                 <ul
                     className={cn(
                         styles.menu,
-                        'flex flex-col fixed bg-black text-pink filter drop-shadow-xs font-semibold ',
-                        isMenuRendered && styles.menuRendered
+                        'flex flex-col fixed bg-black text-pink filter drop-shadow-xs font-semibold '
+
                     )}
                 >
                     <li  style={{transitionDelay: '0ms'}} >
@@ -69,7 +55,7 @@ export default function MobileMenu() {
                         </Link>
                     </li>
                 </ul>
-            )}
+
         </>
     );
 }

@@ -1,6 +1,6 @@
 import { Html, Head, Main, NextScript } from 'next/document';
 
-export default function Document(props) {
+export default function Document() {
     return (
         <Html lang="en">
             <Head>
@@ -43,7 +43,7 @@ export default function Document(props) {
                     name="msapplication-config"
                 />
             </Head>
-            <body className="bg-black min-w-full h-screen min-w-max">
+            <body className="bg-black min-w-full h-screen min-w-max overflow-x-hidden">
             <Main />
             <NextScript />
             </body>
