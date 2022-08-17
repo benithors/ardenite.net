@@ -33,7 +33,7 @@ const Home: NextPage = () => {
                         </ContentContainer>
                     </div>
                 </CrossFade>
-                <ContentContainer className={"h-full flex space-y-8 md:space-y-0  flex-col  md:flex-row items-center w-full  md:w-full lg:w-full   space-x-5 justify-center lg:space-x-7 pt-8  md:pt-0 md:-translate-y-[36px]"}>
+                <ContentContainer className={"h-full flex space-y-8 md:space-y-0  flex-col  md:flex-row items-center w-full  md:w-full lg:w-full  md:space-x-5 justify-center lg:space-x-7 pt-8  md:pt-0 md:-translate-y-[36px]"}>
 
                     <ArdeniteOutlineButton link={"mailto:office@ardenite.net?subject=Order"} title={"LISTEN NOW"} className={"lightBoxPink text-pink bg-brand-black "}/>
                     <ArdeniteOutlineButton link={"mailto:office@ardenite.net?subject=Order"} title={"WATCH NOW"} className={"lightBoxPink text-pink bg-brand-black "}/>
