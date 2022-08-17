@@ -9,7 +9,6 @@ import React from "react";
 import ArdeniteLogo from "../components/ArdeniteLogo";
 import ArdeniteSocial from "../components/ArdeniteSocial";
 import Footer from "../components/Footer";
-import ArdeniteSlider from "../components/ArdeniteSlider";
 
 const IndexPage = () => (
 
@@ -55,11 +54,10 @@ const IndexPage = () => (
                         </div>
 
 
-
                     </div>
                 </div>
 
-           {/*     <div className={"px-8 h-full relative mt-16 max"}>
+                {/*     <div className={"px-8 h-full relative mt-16 max"}>
                     <ArdeniteSlider/>
                     <div className={"absolute bg-black w-fit h-fit z-50 right-14 top-0 text-turquoise text-center text-6xl p-4"}>
                         MERCH
@@ -86,8 +84,6 @@ const IndexPage = () => (
 
             </div>
         </div>
-
-
 
 
     </div>

@@ -6,7 +6,7 @@ interface IProps {
     productName: string;
     price: string;
     sizes: string;
-    image;
+    image:any;
 
 }
 

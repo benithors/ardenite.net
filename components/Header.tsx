@@ -1,7 +1,5 @@
 import React from 'react'
-import ArdeniteText from "./ArdeniteText";
 import ArdeniteMenu from "./ArdeniteMenu";
-import MobileMenu from "./MobileMenu";
 
 
 const Header = () => {
