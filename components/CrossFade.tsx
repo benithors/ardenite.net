@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react'
 import SeboWana from "../public/static/images/SeboWana.png";
 import SeboGuitar from "../public/static/images/SeboGuitar.png";
 
+import Image from "next/image";
 
 import Mask from "../public/static/images/mask.png";
 import CrossFadeImage from "./CrossFadeImage";
@@ -42,11 +43,13 @@ const CrossFade = (props: IProps) => {
         setAnimStatusInstance(animStatus.ONE);
     }, [])
     return (
-        <div className={' w-screen flex flex-col items-center h-[calc(100vh-100px)] relative overflow-hidden  '}>
-            {props.children}
-            <CrossFadeImage priority={true} offset={'-translate-x-[100px]'} animation={' translate-x-[100px] '} className={'absolute  '} animate={animStatusInstance === animStatus.ONE} image={SeboWana}/>
+        <div className={'w-screen  flex flex-col items-center h-[calc(100vh-100px)] relative overflow-hidden  '}>
+            <div  className={"w-[200%]  -translate-y-12  transition-transform ease-linear    duration-[1000ms]  bg-center bg-[url('/static/images/SeboGuitar.png')] h-full"}>
+            </div>
+
+            {/*    <CrossFadeImage priority={true} offset={'-translate-x-[100px]'} animation={' translate-x-[100px] '} className={'absolute  '} animate={animStatusInstance === animStatus.ONE} image={SeboWana}/>
             <CrossFadeImage priority={false} offset={'-translate-x-[100px]'} animation={' translate-x-[100px] '} className={'absolute'} animate={animStatusInstance === animStatus.TWO} image={Mask}/>
-            <CrossFadeImage priority={false} offset={ '-translate-y-[40px] '} animation={'translate-y-[40px] '} className={'absolute'} animate={animStatusInstance === animStatus.THREE} image={SeboGuitar}/>
+            <CrossFadeImage priority={false} offset={ '-translate-y-[40px] '} animation={'translate-y-[40px] '} className={'absolute'} animate={animStatusInstance === animStatus.THREE} image={SeboGuitar}/>*/}
 
 
         </div>
