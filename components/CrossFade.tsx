@@ -44,9 +44,9 @@ const CrossFade = (props: IProps) => {
     return (
         <div className={' w-screen flex flex-col items-center h-[calc(100vh-100px)] relative overflow-hidden  '}>
             {props.children}
-            <CrossFadeImage offset={'-translate-x-[100px]'} animation={' translate-x-[100px] '} className={'absolute  '} animate={animStatusInstance === animStatus.ONE} image={SeboWana}/>
-            <CrossFadeImage offset={'-translate-x-[100px]'} animation={' translate-x-[100px] '} className={'absolute'} animate={animStatusInstance === animStatus.TWO} image={Mask}/>
-            <CrossFadeImage offset={ '-translate-y-[40px] '} animation={'translate-y-[40px] '} className={'absolute'} animate={animStatusInstance === animStatus.THREE} image={SeboGuitar}/>
+            <CrossFadeImage priority={true} offset={'-translate-x-[100px]'} animation={' translate-x-[100px] '} className={'absolute  '} animate={animStatusInstance === animStatus.ONE} image={SeboWana}/>
+            <CrossFadeImage priority={false} offset={'-translate-x-[100px]'} animation={' translate-x-[100px] '} className={'absolute'} animate={animStatusInstance === animStatus.TWO} image={Mask}/>
+            <CrossFadeImage priority={false} offset={ '-translate-y-[40px] '} animation={'translate-y-[40px] '} className={'absolute'} animate={animStatusInstance === animStatus.THREE} image={SeboGuitar}/>
 
 
         </div>
