@@ -4,7 +4,7 @@ import React from 'react'
 const ArdeniteBurger = () => {
 
     return (
-        <svg className={"xl:invisible h-1/2 sm:h-2/3"} viewBox="0 0 44 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg className={"h-full w-full"} viewBox="0 0 44 38" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g filter="url(#filter0_d_532_380)">
                 <rect x="4" y="4" width="35.1724" height="3" rx="1.5" fill="#FDC4F0"/>
                 <rect x="4" y="4" width="35.1724" height="3" rx="1.5" fill="#FDC4F0"/>

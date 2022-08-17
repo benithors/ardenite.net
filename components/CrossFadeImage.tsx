@@ -7,7 +7,7 @@ interface IProps {
     image: any
     className?: string;
     animation: string;
-    counterAnimation:string;
+    offset:string
 }
 /*
 
@@ -21,14 +21,11 @@ interface IProps {
 * */
 const CrossFadeImage = (props: IProps) => {
     return (
-        <div className={'w-full h-full overflow-hidden  transition-opacity duration-[2000ms] ' +' '+ props.className + ' ' + (props.animate ? ' opacity-100' : 'opacity-0')}>
+        <div className={' flex flex-col items-center w-[calc(150vw)] h-[calc(150vh)] bg-red-100  transition-opacity duration-[3000ms]  '+   props.offset + ' ' + props.className + ' ' + (props.animate ? ' opacity-100' : 'opacity-0')}>
 
 
-
-                <Image src={props.image} layout={'responsive'} className={'overflow-hidden transition-transform ease-linear -translate-y-1/4   duration-[10000ms] scale-125   ' + ' '
-
-                    + (props.animate ? props.animation + ' opacity-100  ' :  'delay-1000')
-                } objectFit={'fill'}/>
+                <Image src={props.image} layout={'fill'} className={'  transition-transform ease-linear    duration-[10000ms] '  + (props.animate ? props.animation + ' opacity-100  ' :  'delay-[10000ms] ' )
+                } objectFit={'cover'}/>
 
 
         </div>

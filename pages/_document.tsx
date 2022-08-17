@@ -43,7 +43,7 @@ export default function Document() {
                     name="msapplication-config"
                 />
             </Head>
-            <body className="bg-black min-w-full h-screen min-w-max overflow-x-hidden">
+            <body className="bg-black min-w-full h-screen min-w-max ">
             <Main />
             <NextScript />
             </body>

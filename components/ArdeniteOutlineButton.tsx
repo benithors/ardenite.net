@@ -10,18 +10,11 @@ interface IProps {
 const ArdeniteOutlineButton = (props: IProps) => {
 
     return (
-
-
-
-            <button className={"text-center font-semibold mt-8 p-5 text-3xl w-full " + props.className}>
-                <Link href={props.link}
-                >
-                <a className={"card"} target="_blank">{props.title}</a>
-                </Link>
-            </button>
-
-
-
+        <div className={('h-[50px] md:h-[70px] lg:h-[73px] w-[250px] md:w-[200px] lg:w-[262px]  ') + props.className}>
+            <a  className={"block font-semibold text-xs md:text-xl lg:text-3xl w-full h-full flex flex-col items-center justify-center  "} rel="noreferrer" href={props.link}  target="_blank">
+                {props.title}
+            </a>
+        </div>
     );
 }
 
