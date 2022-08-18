@@ -46,8 +46,8 @@ const CrossFade = (props: IProps) => {
         setAnimStatusInstance(animStatus.ONE);
     }, [])
     return (
-        <div className={'w-screen  flex flex-col items-center h-[calc(100vh-100px)] relative overflow-hidden  '}>
-
+        <div className={'w-screen  flex flex-col items-center h-[calc(100vh-150px)] relative overflow-hidden  '}>
+            {props.children}
             <CrossFadeImage animate={animStatusInstance === animStatus.ONE || animStatusInstance === animStatus.TWO} animateOpacity={animStatusInstance === animStatus.ONE} backgroundImage={("bg-[url('/static/images/SeboWana.png')] ")} animation={"translate-x-12"}/>
             <CrossFadeImage animate={animStatusInstance === animStatus.TWO || animStatusInstance === animStatus.THREE} animateOpacity={animStatusInstance === animStatus.TWO} backgroundImage={("bg-[url('/static/images/oana.png')] ")} animation={"-translate-x-12"}/>
             <CrossFadeImage animate={animStatusInstance === animStatus.THREE || animStatusInstance === animStatus.FOUR} animateOpacity={animStatusInstance === animStatus.THREE} backgroundImage={("bg-[url('/static/images/SeboGuitar.png')] ")} animation={"translate-y-12"}/>

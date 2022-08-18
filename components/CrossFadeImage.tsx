@@ -13,7 +13,7 @@ interface IProps {
 const CrossFadeImage = (props: IProps) => {
     return (
 
-        <div className={('w-[200%] absolute h-full  duration-[3000ms] transition-opacity ') + (props.animateOpacity ? ' opacity-100 ' : ' opacity-0 ')}>
+        <div className={('w-[200%] absolute h-full bg-no-repeat  duration-[3000ms] transition-opacity ') + (props.animateOpacity ? ' opacity-100 ' : ' opacity-0 ')}>
             <div className={(" w-full  transition-transform ease-linear duration-[10000ms]  bg-center  h-full  " + props.backgroundImage + " scale-125 " + (props.animate && ' ' + props.animation))}/>
 
         </div>

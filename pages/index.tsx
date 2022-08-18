@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import {NextPage} from "next";
 import CrossFade from "../components/CrossFade";
-import ArdeniteHeader from "../components/ArdeniteHeader";
+import ArdeniteNavBar from "../components/ArdeniteNavBar";
 import {FloatingNavStatus} from "../components/FloatingNav";
 import ArdeniteOutlineButton from "../components/ArdeniteOutlineButton";
 import ContentContainer from "../components/ContentContainer";
@@ -21,7 +21,7 @@ const Home: NextPage = () => {
         <>
 
             <div className={"flex flex-col items-center w-screen h-full "}>
-                <ArdeniteHeader floatingNavStatus={floatingNavStatus} scroller={scroller}/>
+                <ArdeniteNavBar floatingNavStatus={floatingNavStatus} scroller={scroller}/>
                 <CrossFade>
                     <div className={"w-screen  flex flex-col items-center h-full absolute z-10 "}>
 
@@ -40,7 +40,13 @@ const Home: NextPage = () => {
                     <ArdeniteOutlineButton link={"mailto:office@ardenite.net?subject=Order"} title={"BUY NOW"} className={"lightBoxPink text-pink bg-brand-black "}/>
                 </ContentContainer>
 
+                <div className={'bg-white w-full '}>
 
+                    <ContentContainer className={"mt-24 h-full  flex flex-col-reverse bg-white  w-full"}>
+                        test
+
+                    </ContentContainer>
+                </div>
             </div>
 
 

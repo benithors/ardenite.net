@@ -11,7 +11,7 @@ interface IProps {
     scroller: any
 }
 
-const ArdeniteHeader = (props: IProps) => {
+const ArdeniteNavBar = (props: IProps) => {
 
     const [menuOpen, setMenuOpen] = React.useState(true);
     return (
@@ -43,21 +43,19 @@ const ArdeniteHeader = (props: IProps) => {
                 <button className={'flex w-1/4 h-full p-2 z-50 md:hidden'} onClick={() => setMenuOpen(prevState => !prevState)}>
                     <ArdeniteBurger></ArdeniteBurger>
                 </button>
-                <div className={'fixed top-0 left-0 pointer-events-none   w-full h-full  '}>
-                    <div className={(menuOpen ? " translate-x-full " : " translate-x-0 ") + "h-full w-1/2 bg-brand-black absolute right-0 z-50 transition-transform duration-500 "}>
+                <div onClick={()=> setMenuOpen(prevState => !prevState)} className={ (menuOpen ? " pointer-events-none " : "  pointer-events-auto  ") + ' fixed top-0 left-0 pointer-events-none   w-full h-full  '}>
+                    <div className={(menuOpen ? " translate-x-full " : " translate-x-0 ") + "h-full w-1/2 bg-brand-black absolute right-0 z-50  transition-transform duration-500 "}>
 
-                        <div className={'flex flex-col items-center pt-32 space-y-4 h-full w-full bg- text-xl '}>
-                            <div>
+                        <div className={'flex flex-col items-center justify-center  space-y-4 h-full w-full bg- text-xl '}>
+                            <button>
                                 HOME
-                            </div>
-                            <div>
-                                Merch
-                            </div>
-                            <div>
+                            </button>
+                            <button>
+                                MERCH
+                            </button>
+                            <button>
                                 CONTACT
-                            </div>
-
-
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -114,4 +112,4 @@ const ArdeniteHeader = (props: IProps) => {
 
 }
 
-export default ArdeniteHeader
+export default ArdeniteNavBar
