@@ -31,7 +31,8 @@ module.exports = {
                 '100': '1',
             },
             fontFamily: {
-                sans: ['Raleway', ...fontFamily.sans]
+                InterSans: ['inter', ...fontFamily.sans],
+                SourceSans: ['Source Sans Pro', ...fontFamily.sans]
             },
             extend: {
                 blur: {

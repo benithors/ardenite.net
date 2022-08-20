@@ -6,7 +6,10 @@ import {FloatingNavStatus} from "../components/FloatingNav";
 import ArdeniteOutlineButton from "../components/ArdeniteOutlineButton";
 import ContentContainer from "../components/ContentContainer";
 import ArdeniteHeading from "../components/ArdeniteHeading";
-
+import Image from "next/image";
+import Backstabber from '../public/static/images/backstabber.png';
+import {ArrowUpRight} from "react-feather";
+import ArdeniteEntry from "../components/ArdeniteEntry";
 
 const Home: NextPage = () => {
 
@@ -20,7 +23,7 @@ const Home: NextPage = () => {
     return (
         <>
 
-            <div className={"flex flex-col items-center w-screen h-full "}>
+            <div className={"flex flex-col items-center w-screen h-full font-SourceSans "}>
                 <ArdeniteNavBar floatingNavStatus={floatingNavStatus} scroller={scroller}/>
                 <CrossFade>
                     <div className={"w-screen  flex flex-col items-center h-full absolute z-10 "}>
@@ -40,13 +43,13 @@ const Home: NextPage = () => {
                     <ArdeniteOutlineButton link={"mailto:office@ardenite.net?subject=Order"} title={"BUY NOW"} className={"lightBoxPink text-pink bg-brand-black "}/>
                 </ContentContainer>
 
-                <div className={'bg-white w-full '}>
-
-                    <ContentContainer className={"mt-24 h-full  flex flex-col-reverse bg-white  w-full"}>
-                        test
-
-                    </ContentContainer>
-                </div>
+                <ArdeniteEntry subtitle={'An explosion of emotions'} image={Backstabber} title={'Backstabber'} direction={''}>
+                    Backstabber emerged in an explosion of emotions, caused by the betrayal of a very close person.
+                    <br/>
+                    As an anthem to the broken hearted, the dominant emotions of the single are rage and anger! <br/>
+                    These are noticeable in the chorus and the ironically intonated rap parts. <br/>
+                    The protagonist of the song however also struggles with feelings of helplessness & sorrow, while processing the void of an ending relationship.
+                </ArdeniteEntry>
             </div>
 
 
