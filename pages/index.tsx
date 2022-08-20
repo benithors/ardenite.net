@@ -8,6 +8,8 @@ import ContentContainer from "../components/ContentContainer";
 import ArdeniteHeading from "../components/ArdeniteHeading";
 import Backstabber from '../public/static/images/backstabber.png';
 import Flowers from '../public/static/images/flowersdontcare.png';
+
+import WakeUp from '../public/static/images/wakeup.jpg';
 import ArdeniteEntry, {EntryPosition} from "../components/ArdeniteEntry";
 
 const Home: NextPage = () => {
@@ -46,6 +48,13 @@ const Home: NextPage = () => {
                     </div>
                 </CrossFade>
 
+                <ArdeniteEntry priority={true} subtitle={'We enjoy surprising you'} image={WakeUp} title={'Wake Up'} animation={EntryPosition.right} className={'bg-[#2c475b]'}>
+                    In that sense “Flowers Don&apos;t Care” may seem like --- and probably is --- your new favourite summer party song! However this is just the bitter sweet package (which hopefully compels you to dance!) of its deeper meaning about life,
+                    death
+                    and dealing with the loss of a close soul.
+                    <br/>
+                    Bittersweet, addictive and liberating all at once! What more could one ask for?
+                </ArdeniteEntry>
 
                 <ArdeniteEntry priority={true} subtitle={'We enjoy surprising you'} image={Flowers} title={'Flowers Don´t Care'} animation={EntryPosition.left} className={'bg-teal-900'}>
                     In that sense “Flowers Don&apos;t Care” may seem like --- and probably is --- your new favourite summer party song! However this is just the bitter sweet package (which hopefully compels you to dance!) of its deeper meaning about life,
