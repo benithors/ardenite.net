@@ -65,7 +65,7 @@ const Home: NextPage = () => {
                                     delay: 100,
                                     smooth: true,
                                 });
-                            }} className={'py-8  px-16  '}>
+                            }} className={'py-32  px-16  '}>
                                 <ArrowDown size={'40'} className={'stroke-2 stroke-white size  animate-bounce '}/>
                             </button>
 
