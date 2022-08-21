@@ -27,13 +27,13 @@ const ArdeniteEntry = (props: IProps) => {
 
     const entryInView = useInView({
         triggerOnce: true,
-        rootMargin: "-400px 0px",
+        rootMargin: "0px 0px",
     });
 
     let animationDir = props.animation === EntryPosition.left ? " translate-x-12 " : " -translate-x-12 ";
 
     return (
-        <div ref={entryInView.ref} className={props.className + (" overflow-x-hidden pb-12   w-full h-full flex flex-col-reverse  ") + (props.animation === EntryPosition.left ? " md:flex-row " : "  md:flex-row-reverse ")}>
+        <div ref={entryInView.ref} className={props.className + ("delay-1000 overflow-x-hidden pb-12   w-full h-full flex flex-col-reverse  ") + (props.animation === EntryPosition.left ? " md:flex-row " : "  md:flex-row-reverse ")}>
 
 
             <div className={'text-white  w-full md:w-1/2  flex flex-col  px-12 py-12 md:py-32 lg:py-40  '+ props.backgroundColor }>
