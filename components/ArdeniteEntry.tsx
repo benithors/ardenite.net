@@ -2,6 +2,7 @@ import React from 'react'
 import {ArrowUpRight} from "react-feather";
 import Image from "next/image";
 import {useInView} from "react-intersection-observer";
+import PopInButton from "./PopInButton";
 
 export enum EntryPosition {
     left = 0,
@@ -17,6 +18,7 @@ interface IProps {
     children: any
     className?: string;
     priority:boolean
+    backgroundColor: string;
 }
 
 
@@ -25,16 +27,16 @@ const ArdeniteEntry = (props: IProps) => {
 
     const entryInView = useInView({
         triggerOnce: true,
-        rootMargin: "0px 0px",
+        rootMargin: "-400px 0px",
     });
 
-    let animationDir = props.animation === EntryPosition.left ? " translate-y-12 md:translate-x-12 " : " translate-y-12  md:-translate-x-0 ";
+    let animationDir = props.animation === EntryPosition.left ? " translate-x-12 " : " -translate-x-12 ";
 
     return (
-        <div ref={entryInView.ref} className={props.className + (" overflow-x-hidden  w-full h-full flex flex-col-reverse  ") + (props.animation === EntryPosition.left ? " md:flex-row " : "  md:flex-row-reverse ")}>
+        <div ref={entryInView.ref} className={props.className + (" overflow-x-hidden pb-12   w-full h-full flex flex-col-reverse  ") + (props.animation === EntryPosition.left ? " md:flex-row " : "  md:flex-row-reverse ")}>
 
 
-            <div className={'text-white  w-full md:w-1/2  flex flex-col  p-12 '}>
+            <div className={'text-white  w-full md:w-1/2  flex flex-col  px-12 py-12 md:py-32 lg:py-40  '+ props.backgroundColor }>
 
                 <div className={' flex flex-col w-full md:w-[calc(100vw/3)]  justify-center transition-all duration-1000  items-center md:items-start space-y-8 ' + (entryInView.inView ? " opacity-100 translate-x-0 " +
                     " translate-y-0 " : " opacity-0 " + animationDir)}>
@@ -55,13 +57,12 @@ const ArdeniteEntry = (props: IProps) => {
                     <div>
                         {props.children}
                     </div>
-                    <div className={'w-full flex flex-col md:items-start items-center'}>
-                        <button className={'bg-white w-2/3 rounded-full text-black text-2xl font-InterSans p-4'}>
-                            <div className={'flex flex-row  justify-center opacity-70 '}>
+                    <div className={'w-full flex flex-col md:items-start items-center h-12'}>
 
-                                Watch It <ArrowUpRight className={'translate-x-2 translate-y-1 opacity-50'}/>
-                            </div>
-                        </button>
+                                <PopInButton  className={'text-brand-black  '} ariaLabel={'wach the song on youtube'} type={'button'}>
+                                     Watch It   <ArrowUpRight className={'translate-x-2 opacity-75'}/>
+                                </PopInButton>
+
                     </div>
 
 

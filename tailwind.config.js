@@ -8,10 +8,8 @@ module.exports = {
         extend: {
             colors: {
                 pink: '#FDC4F0',
-                turquoise: '#80FFEC',
-                black: '#000000',
-                debug: '#ec0707',
-                shopPink: '#FF01B8',
+                'brand-turquoise': '#80FFEC',
+                'brand-pink': '#FF01B8',
                 'brand-black': '#100F0F',
                 'brand-black-transparent': 'rgba(16, 15, 15, 0.5)',
             },

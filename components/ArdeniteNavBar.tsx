@@ -3,7 +3,6 @@ import ArdeniteText from "./ArdeniteText";
 import ContentContainer from "./ContentContainer";
 import NavButton from "./NavButton";
 import {FloatingNavStatus} from "./FloatingNav";
-import ArdeniteBurger from "./ArdeniteBurger";
 
 
 interface IProps {
@@ -13,7 +12,6 @@ interface IProps {
 
 const ArdeniteNavBar = (props: IProps) => {
 
-    const [menuOpen, setMenuOpen] = React.useState(true);
     return (
         <nav
             className={
@@ -22,15 +20,15 @@ const ArdeniteNavBar = (props: IProps) => {
         >
             <ContentContainer
                 className={
-                    " flex h-full opacity-100 w-full max-w-screen-2xl max-w-screen-xl flex-row items-center justify-between"
+                    " flex h-full opacity-100 w-full max-w-screen-2xl max-w-screen-xl flex-row items-center md:justify-between"
                 }
             >
 
                 <button
                     aria-label={"Scroll to the top"}
-                    className={"flex flex-row  text-left"}
+                    className={"flex flex-row grow md:grow-0 "}
                     onClick={() => {
-                        props.scroller.scrollTo("topScrollToElement", {
+                        props.scroller.scrollTo("top", {
                             duration: 1500,
                             delay: 100,
                             smooth: true,
@@ -40,56 +38,24 @@ const ArdeniteNavBar = (props: IProps) => {
                     <ArdeniteText/>
                 </button>
 
-                <button className={'flex w-1/4 h-full p-2 z-50 md:hidden'} onClick={() => setMenuOpen(prevState => !prevState)}>
-                    <ArdeniteBurger></ArdeniteBurger>
-                </button>
-                <div onClick={()=> setMenuOpen(prevState => !prevState)} className={ (menuOpen ? " pointer-events-none " : "  pointer-events-auto  ") + ' fixed top-0 left-0 pointer-events-none   w-full h-full  '}>
-                    <div className={(menuOpen ? " translate-x-full " : " translate-x-0 ") + "h-full w-1/2 bg-brand-black absolute right-0 z-50  transition-transform duration-500 "}>
-
-                        <div className={'flex flex-col items-center justify-center  space-y-4 h-full w-full bg- text-xl '}>
-                            <button>
-                                HOME
-                            </button>
-                            <button>
-                                MERCH
-                            </button>
-                            <button>
-                                CONTACT
-                            </button>
-                        </div>
-                    </div>
-                </div>
 
                 <div className={"hidden  md:flex h-full h-full flex-row  items-center self-end"}>
                     <NavButton
                         borderColor={"border-brand-black"}
                         floatingNavStatus={props.floatingNavStatus}
-                        buttonType={FloatingNavStatus.PACKAGES}
+                        buttonType={FloatingNavStatus.ABOUT}
                         onClick={() => {
-                            props.scroller.scrollTo("packagesScrollToElement", {
+                            props.scroller.scrollTo("about", {
                                 duration: 1500,
                                 delay: 100,
                                 smooth: true,
                             });
                         }}
                     >
-                        HOME
+                        ABOUT
 
                     </NavButton>
-                    <NavButton
-                        borderColor={"border-brand-black"}
-                        floatingNavStatus={props.floatingNavStatus}
-                        buttonType={FloatingNavStatus.PACKAGES}
-                        onClick={() => {
-                            props.scroller.scrollTo("packagesScrollToElement", {
-                                duration: 1500,
-                                delay: 100,
-                                smooth: true,
-                            });
-                        }}
-                    >
-                        MERCH
-                    </NavButton>
+
                     <NavButton
                         borderColor={"border-brand-black"}
                         floatingNavStatus={props.floatingNavStatus}
@@ -103,6 +69,20 @@ const ArdeniteNavBar = (props: IProps) => {
                         }}
                     >
                         CONTACT
+                    </NavButton>
+                         <NavButton
+                        borderColor={"border-brand-black"}
+                        floatingNavStatus={props.floatingNavStatus}
+                        buttonType={FloatingNavStatus.PACKAGES}
+                        onClick={() => {
+                            props.scroller.scrollTo("packagesScrollToElement", {
+                                duration: 1500,
+                                delay: 100,
+                                smooth: true,
+                            });
+                        }}
+                    >
+                        MERCH
                     </NavButton>
                 </div>
             </ContentContainer>
