@@ -19,6 +19,8 @@ interface IProps {
     className?: string;
     priority:boolean
     backgroundColor: string;
+    linkText: string;
+    linkUrl: string;
 }
 
 
@@ -59,8 +61,8 @@ const ArdeniteEntry = (props: IProps) => {
                     </div>
                     <div className={'w-full flex flex-col md:items-start items-center h-12'}>
 
-                                <PopInButton  className={'text-brand-black  '} ariaLabel={'wach the song on youtube'} type={'button'}>
-                                     Watch It   <ArrowUpRight className={'translate-x-2 opacity-75'}/>
+                                <PopInButton  className={'text-brand-black  '} href={props.linkUrl} ariaLabel={'wach the song on youtube'} type={'button'}>
+                                    {props.linkText}   <ArrowUpRight className={'translate-x-2 opacity-75'}/>
                                 </PopInButton>
 
                     </div>

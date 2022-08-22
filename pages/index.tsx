@@ -144,7 +144,11 @@ const Home: NextPage = () => {
                 </AboutSection>
 
 
-                <ArdeniteEntry backgroundColor={''} priority={true} subtitle={'We enjoy surprising you'} image={WakeUp} title={'Wake Up'} animation={EntryPosition.right}>
+                <ArdeniteEntry linkText={'Pre-Save Release'} linkUrl={'https://share.amuse.io/track/chypriann-wake-up'} backgroundColor={''} priority={true} subtitle={'New Single "WAKE UP" will be OUT on August 26th 2022 !'} image={WakeUp} title={'Wake Up'} animation={EntryPosition.right}>
+                  We can&apos;t wait to share this song with you, in the meantime make sure to pre-save the release!
+                </ArdeniteEntry>
+
+                <ArdeniteEntry linkText={'Watch It'} linkUrl={'https://youtu.be/1muIRKbC5bo'}  backgroundColor={' '} priority={true} subtitle={'We enjoy surprising you'} image={Flowers} title={'Flowers Don´t Care'} animation={EntryPosition.left}>
                     In that sense “Flowers Don&apos;t Care” may seem like --- and probably is --- your new favourite summer party song! However this is just the bitter sweet package (which hopefully compels you to dance!) of its deeper meaning about life,
                     death
                     and dealing with the loss of a close soul.
@@ -152,16 +156,8 @@ const Home: NextPage = () => {
                     Bittersweet, addictive and liberating all at once! What more could one ask for?
                 </ArdeniteEntry>
 
-                <ArdeniteEntry backgroundColor={' '} priority={true} subtitle={'We enjoy surprising you'} image={Flowers} title={'Flowers Don´t Care'} animation={EntryPosition.left}>
-                    In that sense “Flowers Don&apos;t Care” may seem like --- and probably is --- your new favourite summer party song! However this is just the bitter sweet package (which hopefully compels you to dance!) of its deeper meaning about life,
-                    death
-                    and dealing with the loss of a close soul.
-                    <br/>
-                    Bittersweet, addictive and liberating all at once! What more could one ask for?
-                </ArdeniteEntry>
 
-
-                <ArdeniteEntry backgroundColor={''} priority={false} subtitle={'An explosion of emotions'} image={Backstabber} title={'Backstabber'} animation={EntryPosition.right}>
+                <ArdeniteEntry linkText={'Watch It'} linkUrl={'https://youtu.be/y9bczIoB9lw'}  backgroundColor={''} priority={false} subtitle={'An explosion of emotions'} image={Backstabber} title={'Backstabber'} animation={EntryPosition.right}>
                     Backstabber emerged in an explosion of emotions, caused by the betrayal of a very close person.
                     <br/>
                     As an anthem to the broken hearted, the dominant emotions of the single are rage and anger! <br/>
@@ -181,7 +177,7 @@ const Home: NextPage = () => {
                                     While they could not be any more different, they are united by their common sheer passion for music & the all around creativity, which comes with its production & marketing!
                                 </p>
                                 <div className={'flex flex-row w-full items-center justify-center space-x-4'}>
-                                    <Socials inView={true} userName={'ardenite'} youtube={"https://www.youtube.com/c/ARDENITE"} facebook={"https://www.facebook.com/ardenite"} instagram={"https://www.instagram.com/ardeniteofficial"}/>
+                                    <Socials inView={true}  userName={'ardenite'} youtube={"https://www.youtube.com/c/ARDENITE"} facebook={"https://www.facebook.com/ardenite"} instagram={"https://www.instagram.com/ardeniteofficial"}/>
                                 </div>
                             </Section>
 
