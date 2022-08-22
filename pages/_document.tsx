@@ -45,7 +45,9 @@ export default function Document() {
                 <link rel="preconnect" href="https://fonts.googleapis.com"/>
                     <link rel="preconnect" href="https://fonts.gstatic.com" />
                     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Source+Sans+Pro:wght@300&display=swap" rel="stylesheet"/>
-                <script async defer data-website-id="c8a469c6-ac0b-45bb-a716-8399f805bba3" src="https://kylo-analytics.vercel.app/umami.js"></script>
+                <script async defer data-website-id="c8a469c6-ac0b-45bb-a716-8399f805bba3" src="https://kylo-analytics.vercel.app/umami.js"
+                 data-domains="ardenite.net"
+                ></script>
             </Head>
             <body className="bg-brand-black min-w-full h-screen min-w-max overflow-x-hidden ">
             <Main/>
