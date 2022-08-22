@@ -168,7 +168,7 @@ const Home: NextPage = () => {
 
                 <ContactSection name={'contact'}>
                     <div ref={contactInView.ref}>
-                        <ContentContainer className={" h-full  flex flex-col-reverse   w-full py-20 md:py-32 lg:py-40"}>
+                        <ContentContainer className={" h-full w-full  flex flex-col-reverse   w-full py-20 md:py-32 lg:py-40"}>
 
                             <Section subtitle={'Do you want to meet us?'} title={'CONTACT'}>
                                 <p className={'text-center opacity-70'}>
@@ -176,8 +176,8 @@ const Home: NextPage = () => {
                                     <br/>
                                     While they could not be any more different, they are united by their common sheer passion for music & the all around creativity, which comes with its production & marketing!
                                 </p>
-                                <div className={'flex flex-row w-full items-center justify-center space-x-4'}>
-                                    <Socials inView={true}  userName={'ardenite'} youtube={"https://www.youtube.com/c/ARDENITE"} facebook={"https://www.facebook.com/ardenite"} instagram={"https://www.instagram.com/ardeniteofficial"}/>
+                                <div className={'flex flex-wrap'}>
+                                    <Socials   userName={'ardenite'} youtube={"https://www.youtube.com/c/ARDENITE"} facebook={"https://www.facebook.com/ardenite"} instagram={"https://www.instagram.com/ardeniteofficial"} bandcamp={'https://ardenite.bandcamp.com/'} paypal={'https://www.paypal.com/paypalme/ardeniteofficial'} tiktok={'https://www.tiktok.com/@ardeniteofficial'} spotify={'https://open.spotify.com/artist/3GXo8euWCGsniO8H7MrU9B?si=WgztQFU7SBW79PH41C-Uwg'} appleMusic={'https://music.apple.com/at/artist/ardenite/1454820051'} soundcloud={'https://soundcloud.com/ardenite-band'}/>
                                 </div>
                             </Section>
 

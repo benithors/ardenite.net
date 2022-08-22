@@ -1,136 +1,310 @@
 import React from "react";
-import {Globe, Linkedin, Mail, Twitter} from "react-feather";
 import {getOpacityFromBottomTransition} from "../lib/Transitions";
+import {useInView} from "react-intersection-observer";
 
 interface IProps {
-    inView: boolean;
-    email?: string;
-    youtube?: string;
-    facebook?: string;
-    instagram?: string;
+
+    bandcamp: string;
+    paypal: string;
+    soundcloud: string;
+    spotify: string;
+    tiktok: string;
+    youtube: string;
+    facebook: string;
+    instagram: string;
     userName: string;
+    appleMusic: string;
 }
 
 const Socials = (props: IProps) => {
+
+    const socialsInView = useInView({
+        triggerOnce: true,
+        rootMargin: "-0px 0px",
+    });
     return (
         <>
-            {props.email && (
-                <a
-                    target={"_blank"}
-                    rel="noreferrer"
-                    aria-label={"Write an email to " + props.userName}
-                    href={"mailto:" + props.email}
-                    className={"text-white hover:text-brand-pink"}
-                >
-                    <Mail
-                        className={
-                            "stroke-brand-pink hover:scale-110 " +
-                            getOpacityFromBottomTransition(props.inView)
-                        }
-                    ></Mail>
-                </a>
-            )}
-            {props.youtube && (
-                <a
-                    target={"_blank"}
-                    rel="noreferrer"
-                    aria-label={"Open youtube of " + props.userName}
-                    href={props.youtube}
-                    className={"text-white hover:text-brand-pink"}
-                >
 
-                    <svg className={
-                        "stroke-brand-pink hover:scale-110 " +
-                        getOpacityFromBottomTransition(props.inView)
-                    } width="50" height="40" viewBox="0 -3 50 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g filter="url(#filter0_d_532_305)">
-                            <path
-                                d="M42.567 10.6993C42.369 9.90837 41.9658 9.18364 41.3981 8.59836C40.8303 8.01308 40.1182 7.58799 39.3336 7.36602C36.467 6.66602 25.0003 6.66602 25.0003 6.66602C25.0003 6.66602 13.5336 6.66602 10.667 7.43268C9.88238 7.65466 9.17026 8.07975 8.60255 8.66503C8.03483 9.2503 7.63162 9.97503 7.43364 10.766C6.90899 13.6753 6.65236 16.6265 6.66697 19.5827C6.64827 22.5611 6.90491 25.5348 7.43364 28.466C7.6519 29.2324 8.06415 29.9296 8.63054 30.4901C9.19694 31.0507 9.89834 31.4557 10.667 31.666C13.5336 32.4327 25.0003 32.4327 25.0003 32.4327C25.0003 32.4327 36.467 32.4327 39.3336 31.666C40.1182 31.444 40.8303 31.0189 41.3981 30.4337C41.9658 29.8484 42.369 29.1237 42.567 28.3327C43.0876 25.4453 43.3442 22.5166 43.3336 19.5827C43.3523 16.6043 43.0957 13.6305 42.567 10.6993V10.6993Z"
-                                stroke="#80FFEC" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                            <path d="M21.25 25.0328L30.8333 19.5828L21.25 14.1328V25.0328Z" stroke="#80FFEC" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                        </g>
-                        <defs>
-                            <filter id="filter0_d_532_305" x="0" y="-5" width="50" height="50" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
-                                <feFlood floodOpacity="0" result="BackgroundImageFix"/>
-                                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-                                <feOffset/>
-                                <feGaussianBlur stdDeviation="2.5"/>
-                                <feColorMatrix type="matrix" values="0 0 0 0 0.205 0 0 0 0 0.933323 0 0 0 0 1 0 0 0 1 0"/>
-                                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_532_305"/>
-                                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_532_305" result="shape"/>
-                            </filter>
-                        </defs>
-                    </svg>
-                </a>
-            )}
-            {props.facebook && (
-                <a
-                    target={"_blank"}
-                    rel="noreferrer"
-                    href={props.facebook}
-                    aria-label={"Open facebook of " + props.userName}
-                    className={"text-white hover:text-brand-pink"}
-                >
-                    <svg className={
-                        "stroke-brand-pink hover:scale-110 " +
-                        getOpacityFromBottomTransition(props.inView)
+
+
+
+
+            <a ref={socialsInView.ref}
+                target={"_blank"}
+                rel="noreferrer"
+                href={props.facebook}
+                aria-label={"Open facebook of " + props.userName}
+
+            >
+
+                   <svg className={
+                        " hover:scale-110 delay-[50ms] " +
+                        getOpacityFromBottomTransition(socialsInView.inView)
                     } width="40" height="46" viewBox="0 0 40 46" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g filter="url(#filter0_d_532_309)">
-                            <path
-                                d="M29.9993 6.33398H24.9993C22.7892 6.33398 20.6696 7.21196 19.1068 8.77476C17.544 10.3376 16.666 12.4572 16.666 14.6673V19.6673H11.666V26.334H16.666V39.6673H23.3327V26.334H28.3327L29.9993 19.6673H23.3327V14.6673C23.3327 14.2253 23.5083 13.8014 23.8208 13.4888C24.1334 13.1762 24.5573 13.0007 24.9993 13.0007H29.9993V6.33398Z"
-                                stroke="#80FFEC" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                        </g>
-                        <defs>
-                            <filter id="filter0_d_532_309" x="-5" y="-2" width="50" height="50" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
-                                <feFlood floodOpacity="0" result="BackgroundImageFix"/>
-                                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-                                <feOffset/>
-                                <feGaussianBlur stdDeviation="2.5"/>
-                                <feColorMatrix type="matrix" values="0 0 0 0 0.205 0 0 0 0 0.933323 0 0 0 0 1 0 0 0 1 0"/>
-                                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_532_309"/>
-                                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_532_309" result="shape"/>
-                            </filter>
-                        </defs>
-                    </svg>
+                    <g filter="url(#filter0_d_506_323)">
+                        <path d="M29.9998 6.33301H24.9998C22.7897 6.33301 20.6701 7.21098 19.1073 8.77378C17.5445 10.3366 16.6665 12.4562 16.6665 14.6663V19.6663H11.6665V26.333H16.6665V39.6663H23.3332V26.333H28.3332L29.9998 19.6663H23.3332V14.6663C23.3332 14.2243 23.5088 13.8004 23.8213 13.4878C24.1339 13.1753 24.5578 12.9997 24.9998 12.9997H29.9998V6.33301Z" stroke="#80FFEC" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    </g>
+                    <defs>
+                        <filter id="filter0_d_506_323" x="-5" y="-2" width="50" height="50" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                            <feFlood floodOpacity="0" result="BackgroundImageFix"/>
+                            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                            <feOffset/>
+                            <feGaussianBlur stdDeviation="2.5"/>
+                            <feColorMatrix type="matrix" values="0 0 0 0 0.205 0 0 0 0 0.933323 0 0 0 0 1 0 0 0 1 0"/>
+                            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_506_323"/>
+                            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_506_323" result="shape"/>
+                        </filter>
+                    </defs>
+                </svg>
 
-                </a>
-            )}
-            {props.instagram && (
-                <a
-                    href={props.instagram}
-                    target={"_blank"}
-                    rel="noreferrer"
-                    aria-label={"Open instagram of " + props.userName}
-                    className={"text-white hover:text-brand-pink"}
-                >
-                    <svg className={
-                        "stroke-brand-pink hover:scale-110 " +
-                        getOpacityFromBottomTransition(props.inView)
+            </a>
+
+            <a
+                href={props.instagram}
+                target={"_blank"}
+                rel="noreferrer"
+                aria-label={"Open instagram of " + props.userName}
+
+            >
+                   <svg className={
+                        " hover:scale-110 delay-[100ms] " +
+                        getOpacityFromBottomTransition(socialsInView.inView)
                     } width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g filter="url(#filter0_d_532_311)">
-                            <path
-                                d="M31.334 6.33398H14.6673C10.0649 6.33398 6.33398 10.0649 6.33398 14.6673V31.334C6.33398 35.9364 10.0649 39.6673 14.6673 39.6673H31.334C35.9364 39.6673 39.6673 35.9364 39.6673 31.334V14.6673C39.6673 10.0649 35.9364 6.33398 31.334 6.33398Z"
-                                stroke="#80FFEC" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                            <path
-                                d="M29.6655 21.9505C29.8712 23.3376 29.6343 24.7542 28.9885 25.9989C28.3426 27.2435 27.3208 28.2529 26.0682 28.8833C24.8157 29.5137 23.3963 29.7332 22.0118 29.5104C20.6274 29.2876 19.3485 28.634 18.3569 27.6424C17.3654 26.6509 16.7117 25.372 16.489 23.9875C16.2662 22.6031 16.4856 21.1837 17.1161 19.9311C17.7465 18.6786 18.7558 17.6567 20.0005 17.0109C21.2452 16.3651 22.6618 16.1281 24.0489 16.3338C25.4637 16.5436 26.7736 17.2029 27.785 18.2143C28.7964 19.2258 29.4557 20.5356 29.6655 21.9505Z"
-                                stroke="#80FFEC" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                            <path d="M32.166 13.834H32.1827" stroke="#80FFEC" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                        </g>
+                    <g filter="url(#filter0_d_506_330)">
+                        <path
+                            d="M31.3335 6.33301H14.6668C10.0645 6.33301 6.3335 10.064 6.3335 14.6663V31.333C6.3335 35.9354 10.0645 39.6663 14.6668 39.6663H31.3335C35.9359 39.6663 39.6668 35.9354 39.6668 31.333V14.6663C39.6668 10.064 35.9359 6.33301 31.3335 6.33301Z"
+                            stroke="#80FFEC" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                        <path
+                            d="M29.6665 21.9505C29.8722 23.3376 29.6353 24.7542 28.9894 25.9989C28.3436 27.2435 27.3218 28.2529 26.0692 28.8833C24.8167 29.5137 23.3973 29.7332 22.0128 29.5104C20.6284 29.2876 19.3494 28.634 18.3579 27.6424C17.3664 26.6509 16.7127 25.372 16.4899 23.9875C16.2672 22.6031 16.4866 21.1837 17.117 19.9311C17.7475 18.6786 18.7568 17.6567 20.0015 17.0109C21.2461 16.3651 22.6628 16.1281 24.0498 16.3338C25.4647 16.5436 26.7746 17.2029 27.786 18.2143C28.7974 19.2258 29.4567 20.5356 29.6665 21.9505Z"
+                            stroke="#80FFEC" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                        <path d="M32.1665 13.833H32.1832" stroke="#80FFEC" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    </g>
+                    <defs>
+                        <filter id="filter0_d_506_330" x="-2" y="-2" width="50" height="50" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                            <feFlood floodOpacity="0" result="BackgroundImageFix"/>
+                            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                            <feOffset/>
+                            <feGaussianBlur stdDeviation="2.5"/>
+                            <feColorMatrix type="matrix" values="0 0 0 0 0.205 0 0 0 0 0.933323 0 0 0 0 1 0 0 0 1 0"/>
+                            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_506_330"/>
+                            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_506_330" result="shape"/>
+                        </filter>
+                    </defs>
+                </svg>
+            </a>
 
-                        <defs>
-                            <filter id="filter0_d_532_311" x="-2" y="-2" width="50" height="50" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
-                                <feFlood floodOpacity="0" result="BackgroundImageFix"/>
-                                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-                                <feOffset/>
-                                <feGaussianBlur stdDeviation="2.5"/>
-                                <feColorMatrix type="matrix" values="0 0 0 0 0.205 0 0 0 0 0.933323 0 0 0 0 1 0 0 0 1 0"/>
-                                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_532_311"/>
-                                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_532_311" result="shape"/>
-                            </filter>
-                        </defs>
-                    </svg>
-                </a>
-            )}
+
+            <a
+                href={props.tiktok}
+                target={"_blank"}
+                rel="noreferrer"
+                aria-label={"Open tiktok of " + props.userName}
+
+            >
+                   <svg className={
+                        " hover:scale-110 delay-[200ms] " +
+                        getOpacityFromBottomTransition(socialsInView.inView)
+                    } width="40" height="45" viewBox="0 0 40 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g filter="url(#filter0_d_506_322)">
+                        <path
+                            d="M34 13.9159C28.2842 13.3676 26.4191 8.39875 26.4191 6H21.1192V29.0623C21.1192 31.1526 19.0731 33.5171 16.4567 33.5171C9.78151 33.5171 9.81504 23.6822 16.4567 23.6822V18.2679C1.99937 18.2679 3.0392 39 16.4567 39C23.6685 39 26.4191 32.5576 26.4191 29.6106V16.6573C29.807 19.1589 32.7589 19.296 34 19.296V13.9159Z"
+                            stroke="#80FFEC" strokeWidth="2" strokeLinejoin="round"/>
+                    </g>
+                    <defs>
+                        <filter id="filter0_d_506_322" x="0" y="0" width="40" height="45" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                            <feFlood floodOpacity="0" result="BackgroundImageFix"/>
+                            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                            <feOffset/>
+                            <feGaussianBlur stdDeviation="2.5"/>
+                            <feColorMatrix type="matrix" values="0 0 0 0 0.203922 0 0 0 0 0.933333 0 0 0 0 1 0 0 0 1 0"/>
+                            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_506_322"/>
+                            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_506_322" result="shape"/>
+                        </filter>
+                    </defs>
+                </svg>
+            </a>
+
+            <a
+                href={props.spotify}
+                target={"_blank"}
+                rel="noreferrer"
+                aria-label={"Open spotify of " + props.userName}
+
+            >
+                   <svg className={
+                        " hover:scale-110 delay-[250ms] " +
+                        getOpacityFromBottomTransition(socialsInView.inView)
+                    } width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g filter="url(#filter0_d_506_336)">
+                        <path
+                            d="M13.9605 17.1889C18.0022 16.1783 27.1781 16.3587 32.4942 18.9575M14.6523 22.9277C18.4756 22.0615 26.8868 22.1337 31.4019 24.5519M15.0529 28.4139C17.8677 27.8846 24.52 27.6199 29.5813 29.8577M22.9179 6C0.378802 6 0.342574 40 22.9179 40C45.4933 40 45.8938 6 22.9179 6Z"
+                            stroke="#80FFEC" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    </g>
+                    <defs>
+                        <filter id="filter0_d_506_336" x="0" y="0" width="46" height="46" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                            <feFlood floodOpacity="0" result="BackgroundImageFix"/>
+                            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                            <feOffset/>
+                            <feGaussianBlur stdDeviation="2.5"/>
+                            <feColorMatrix type="matrix" values="0 0 0 0 0.203922 0 0 0 0 0.933333 0 0 0 0 1 0 0 0 1 0"/>
+                            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_506_336"/>
+                            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_506_336" result="shape"/>
+                        </filter>
+                    </defs>
+                </svg>
+            </a>
+
+               <a
+                href={props.appleMusic}
+                target={"_blank"}
+                rel="noreferrer"
+                aria-label={"Open apple music of " + props.userName}
+
+            >
+
+                      <svg className={
+                        " hover:scale-110 delay-[300ms] " +
+                        getOpacityFromBottomTransition(socialsInView.inView)
+                    } width="42" height="45" viewBox="0 0 42 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                       <g filter="url(#filter0_d_507_352)">
+                           <path d="M35.9477 28.128V12.7034M35.9477 28.128C34.4513 24.7079 27.909 24.1949 26.3778 28.5385C24.8466 32.882 36.8872 35.1735 35.9477 28.128ZM15.7292 35.1051L15.7292 19.0306M15.7292 35.1051C15.102 31.5139 6.95969 30.4195 6.0549 35.1051C5.15011 39.7906 15.7292 40.7824 15.7292 35.1051ZM15.7292 19.0306V12.3956L35.9477 6V12.7034M15.7292 19.0306L35.9477 12.7034" stroke="#80FFEC" strokeWidth="2" strokeLinejoin="round"/>
+                       </g>
+                       <defs>
+                           <filter id="filter0_d_507_352" x="-0.000488281" y="0" width="42" height="45" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                               <feFlood floodOpacity="0" result="BackgroundImageFix"/>
+                               <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                               <feOffset/>
+                               <feGaussianBlur stdDeviation="2.5"/>
+                               <feColorMatrix type="matrix" values="0 0 0 0 0.203922 0 0 0 0 0.933333 0 0 0 0 1 0 0 0 1 0"/>
+                               <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_507_352"/>
+                               <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_507_352" result="shape"/>
+                           </filter>
+                       </defs>
+                   </svg>
+
+            </a>
+
+
+                 <a
+                href={props.soundcloud}
+                target={"_blank"}
+                rel="noreferrer"
+                aria-label={"Open soundcloud music of " + props.userName}
+
+            >
+                        <svg className={
+                        " hover:scale-110 delay-[350ms] " +
+                        getOpacityFromBottomTransition(socialsInView.inView)
+                    } width="49" height="32" viewBox="0 0 49 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                         <g filter="url(#filter0_d_507_351)">
+                             <path d="M6 17.1628V24.7596M10.9169 13.4807V26M15.8338 13.4807V26M20.7507 8.59697V26M25.7444 6V26H38.4208C43.9908 26 45.9498 14.6434 35.7319 16C35.7319 12.279 33.1966 6.00005 25.7444 6Z" stroke="#80FFEC" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                         </g>
+                         <defs>
+                             <filter id="filter0_d_507_351" x="0" y="0" width="49" height="32" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                                 <feFlood floodOpacity="0" result="BackgroundImageFix"/>
+                                 <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                                 <feOffset/>
+                                 <feGaussianBlur stdDeviation="2.5"/>
+                                 <feColorMatrix type="matrix" values="0 0 0 0 0.203922 0 0 0 0 0.933333 0 0 0 0 1 0 0 0 1 0"/>
+                                 <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_507_351"/>
+                                 <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_507_351" result="shape"/>
+                             </filter>
+                         </defs>
+                     </svg>
+
+
+            </a>
+
+            <a
+                href={props.youtube}
+                target={"_blank"}
+                rel="noreferrer"
+                aria-label={"Open youtube of " + props.userName}
+
+            >
+                   <svg className={
+                        " hover:scale-110 delay-[400ms] " +
+                        getOpacityFromBottomTransition(socialsInView.inView)
+                    } width="50" height="40" viewBox="0 0 50 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g filter="url(#filter0_d_506_326)">
+                        <path
+                            d="M42.567 10.7003C42.369 9.90934 41.9658 9.18461 41.3981 8.59934C40.8303 8.01406 40.1182 7.58897 39.3336 7.36699C36.467 6.66699 25.0003 6.66699 25.0003 6.66699C25.0003 6.66699 13.5336 6.66699 10.667 7.43366C9.88238 7.65563 9.17026 8.08073 8.60255 8.666C8.03483 9.25128 7.63162 9.97601 7.43364 10.767C6.90899 13.6763 6.65236 16.6275 6.66697 19.5837C6.64827 22.5621 6.90491 25.5358 7.43364 28.467C7.6519 29.2334 8.06415 29.9306 8.63054 30.4911C9.19694 31.0517 9.89834 31.4567 10.667 31.667C13.5336 32.4337 25.0003 32.4337 25.0003 32.4337C25.0003 32.4337 36.467 32.4337 39.3336 31.667C40.1182 31.445 40.8303 31.0199 41.3981 30.4346C41.9658 29.8494 42.369 29.1246 42.567 28.3337C43.0876 25.4463 43.3442 22.5175 43.3336 19.5837C43.3523 16.6052 43.0957 13.6315 42.567 10.7003V10.7003Z"
+                            stroke="#80FFEC" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                        <path d="M21.25 25.0338L30.8333 19.5838L21.25 14.1338V25.0338Z" stroke="#80FFEC" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    </g>
+                    <defs>
+                        <filter id="filter0_d_506_326" x="0" y="-5" width="50" height="50" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                            <feFlood floodOpacity="0" result="BackgroundImageFix"/>
+                            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                            <feOffset/>
+                            <feGaussianBlur stdDeviation="2.5"/>
+                            <feColorMatrix type="matrix" values="0 0 0 0 0.205 0 0 0 0 0.933323 0 0 0 0 1 0 0 0 1 0"/>
+                            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_506_326"/>
+                            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_506_326" result="shape"/>
+                        </filter>
+                    </defs>
+                </svg>
+            </a>
+
+            <a
+                href={props.bandcamp}
+                target={"_blank"}
+                rel="noreferrer"
+                aria-label={"Open bandcamp of " + props.userName}
+
+            >
+                   <svg className={
+                        " hover:scale-110 delay-[450ms] " +
+                        getOpacityFromBottomTransition(socialsInView.inView)
+                    } width="48" height="47" viewBox="0 0 48 47" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g filter="url(#filter0_d_508_2)">
+                        <path d="M24.3954 6C0.543378 6 -0.797831 41 24.3954 41C48.2113 41 47.5226 6 24.3954 6Z" stroke="#80FFEC" strokeWidth="2" strokeLinejoin="round"/>
+                    </g>
+                    <defs>
+                        <filter id="filter0_d_508_2" x="0" y="0" width="48" height="47" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                            <feFlood floodOpacity="0" result="BackgroundImageFix"/>
+                            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                            <feOffset/>
+                            <feGaussianBlur stdDeviation="2.5"/>
+                            <feColorMatrix type="matrix" values="0 0 0 0 0.203922 0 0 0 0 0.933333 0 0 0 0 1 0 0 0 1 0"/>
+                            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_508_2"/>
+                            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_508_2" result="shape"/>
+                        </filter>
+                    </defs>
+                </svg>
+
+            </a>
+
+            <a
+                href={props.paypal}
+                target={"_blank"}
+                rel="noreferrer"
+                aria-label={"Open paypal donation of " + props.userName}
+
+            >
+
+                   <svg className={
+                        " hover:scale-110 delay-[500ms] " +
+                        getOpacityFromBottomTransition(socialsInView.inView)
+                    } width="42" height="46" viewBox="0 0 42 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g filter="url(#filter0_d_507_355)">
+                        <path
+                            d="M10.2826 7.32002L9.2948 7.16419L9.2948 7.16419L10.2826 7.32002ZM6.04861 34.1581L7.02071 34.3926C7.02699 34.3666 7.03222 34.3404 7.03639 34.3139L6.04861 34.1581ZM7.0174 35.5743L7.07066 36.5729L7.0174 35.5743ZM13.2607 35.5743L13.2463 36.5742L14.1145 36.5867L14.2487 35.7289L13.2607 35.5743ZM14.7677 25.9438L15.7557 26.0984C15.76 26.0711 15.7631 26.0436 15.7651 26.016L14.7677 25.9438ZM12.0049 6.0808L11.8405 7.0672C11.8949 7.07625 11.9498 7.0808 12.0049 7.0808L12.0049 6.0808ZM11.1796 35.5515L11.1875 34.5515L11.1796 35.5515ZM10.7132 38.4067L9.72617 38.2455L9.72451 38.2564L10.7132 38.4067ZM18.0329 40V41H18.89L19.0211 40.153L18.0329 40ZM19.5399 30.2634L18.5532 30.1006L18.5517 30.1104L19.5399 30.2634ZM34.8612 22.4738L33.9511 22.0593L34.8612 22.4738ZM9.2948 7.16419L5.06082 34.0023L7.03639 34.3139L11.2704 7.47586L9.2948 7.16419ZM5.0765 33.9235C4.99033 34.2807 4.92937 34.8869 5.16649 35.4572C5.2948 35.7659 5.51918 36.0802 5.88071 36.3006C6.23947 36.5192 6.65115 36.5953 7.07066 36.5729L6.96413 34.5758C6.8526 34.5817 6.86271 34.5569 6.92157 34.5928C6.94817 34.609 6.97148 34.63 6.98904 34.6516C7.00567 34.6721 7.01223 34.687 7.01324 34.6894C7.01402 34.6913 7.01058 34.6834 7.00696 34.6632C7.00336 34.643 7.00054 34.6159 7.00007 34.5825C6.99909 34.5122 7.00885 34.4418 7.02071 34.3926L5.0765 33.9235ZM14.2487 35.7289L15.7557 26.0984L13.7797 25.7892L12.2727 35.4197L14.2487 35.7289ZM15.7651 26.016C15.7681 25.9741 15.7793 25.9057 15.8046 25.8297C15.8298 25.7542 15.8624 25.6909 15.8968 25.6443C15.9294 25.6002 15.9594 25.5764 15.9863 25.5621C16.0102 25.5494 16.0622 25.5275 16.1671 25.5275V23.5275C15.3009 23.5275 14.6737 23.9346 14.2887 24.4552C13.9347 24.934 13.7985 25.4826 13.7703 25.8716L15.7651 26.016ZM16.1671 25.5275C17.3408 25.5275 21.6681 25.9017 25.4865 24.3521C27.4314 23.5628 29.2994 22.2594 30.586 20.1304C31.8713 18.0037 32.5158 15.1535 32.1978 11.3785L30.2048 11.5464C30.4968 15.0121 29.89 17.4153 28.8743 19.096C27.8601 20.7743 26.3777 21.832 24.7344 22.4989C21.3766 23.8615 17.5768 23.5275 16.1671 23.5275V25.5275ZM32.171 11.2181C31.7135 9.4027 30.8722 8.04075 29.6298 7.07022C28.4073 6.1152 26.8811 5.6058 25.1672 5.32821C23.4553 5.05094 21.4764 4.99335 19.295 5.00057C17.0236 5.00809 14.7472 5.08079 12.0049 5.0808L12.0049 7.0808C14.6268 7.08079 17.2257 7.00743 19.3016 7.00056C21.4674 6.9934 23.3076 7.05309 24.8474 7.30248C26.3853 7.55156 27.5434 7.9782 28.3986 8.64631C29.234 9.29891 29.8638 10.2472 30.2316 11.7068L32.171 11.2181ZM12.1692 5.09439C11.764 5.0269 11.1579 5.04227 10.5833 5.32771C9.95096 5.64179 9.43962 6.24621 9.2948 7.16419L11.2704 7.47586C11.295 7.31967 11.3395 7.2423 11.366 7.2063C11.3931 7.16965 11.4265 7.142 11.473 7.11892C11.5236 7.09378 11.5897 7.07455 11.6661 7.06586C11.7438 7.05701 11.8083 7.06184 11.8405 7.0672L12.1692 5.09439ZM7.07066 36.5729C7.74512 36.5369 9.537 36.5386 11.1717 36.5515L11.1875 34.5515C9.57962 34.5388 7.7145 34.5357 6.96413 34.5758L7.07066 36.5729ZM11.1717 36.5515C11.9653 36.5577 12.709 36.5665 13.2463 36.5742L13.2751 34.5744C12.7335 34.5666 11.9855 34.5578 11.1875 34.5515L11.1717 36.5515ZM10.1927 35.3903L9.72623 38.2455L11.7001 38.5679L12.1665 35.7127L10.1927 35.3903ZM9.72451 38.2564C9.71922 38.2912 9.71016 38.3392 9.69447 38.4199C9.68023 38.4931 9.66169 38.5877 9.64477 38.6872C9.61213 38.8792 9.57498 39.1464 9.58667 39.4227C9.59777 39.6853 9.65751 40.0927 9.94393 40.4466C10.2677 40.8466 10.7307 41 11.1796 41V39C11.172 39 11.2163 38.9987 11.2874 39.0285C11.3644 39.0608 11.4398 39.1158 11.4985 39.1883C11.6028 39.3172 11.5881 39.4148 11.5849 39.3381C11.5822 39.2751 11.5908 39.1734 11.6165 39.0224C11.6287 38.9505 11.6425 38.88 11.6577 38.8016C11.6715 38.7305 11.6891 38.6402 11.7018 38.557L9.72451 38.2564ZM11.1796 41C11.1813 41 11.1831 41 11.1849 41C11.1866 41 11.1884 41 11.1902 41C11.192 41 11.1938 41 11.1956 41C11.1974 41 11.1992 41 11.2011 41C11.2029 41 11.2048 41 11.2066 41C11.2085 41 11.2104 41 11.2122 41C11.2141 41 11.216 41 11.2179 41C11.2199 41 11.2218 41 11.2237 41C11.2257 41 11.2276 41 11.2296 41C11.2315 41 11.2335 41 11.2355 41C11.2375 41 11.2395 41 11.2415 41C11.2435 41 11.2455 41 11.2476 41C11.2496 41 11.2516 41 11.2537 41C11.2558 41 11.2578 41 11.2599 41C11.262 41 11.2641 41 11.2662 41C11.2683 41 11.2704 41 11.2726 41C11.2747 41 11.2768 41 11.279 41C11.2812 41 11.2833 41 11.2855 41C11.2877 41 11.2899 41 11.2921 41C11.2943 41 11.2965 41 11.2987 41C11.3009 41 11.3032 41 11.3054 41C11.3077 41 11.3099 41 11.3122 41C11.3145 41 11.3168 41 11.3191 41C11.3214 41 11.3237 41 11.326 41C11.3283 41 11.3307 41 11.333 41C11.3353 41 11.3377 41 11.3401 41C11.3424 41 11.3448 41 11.3472 41C11.3496 41 11.352 41 11.3544 41C11.3568 41 11.3592 41 11.3617 41C11.3641 41 11.3666 41 11.369 41C11.3715 41 11.3739 41 11.3764 41C11.3789 41 11.3814 41 11.3839 41C11.3864 41 11.3889 41 11.3914 41C11.394 41 11.3965 41 11.3991 41C11.4016 41 11.4042 41 11.4067 41C11.4093 41 11.4119 41 11.4145 41C11.4171 41 11.4197 41 11.4223 41C11.4249 41 11.4275 41 11.4302 41C11.4328 41 11.4355 41 11.4381 41C11.4408 41 11.4434 41 11.4461 41C11.4488 41 11.4515 41 11.4542 41C11.4569 41 11.4596 41 11.4623 41C11.4651 41 11.4678 41 11.4705 41C11.4733 41 11.4761 41 11.4788 41C11.4816 41 11.4844 41 11.4872 41C11.4899 41 11.4927 41 11.4956 41C11.4984 41 11.5012 41 11.504 41C11.5069 41 11.5097 41 11.5125 41C11.5154 41 11.5183 41 11.5211 41C11.524 41 11.5269 41 11.5298 41C11.5327 41 11.5356 41 11.5385 41C11.5414 41 11.5444 41 11.5473 41C11.5502 41 11.5532 41 11.5561 41C11.5591 41 11.5621 41 11.565 41C11.568 41 11.571 41 11.574 41C11.577 41 11.58 41 11.583 41C11.5861 41 11.5891 41 11.5921 41C11.5952 41 11.5982 41 11.6013 41C11.6043 41 11.6074 41 11.6105 41C11.6136 41 11.6167 41 11.6198 41C11.6229 41 11.626 41 11.6291 41C11.6322 41 11.6353 41 11.6385 41C11.6416 41 11.6448 41 11.6479 41C11.6511 41 11.6543 41 11.6575 41C11.6606 41 11.6638 41 11.667 41C11.6702 41 11.6734 41 11.6767 41C11.6799 41 11.6831 41 11.6864 41C11.6896 41 11.6928 41 11.6961 41C11.6994 41 11.7026 41 11.7059 41C11.7092 41 11.7125 41 11.7158 41C11.7191 41 11.7224 41 11.7257 41C11.729 41 11.7323 41 11.7357 41C11.739 41 11.7424 41 11.7457 41C11.7491 41 11.7524 41 11.7558 41C11.7592 41 11.7626 41 11.766 41C11.7694 41 11.7728 41 11.7762 41C11.7796 41 11.783 41 11.7864 41C11.7899 41 11.7933 41 11.7968 41C11.8002 41 11.8037 41 11.8071 41C11.8106 41 11.8141 41 11.8176 41C11.8211 41 11.8246 41 11.8281 41C11.8316 41 11.8351 41 11.8386 41C11.8421 41 11.8457 41 11.8492 41C11.8527 41 11.8563 41 11.8599 41C11.8634 41 11.867 41 11.8706 41C11.8741 41 11.8777 41 11.8813 41C11.8849 41 11.8885 41 11.8921 41C11.8957 41 11.8994 41 11.903 41C11.9066 41 11.9103 41 11.9139 41C11.9176 41 11.9212 41 11.9249 41C11.9286 41 11.9322 41 11.9359 41C11.9396 41 11.9433 41 11.947 41C11.9507 41 11.9544 41 11.9581 41C11.9619 41 11.9656 41 11.9693 41C11.9731 41 11.9768 41 11.9806 41C11.9843 41 11.9881 41 11.9918 41C11.9956 41 11.9994 41 12.0032 41C12.007 41 12.0108 41 12.0146 41C12.0184 41 12.0222 41 12.026 41C12.0298 41 12.0337 41 12.0375 41C12.0413 41 12.0452 41 12.049 41C12.0529 41 12.0567 41 12.0606 41C12.0645 41 12.0684 41 12.0723 41C12.0761 41 12.08 41 12.0839 41C12.0878 41 12.0918 41 12.0957 41C12.0996 41 12.1035 41 12.1075 41C12.1114 41 12.1154 41 12.1193 41C12.1233 41 12.1272 41 12.1312 41C12.1352 41 12.1391 41 12.1431 41C12.1471 41 12.1511 41 12.1551 41C12.1591 41 12.1631 41 12.1671 41C12.1711 41 12.1752 41 12.1792 41C12.1832 41 12.1873 41 12.1913 41C12.1954 41 12.1994 41 12.2035 41C12.2075 41 12.2116 41 12.2157 41C12.2198 41 12.2239 41 12.228 41C12.2321 41 12.2362 41 12.2403 41C12.2444 41 12.2485 41 12.2526 41C12.2567 41 12.2609 41 12.265 41C12.2692 41 12.2733 41 12.2775 41C12.2816 41 12.2858 41 12.2899 41C12.2941 41 12.2983 41 12.3025 41C12.3067 41 12.3109 41 12.3151 41C12.3193 41 12.3235 41 12.3277 41C12.3319 41 12.3361 41 12.3403 41C12.3446 41 12.3488 41 12.3531 41C12.3573 41 12.3615 41 12.3658 41C12.3701 41 12.3743 41 12.3786 41C12.3829 41 12.3871 41 12.3914 41C12.3957 41 12.4 41 12.4043 41C12.4086 41 12.4129 41 12.4172 41C12.4216 41 12.4259 41 12.4302 41C12.4345 41 12.4389 41 12.4432 41C12.4476 41 12.4519 41 12.4563 41C12.4606 41 12.465 41 12.4694 41C12.4737 41 12.4781 41 12.4825 41C12.4869 41 12.4913 41 12.4957 41C12.5001 41 12.5045 41 12.5089 41C12.5133 41 12.5177 41 12.5221 41C12.5265 41 12.531 41 12.5354 41C12.5399 41 12.5443 41 12.5487 41C12.5532 41 12.5577 41 12.5621 41C12.5666 41 12.5711 41 12.5755 41C12.58 41 12.5845 41 12.589 41C12.5935 41 12.598 41 12.6025 41C12.607 41 12.6115 41 12.616 41C12.6205 41 12.625 41 12.6296 41C12.6341 41 12.6386 41 12.6432 41C12.6477 41 12.6523 41 12.6568 41C12.6614 41 12.6659 41 12.6705 41C12.6751 41 12.6796 41 12.6842 41C12.6888 41 12.6934 41 12.698 41C12.7026 41 12.7072 41 12.7118 41C12.7164 41 12.721 41 12.7256 41C12.7302 41 12.7348 41 12.7394 41C12.7441 41 12.7487 41 12.7533 41C12.758 41 12.7626 41 12.7673 41C12.7719 41 12.7766 41 12.7813 41C12.7859 41 12.7906 41 12.7953 41C12.7999 41 12.8046 41 12.8093 41C12.814 41 12.8187 41 12.8234 41C12.8281 41 12.8328 41 12.8375 41C12.8422 41 12.8469 41 12.8516 41C12.8563 41 12.8611 41 12.8658 41C12.8705 41 12.8753 41 12.88 41C12.8848 41 12.8895 41 12.8943 41C12.899 41 12.9038 41 12.9085 41C12.9133 41 12.9181 41 12.9229 41C12.9276 41 12.9324 41 12.9372 41C12.942 41 12.9468 41 12.9516 41C12.9564 41 12.9612 41 12.966 41C12.9708 41 12.9756 41 12.9804 41C12.9852 41 12.9901 41 12.9949 41C12.9997 41 13.0046 41 13.0094 41C13.0142 41 13.0191 41 13.0239 41C13.0288 41 13.0336 41 13.0385 41C13.0434 41 13.0482 41 13.0531 41C13.058 41 13.0628 41 13.0677 41C13.0726 41 13.0775 41 13.0824 41C13.0873 41 13.0922 41 13.0971 41C13.102 41 13.1069 41 13.1118 41C13.1167 41 13.1216 41 13.1265 41C13.1314 41 13.1364 41 13.1413 41C13.1462 41 13.1511 41 13.1561 41C13.161 41 13.166 41 13.1709 41C13.1759 41 13.1808 41 13.1858 41C13.1907 41 13.1957 41 13.2007 41C13.2056 41 13.2106 41 13.2156 41C13.2205 41 13.2255 41 13.2305 41C13.2355 41 13.2405 41 13.2455 41C13.2505 41 13.2555 41 13.2605 41C13.2655 41 13.2705 41 13.2755 41C13.2805 41 13.2855 41 13.2905 41C13.2956 41 13.3006 41 13.3056 41C13.3107 41 13.3157 41 13.3207 41C13.3258 41 13.3308 41 13.3359 41C13.3409 41 13.3459 41 13.351 41C13.3561 41 13.3611 41 13.3662 41C13.3712 41 13.3763 41 13.3814 41C13.3865 41 13.3915 41 13.3966 41C13.4017 41 13.4068 41 13.4119 41C13.4169 41 13.422 41 13.4271 41C13.4322 41 13.4373 41 13.4424 41C13.4475 41 13.4526 41 13.4578 41C13.4629 41 13.468 41 13.4731 41C13.4782 41 13.4833 41 13.4885 41C13.4936 41 13.4987 41 13.5039 41C13.509 41 13.5141 41 13.5193 41C13.5244 41 13.5296 41 13.5347 41C13.5399 41 13.545 41 13.5502 41C13.5553 41 13.5605 41 13.5657 41C13.5708 41 13.576 41 13.5812 41C13.5863 41 13.5915 41 13.5967 41C13.6019 41 13.607 41 13.6122 41C13.6174 41 13.6226 41 13.6278 41C13.633 41 13.6382 41 13.6434 41C13.6486 41 13.6538 41 13.659 41C13.6642 41 13.6694 41 13.6746 41C13.6798 41 13.685 41 13.6902 41C13.6955 41 13.7007 41 13.7059 41C13.7111 41 13.7164 41 13.7216 41C13.7268 41 13.7321 41 13.7373 41C13.7425 41 13.7478 41 13.753 41C13.7583 41 13.7635 41 13.7688 41C13.774 41 13.7793 41 13.7845 41C13.7898 41 13.795 41 13.8003 41C13.8056 41 13.8108 41 13.8161 41C13.8214 41 13.8266 41 13.8319 41C13.8372 41 13.8424 41 13.8477 41C13.853 41 13.8583 41 13.8636 41C13.8689 41 13.8741 41 13.8794 41C13.8847 41 13.89 41 13.8953 41C13.9006 41 13.9059 41 13.9112 41C13.9165 41 13.9218 41 13.9271 41C13.9324 41 13.9377 41 13.943 41C13.9484 41 13.9537 41 13.959 41C13.9643 41 13.9696 41 13.9749 41C13.9803 41 13.9856 41 13.9909 41C13.9962 41 14.0016 41 14.0069 41C14.0122 41 14.0176 41 14.0229 41C14.0282 41 14.0336 41 14.0389 41C14.0443 41 14.0496 41 14.0549 41C14.0603 41 14.0656 41 14.071 41C14.0763 41 14.0817 41 14.087 41C14.0924 41 14.0977 41 14.1031 41C14.1085 41 14.1138 41 14.1192 41C14.1245 41 14.1299 41 14.1353 41C14.1406 41 14.146 41 14.1514 41C14.1568 41 14.1621 41 14.1675 41C14.1729 41 14.1783 41 14.1836 41C14.189 41 14.1944 41 14.1998 41C14.2052 41 14.2105 41 14.2159 41C14.2213 41 14.2267 41 14.2321 41C14.2375 41 14.2429 41 14.2483 41C14.2537 41 14.259 41 14.2644 41C14.2698 41 14.2752 41 14.2806 41C14.286 41 14.2914 41 14.2968 41C14.3022 41 14.3076 41 14.3131 41C14.3185 41 14.3239 41 14.3293 41C14.3347 41 14.3401 41 14.3455 41C14.3509 41 14.3563 41 14.3617 41C14.3672 41 14.3726 41 14.378 41C14.3834 41 14.3888 41 14.3943 41C14.3997 41 14.4051 41 14.4105 41C14.4159 41 14.4214 41 14.4268 41C14.4322 41 14.4377 41 14.4431 41C14.4485 41 14.4539 41 14.4594 41C14.4648 41 14.4702 41 14.4757 41C14.4811 41 14.4865 41 14.492 41C14.4974 41 14.5028 41 14.5083 41C14.5137 41 14.5192 41 14.5246 41C14.53 41 14.5355 41 14.5409 41C14.5464 41 14.5518 41 14.5572 41C14.5627 41 14.5681 41 14.5736 41C14.579 41 14.5845 41 14.5899 41C14.5954 41 14.6008 41 14.6063 41C14.6117 41 14.6172 41 14.6226 41C14.6281 41 14.6335 41 14.639 41C14.6444 41 14.6499 41 14.6553 41C14.6608 41 14.6662 41 14.6717 41C14.6771 41 14.6826 41 14.688 41C14.6935 41 14.699 41 14.7044 41C14.7099 41 14.7153 41 14.7208 41C14.7262 41 14.7317 41 14.7372 41C14.7426 41 14.7481 41 14.7535 41C14.759 41 14.7645 41 14.7699 41C14.7754 41 14.7808 41 14.7863 41C14.7918 41 14.7972 41 14.8027 41C14.8081 41 14.8136 41 14.8191 41C14.8245 41 14.83 41 14.8355 41C14.8409 41 14.8464 41 14.8518 41C14.8573 41 14.8628 41 14.8682 41C14.8737 41 14.8792 41 14.8846 41C14.8901 41 14.8956 41 14.901 41C14.9065 41 14.9119 41 14.9174 41C14.9229 41 14.9283 41 14.9338 41C14.9393 41 14.9447 41 14.9502 41C14.9557 41 14.9611 41 14.9666 41C14.972 41 14.9775 41 14.983 41C14.9884 41 14.9939 41 14.9994 41C15.0048 41 15.0103 41 15.0157 41C15.0212 41 15.0267 41 15.0321 41C15.0376 41 15.043 41 15.0485 41C15.054 41 15.0594 41 15.0649 41C15.0704 41 15.0758 41 15.0813 41C15.0867 41 15.0922 41 15.0976 41C15.1031 41 15.1086 41 15.114 41C15.1195 41 15.1249 41 15.1304 41C15.1358 41 15.1413 41 15.1468 41C15.1522 41 15.1577 41 15.1631 41C15.1686 41 15.174 41 15.1795 41C15.1849 41 15.1904 41 15.1958 41C15.2013 41 15.2067 41 15.2122 41C15.2176 41 15.2231 41 15.2285 41C15.234 41 15.2394 41 15.2449 41C15.2503 41 15.2557 41 15.2612 41C15.2666 41 15.2721 41 15.2775 41C15.283 41 15.2884 41 15.2938 41C15.2993 41 15.3047 41 15.3102 41C15.3156 41 15.321 41 15.3265 41C15.3319 41 15.3373 41 15.3428 41C15.3482 41 15.3536 41 15.3591 41C15.3645 41 15.3699 41 15.3754 41C15.3808 41 15.3862 41 15.3916 41C15.3971 41 15.4025 41 15.4079 41C15.4133 41 15.4188 41 15.4242 41C15.4296 41 15.435 41 15.4405 41C15.4459 41 15.4513 41 15.4567 41C15.4621 41 15.4675 41 15.4729 41C15.4784 41 15.4838 41 15.4892 41C15.4946 41 15.5 41 15.5054 41C15.5108 41 15.5162 41 15.5216 41C15.527 41 15.5324 41 15.5378 41C15.5432 41 15.5486 41 15.554 41C15.5594 41 15.5648 41 15.5702 41C15.5756 41 15.581 41 15.5864 41C15.5918 41 15.5972 41 15.6025 41C15.6079 41 15.6133 41 15.6187 41C15.6241 41 15.6295 41 15.6348 41C15.6402 41 15.6456 41 15.651 41C15.6563 41 15.6617 41 15.6671 41C15.6725 41 15.6778 41 15.6832 41C15.6886 41 15.6939 41 15.6993 41C15.7047 41 15.71 41 15.7154 41C15.7207 41 15.7261 41 15.7314 41C15.7368 41 15.7421 41 15.7475 41C15.7528 41 15.7582 41 15.7635 41C15.7689 41 15.7742 41 15.7796 41C15.7849 41 15.7903 41 15.7956 41C15.8009 41 15.8063 41 15.8116 41C15.8169 41 15.8223 41 15.8276 41C15.8329 41 15.8382 41 15.8436 41C15.8489 41 15.8542 41 15.8595 41C15.8648 41 15.8701 41 15.8755 41C15.8808 41 15.8861 41 15.8914 41C15.8967 41 15.902 41 15.9073 41C15.9126 41 15.9179 41 15.9232 41C15.9285 41 15.9338 41 15.9391 41C15.9444 41 15.9497 41 15.9549 41C15.9602 41 15.9655 41 15.9708 41C15.9761 41 15.9813 41 15.9866 41C15.9919 41 15.9972 41 16.0024 41C16.0077 41 16.013 41 16.0182 41C16.0235 41 16.0287 41 16.034 41C16.0393 41 16.0445 41 16.0498 41C16.055 41 16.0603 41 16.0655 41C16.0708 41 16.076 41 16.0812 41C16.0865 41 16.0917 41 16.0969 41C16.1022 41 16.1074 41 16.1126 41C16.1179 41 16.1231 41 16.1283 41C16.1335 41 16.1387 41 16.1439 41C16.1492 41 16.1544 41 16.1596 41C16.1648 41 16.17 41 16.1752 41C16.1804 41 16.1856 41 16.1908 41C16.196 41 16.2011 41 16.2063 41C16.2115 41 16.2167 41 16.2219 41C16.2271 41 16.2322 41 16.2374 41C16.2426 41 16.2477 41 16.2529 41C16.2581 41 16.2632 41 16.2684 41C16.2736 41 16.2787 41 16.2839 41C16.289 41 16.2942 41 16.2993 41C16.3044 41 16.3096 41 16.3147 41C16.3199 41 16.325 41 16.3301 41C16.3352 41 16.3404 41 16.3455 41C16.3506 41 16.3557 41 16.3608 41C16.3659 41 16.3711 41 16.3762 41C16.3813 41 16.3864 41 16.3915 41C16.3966 41 16.4017 41 16.4067 41C16.4118 41 16.4169 41 16.422 41C16.4271 41 16.4322 41 16.4372 41C16.4423 41 16.4474 41 16.4524 41C16.4575 41 16.4626 41 16.4676 41C16.4727 41 16.4777 41 16.4828 41C16.4878 41 16.4929 41 16.4979 41C16.5029 41 16.508 41 16.513 41C16.518 41 16.5231 41 16.5281 41C16.5331 41 16.5381 41 16.5431 41C16.5481 41 16.5532 41 16.5582 41C16.5632 41 16.5682 41 16.5732 41C16.5782 41 16.5831 41 16.5881 41C16.5931 41 16.5981 41 16.6031 41C16.6081 41 16.613 41 16.618 41C16.623 41 16.6279 41 16.6329 41C16.6378 41 16.6428 41 16.6477 41C16.6527 41 16.6576 41 16.6626 41C16.6675 41 16.6725 41 16.6774 41C16.6823 41 16.6872 41 16.6922 41C16.6971 41 16.702 41 16.7069 41C16.7118 41 16.7167 41 16.7216 41C16.7265 41 16.7314 41 16.7363 41C16.7412 41 16.7461 41 16.751 41C16.7559 41 16.7607 41 16.7656 41C16.7705 41 16.7754 41 16.7802 41C16.7851 41 16.7899 41 16.7948 41C16.7996 41 16.8045 41 16.8093 41C16.8142 41 16.819 41 16.8238 41C16.8287 41 16.8335 41 16.8383 41C16.8431 41 16.8479 41 16.8527 41C16.8576 41 16.8624 41 16.8672 41C16.872 41 16.8768 41 16.8815 41C16.8863 41 16.8911 41 16.8959 41C16.9007 41 16.9054 41 16.9102 41C16.915 41 16.9197 41 16.9245 41C16.9292 41 16.934 41 16.9387 41C16.9435 41 16.9482 41 16.953 41C16.9577 41 16.9624 41 16.9671 41C16.9719 41 16.9766 41 16.9813 41C16.986 41 16.9907 41 16.9954 41C17.0001 41 17.0048 41 17.0095 41C17.0142 41 17.0189 41 17.0235 41C17.0282 41 17.0329 41 17.0375 41C17.0422 41 17.0469 41 17.0515 41C17.0562 41 17.0608 41 17.0655 41C17.0701 41 17.0747 41 17.0794 41C17.084 41 17.0886 41 17.0932 41C17.0978 41 17.1025 41 17.1071 41C17.1117 41 17.1163 41 17.1209 41C17.1254 41 17.13 41 17.1346 41C17.1392 41 17.1438 41 17.1483 41C17.1529 41 17.1575 41 17.162 41C17.1666 41 17.1711 41 17.1757 41C17.1802 41 17.1848 41 17.1893 41C17.1938 41 17.1983 41 17.2029 41C17.2074 41 17.2119 41 17.2164 41C17.2209 41 17.2254 41 17.2299 41C17.2344 41 17.2389 41 17.2433 41C17.2478 41 17.2523 41 17.2568 41C17.2612 41 17.2657 41 17.2701 41C17.2746 41 17.279 41 17.2835 41C17.2879 41 17.2924 41 17.2968 41C17.3012 41 17.3056 41 17.31 41C17.3144 41 17.3189 41 17.3233 41C17.3277 41 17.332 41 17.3364 41C17.3408 41 17.3452 41 17.3496 41C17.3539 41 17.3583 41 17.3627 41C17.367 41 17.3714 41 17.3757 41C17.3801 41 17.3844 41 17.3887 41C17.3931 41 17.3974 41 17.4017 41C17.406 41 17.4103 41 17.4146 41C17.4189 41 17.4232 41 17.4275 41C17.4318 41 17.4361 41 17.4404 41C17.4446 41 17.4489 41 17.4532 41C17.4574 41 17.4617 41 17.4659 41C17.4702 41 17.4744 41 17.4786 41C17.4829 41 17.4871 41 17.4913 41C17.4955 41 17.4997 41 17.5039 41C17.5081 41 17.5123 41 17.5165 41C17.5207 41 17.5249 41 17.5291 41C17.5332 41 17.5374 41 17.5416 41C17.5457 41 17.5499 41 17.554 41C17.5582 41 17.5623 41 17.5664 41C17.5705 41 17.5747 41 17.5788 41C17.5829 41 17.587 41 17.5911 41C17.5952 41 17.5993 41 17.6034 41C17.6074 41 17.6115 41 17.6156 41C17.6196 41 17.6237 41 17.6278 41C17.6318 41 17.6358 41 17.6399 41C17.6439 41 17.6479 41 17.652 41C17.656 41 17.66 41 17.664 41C17.668 41 17.672 41 17.676 41C17.68 41 17.6839 41 17.6879 41C17.6919 41 17.6959 41 17.6998 41C17.7038 41 17.7077 41 17.7116 41C17.7156 41 17.7195 41 17.7234 41C17.7274 41 17.7313 41 17.7352 41C17.7391 41 17.743 41 17.7469 41C17.7508 41 17.7547 41 17.7585 41C17.7624 41 17.7663 41 17.7701 41C17.774 41 17.7778 41 17.7817 41C17.7855 41 17.7893 41 17.7932 41C17.797 41 17.8008 41 17.8046 41C17.8084 41 17.8122 41 17.816 41C17.8198 41 17.8236 41 17.8274 41C17.8311 41 17.8349 41 17.8387 41C17.8424 41 17.8462 41 17.8499 41C17.8536 41 17.8574 41 17.8611 41C17.8648 41 17.8685 41 17.8722 41C17.8759 41 17.8796 41 17.8833 41C17.887 41 17.8907 41 17.8943 41C17.898 41 17.9017 41 17.9053 41C17.909 41 17.9126 41 17.9163 41C17.9199 41 17.9235 41 17.9271 41C17.9307 41 17.9344 41 17.938 41C17.9416 41 17.9451 41 17.9487 41C17.9523 41 17.9559 41 17.9594 41C17.963 41 17.9666 41 17.9701 41C17.9736 41 17.9772 41 17.9807 41C17.9842 41 17.9877 41 17.9913 41C17.9948 41 17.9983 41 18.0018 41C18.0052 41 18.0087 41 18.0122 41C18.0157 41 18.0191 41 18.0226 41C18.026 41 18.0295 41 18.0329 41V39C18.0295 39 18.026 39 18.0226 39C18.0191 39 18.0157 39 18.0122 39C18.0087 39 18.0052 39 18.0018 39C17.9983 39 17.9948 39 17.9913 39C17.9877 39 17.9842 39 17.9807 39C17.9772 39 17.9736 39 17.9701 39C17.9666 39 17.963 39 17.9594 39C17.9559 39 17.9523 39 17.9487 39C17.9451 39 17.9416 39 17.938 39C17.9344 39 17.9307 39 17.9271 39C17.9235 39 17.9199 39 17.9163 39C17.9126 39 17.909 39 17.9053 39C17.9017 39 17.898 39 17.8943 39C17.8907 39 17.887 39 17.8833 39C17.8796 39 17.8759 39 17.8722 39C17.8685 39 17.8648 39 17.8611 39C17.8574 39 17.8536 39 17.8499 39C17.8462 39 17.8424 39 17.8387 39C17.8349 39 17.8311 39 17.8274 39C17.8236 39 17.8198 39 17.816 39C17.8122 39 17.8084 39 17.8046 39C17.8008 39 17.797 39 17.7932 39C17.7893 39 17.7855 39 17.7817 39C17.7778 39 17.774 39 17.7701 39C17.7663 39 17.7624 39 17.7585 39C17.7547 39 17.7508 39 17.7469 39C17.743 39 17.7391 39 17.7352 39C17.7313 39 17.7274 39 17.7234 39C17.7195 39 17.7156 39 17.7116 39C17.7077 39 17.7038 39 17.6998 39C17.6959 39 17.6919 39 17.6879 39C17.6839 39 17.68 39 17.676 39C17.672 39 17.668 39 17.664 39C17.66 39 17.656 39 17.652 39C17.6479 39 17.6439 39 17.6399 39C17.6358 39 17.6318 39 17.6278 39C17.6237 39 17.6196 39 17.6156 39C17.6115 39 17.6074 39 17.6034 39C17.5993 39 17.5952 39 17.5911 39C17.587 39 17.5829 39 17.5788 39C17.5747 39 17.5705 39 17.5664 39C17.5623 39 17.5582 39 17.554 39C17.5499 39 17.5457 39 17.5416 39C17.5374 39 17.5332 39 17.5291 39C17.5249 39 17.5207 39 17.5165 39C17.5123 39 17.5081 39 17.5039 39C17.4997 39 17.4955 39 17.4913 39C17.4871 39 17.4829 39 17.4786 39C17.4744 39 17.4702 39 17.4659 39C17.4617 39 17.4574 39 17.4532 39C17.4489 39 17.4446 39 17.4404 39C17.4361 39 17.4318 39 17.4275 39C17.4232 39 17.4189 39 17.4146 39C17.4103 39 17.406 39 17.4017 39C17.3974 39 17.3931 39 17.3887 39C17.3844 39 17.3801 39 17.3757 39C17.3714 39 17.367 39 17.3627 39C17.3583 39 17.3539 39 17.3496 39C17.3452 39 17.3408 39 17.3364 39C17.332 39 17.3277 39 17.3233 39C17.3189 39 17.3144 39 17.31 39C17.3056 39 17.3012 39 17.2968 39C17.2924 39 17.2879 39 17.2835 39C17.279 39 17.2746 39 17.2701 39C17.2657 39 17.2612 39 17.2568 39C17.2523 39 17.2478 39 17.2433 39C17.2389 39 17.2344 39 17.2299 39C17.2254 39 17.2209 39 17.2164 39C17.2119 39 17.2074 39 17.2029 39C17.1983 39 17.1938 39 17.1893 39C17.1848 39 17.1802 39 17.1757 39C17.1711 39 17.1666 39 17.162 39C17.1575 39 17.1529 39 17.1483 39C17.1438 39 17.1392 39 17.1346 39C17.13 39 17.1254 39 17.1209 39C17.1163 39 17.1117 39 17.1071 39C17.1025 39 17.0978 39 17.0932 39C17.0886 39 17.084 39 17.0794 39C17.0747 39 17.0701 39 17.0655 39C17.0608 39 17.0562 39 17.0515 39C17.0469 39 17.0422 39 17.0375 39C17.0329 39 17.0282 39 17.0235 39C17.0189 39 17.0142 39 17.0095 39C17.0048 39 17.0001 39 16.9954 39C16.9907 39 16.986 39 16.9813 39C16.9766 39 16.9719 39 16.9671 39C16.9624 39 16.9577 39 16.953 39C16.9482 39 16.9435 39 16.9387 39C16.934 39 16.9292 39 16.9245 39C16.9197 39 16.915 39 16.9102 39C16.9054 39 16.9007 39 16.8959 39C16.8911 39 16.8863 39 16.8815 39C16.8768 39 16.872 39 16.8672 39C16.8624 39 16.8576 39 16.8527 39C16.8479 39 16.8431 39 16.8383 39C16.8335 39 16.8287 39 16.8238 39C16.819 39 16.8142 39 16.8093 39C16.8045 39 16.7996 39 16.7948 39C16.7899 39 16.7851 39 16.7802 39C16.7754 39 16.7705 39 16.7656 39C16.7607 39 16.7559 39 16.751 39C16.7461 39 16.7412 39 16.7363 39C16.7314 39 16.7265 39 16.7216 39C16.7167 39 16.7118 39 16.7069 39C16.702 39 16.6971 39 16.6922 39C16.6872 39 16.6823 39 16.6774 39C16.6725 39 16.6675 39 16.6626 39C16.6576 39 16.6527 39 16.6477 39C16.6428 39 16.6378 39 16.6329 39C16.6279 39 16.623 39 16.618 39C16.613 39 16.6081 39 16.6031 39C16.5981 39 16.5931 39 16.5881 39C16.5831 39 16.5782 39 16.5732 39C16.5682 39 16.5632 39 16.5582 39C16.5532 39 16.5481 39 16.5431 39C16.5381 39 16.5331 39 16.5281 39C16.5231 39 16.518 39 16.513 39C16.508 39 16.5029 39 16.4979 39C16.4929 39 16.4878 39 16.4828 39C16.4777 39 16.4727 39 16.4676 39C16.4626 39 16.4575 39 16.4524 39C16.4474 39 16.4423 39 16.4372 39C16.4322 39 16.4271 39 16.422 39C16.4169 39 16.4118 39 16.4067 39C16.4017 39 16.3966 39 16.3915 39C16.3864 39 16.3813 39 16.3762 39C16.3711 39 16.3659 39 16.3608 39C16.3557 39 16.3506 39 16.3455 39C16.3404 39 16.3352 39 16.3301 39C16.325 39 16.3199 39 16.3147 39C16.3096 39 16.3044 39 16.2993 39C16.2942 39 16.289 39 16.2839 39C16.2787 39 16.2736 39 16.2684 39C16.2632 39 16.2581 39 16.2529 39C16.2477 39 16.2426 39 16.2374 39C16.2322 39 16.2271 39 16.2219 39C16.2167 39 16.2115 39 16.2063 39C16.2011 39 16.196 39 16.1908 39C16.1856 39 16.1804 39 16.1752 39C16.17 39 16.1648 39 16.1596 39C16.1544 39 16.1492 39 16.1439 39C16.1387 39 16.1335 39 16.1283 39C16.1231 39 16.1179 39 16.1126 39C16.1074 39 16.1022 39 16.0969 39C16.0917 39 16.0865 39 16.0812 39C16.076 39 16.0708 39 16.0655 39C16.0603 39 16.055 39 16.0498 39C16.0445 39 16.0393 39 16.034 39C16.0287 39 16.0235 39 16.0182 39C16.013 39 16.0077 39 16.0024 39C15.9972 39 15.9919 39 15.9866 39C15.9813 39 15.9761 39 15.9708 39C15.9655 39 15.9602 39 15.9549 39C15.9497 39 15.9444 39 15.9391 39C15.9338 39 15.9285 39 15.9232 39C15.9179 39 15.9126 39 15.9073 39C15.902 39 15.8967 39 15.8914 39C15.8861 39 15.8808 39 15.8755 39C15.8701 39 15.8648 39 15.8595 39C15.8542 39 15.8489 39 15.8436 39C15.8382 39 15.8329 39 15.8276 39C15.8223 39 15.8169 39 15.8116 39C15.8063 39 15.8009 39 15.7956 39C15.7903 39 15.7849 39 15.7796 39C15.7742 39 15.7689 39 15.7635 39C15.7582 39 15.7528 39 15.7475 39C15.7421 39 15.7368 39 15.7314 39C15.7261 39 15.7207 39 15.7154 39C15.71 39 15.7047 39 15.6993 39C15.6939 39 15.6886 39 15.6832 39C15.6778 39 15.6725 39 15.6671 39C15.6617 39 15.6563 39 15.651 39C15.6456 39 15.6402 39 15.6348 39C15.6295 39 15.6241 39 15.6187 39C15.6133 39 15.6079 39 15.6025 39C15.5972 39 15.5918 39 15.5864 39C15.581 39 15.5756 39 15.5702 39C15.5648 39 15.5594 39 15.554 39C15.5486 39 15.5432 39 15.5378 39C15.5324 39 15.527 39 15.5216 39C15.5162 39 15.5108 39 15.5054 39C15.5 39 15.4946 39 15.4892 39C15.4838 39 15.4784 39 15.4729 39C15.4675 39 15.4621 39 15.4567 39C15.4513 39 15.4459 39 15.4405 39C15.435 39 15.4296 39 15.4242 39C15.4188 39 15.4133 39 15.4079 39C15.4025 39 15.3971 39 15.3916 39C15.3862 39 15.3808 39 15.3754 39C15.3699 39 15.3645 39 15.3591 39C15.3536 39 15.3482 39 15.3428 39C15.3373 39 15.3319 39 15.3265 39C15.321 39 15.3156 39 15.3102 39C15.3047 39 15.2993 39 15.2938 39C15.2884 39 15.283 39 15.2775 39C15.2721 39 15.2666 39 15.2612 39C15.2557 39 15.2503 39 15.2449 39C15.2394 39 15.234 39 15.2285 39C15.2231 39 15.2176 39 15.2122 39C15.2067 39 15.2013 39 15.1958 39C15.1904 39 15.1849 39 15.1795 39C15.174 39 15.1686 39 15.1631 39C15.1577 39 15.1522 39 15.1468 39C15.1413 39 15.1358 39 15.1304 39C15.1249 39 15.1195 39 15.114 39C15.1086 39 15.1031 39 15.0976 39C15.0922 39 15.0867 39 15.0813 39C15.0758 39 15.0704 39 15.0649 39C15.0594 39 15.054 39 15.0485 39C15.043 39 15.0376 39 15.0321 39C15.0267 39 15.0212 39 15.0157 39C15.0103 39 15.0048 39 14.9994 39C14.9939 39 14.9884 39 14.983 39C14.9775 39 14.972 39 14.9666 39C14.9611 39 14.9557 39 14.9502 39C14.9447 39 14.9393 39 14.9338 39C14.9283 39 14.9229 39 14.9174 39C14.9119 39 14.9065 39 14.901 39C14.8956 39 14.8901 39 14.8846 39C14.8792 39 14.8737 39 14.8682 39C14.8628 39 14.8573 39 14.8518 39C14.8464 39 14.8409 39 14.8355 39C14.83 39 14.8245 39 14.8191 39C14.8136 39 14.8081 39 14.8027 39C14.7972 39 14.7918 39 14.7863 39C14.7808 39 14.7754 39 14.7699 39C14.7645 39 14.759 39 14.7535 39C14.7481 39 14.7426 39 14.7372 39C14.7317 39 14.7262 39 14.7208 39C14.7153 39 14.7099 39 14.7044 39C14.699 39 14.6935 39 14.688 39C14.6826 39 14.6771 39 14.6717 39C14.6662 39 14.6608 39 14.6553 39C14.6499 39 14.6444 39 14.639 39C14.6335 39 14.6281 39 14.6226 39C14.6172 39 14.6117 39 14.6063 39C14.6008 39 14.5954 39 14.5899 39C14.5845 39 14.579 39 14.5736 39C14.5681 39 14.5627 39 14.5572 39C14.5518 39 14.5464 39 14.5409 39C14.5355 39 14.53 39 14.5246 39C14.5192 39 14.5137 39 14.5083 39C14.5028 39 14.4974 39 14.492 39C14.4865 39 14.4811 39 14.4757 39C14.4702 39 14.4648 39 14.4594 39C14.4539 39 14.4485 39 14.4431 39C14.4377 39 14.4322 39 14.4268 39C14.4214 39 14.4159 39 14.4105 39C14.4051 39 14.3997 39 14.3943 39C14.3888 39 14.3834 39 14.378 39C14.3726 39 14.3672 39 14.3617 39C14.3563 39 14.3509 39 14.3455 39C14.3401 39 14.3347 39 14.3293 39C14.3239 39 14.3185 39 14.3131 39C14.3076 39 14.3022 39 14.2968 39C14.2914 39 14.286 39 14.2806 39C14.2752 39 14.2698 39 14.2644 39C14.259 39 14.2537 39 14.2483 39C14.2429 39 14.2375 39 14.2321 39C14.2267 39 14.2213 39 14.2159 39C14.2105 39 14.2052 39 14.1998 39C14.1944 39 14.189 39 14.1836 39C14.1783 39 14.1729 39 14.1675 39C14.1621 39 14.1568 39 14.1514 39C14.146 39 14.1406 39 14.1353 39C14.1299 39 14.1245 39 14.1192 39C14.1138 39 14.1085 39 14.1031 39C14.0977 39 14.0924 39 14.087 39C14.0817 39 14.0763 39 14.071 39C14.0656 39 14.0603 39 14.0549 39C14.0496 39 14.0443 39 14.0389 39C14.0336 39 14.0282 39 14.0229 39C14.0176 39 14.0122 39 14.0069 39C14.0016 39 13.9962 39 13.9909 39C13.9856 39 13.9803 39 13.9749 39C13.9696 39 13.9643 39 13.959 39C13.9537 39 13.9484 39 13.943 39C13.9377 39 13.9324 39 13.9271 39C13.9218 39 13.9165 39 13.9112 39C13.9059 39 13.9006 39 13.8953 39C13.89 39 13.8847 39 13.8794 39C13.8741 39 13.8689 39 13.8636 39C13.8583 39 13.853 39 13.8477 39C13.8424 39 13.8372 39 13.8319 39C13.8266 39 13.8214 39 13.8161 39C13.8108 39 13.8056 39 13.8003 39C13.795 39 13.7898 39 13.7845 39C13.7793 39 13.774 39 13.7688 39C13.7635 39 13.7583 39 13.753 39C13.7478 39 13.7425 39 13.7373 39C13.7321 39 13.7268 39 13.7216 39C13.7164 39 13.7111 39 13.7059 39C13.7007 39 13.6955 39 13.6902 39C13.685 39 13.6798 39 13.6746 39C13.6694 39 13.6642 39 13.659 39C13.6538 39 13.6486 39 13.6434 39C13.6382 39 13.633 39 13.6278 39C13.6226 39 13.6174 39 13.6122 39C13.607 39 13.6019 39 13.5967 39C13.5915 39 13.5863 39 13.5812 39C13.576 39 13.5708 39 13.5657 39C13.5605 39 13.5553 39 13.5502 39C13.545 39 13.5399 39 13.5347 39C13.5296 39 13.5244 39 13.5193 39C13.5141 39 13.509 39 13.5039 39C13.4987 39 13.4936 39 13.4885 39C13.4833 39 13.4782 39 13.4731 39C13.468 39 13.4629 39 13.4578 39C13.4526 39 13.4475 39 13.4424 39C13.4373 39 13.4322 39 13.4271 39C13.422 39 13.4169 39 13.4119 39C13.4068 39 13.4017 39 13.3966 39C13.3915 39 13.3865 39 13.3814 39C13.3763 39 13.3712 39 13.3662 39C13.3611 39 13.3561 39 13.351 39C13.3459 39 13.3409 39 13.3359 39C13.3308 39 13.3258 39 13.3207 39C13.3157 39 13.3107 39 13.3056 39C13.3006 39 13.2956 39 13.2905 39C13.2855 39 13.2805 39 13.2755 39C13.2705 39 13.2655 39 13.2605 39C13.2555 39 13.2505 39 13.2455 39C13.2405 39 13.2355 39 13.2305 39C13.2255 39 13.2205 39 13.2156 39C13.2106 39 13.2056 39 13.2007 39C13.1957 39 13.1907 39 13.1858 39C13.1808 39 13.1759 39 13.1709 39C13.166 39 13.161 39 13.1561 39C13.1511 39 13.1462 39 13.1413 39C13.1364 39 13.1314 39 13.1265 39C13.1216 39 13.1167 39 13.1118 39C13.1069 39 13.102 39 13.0971 39C13.0922 39 13.0873 39 13.0824 39C13.0775 39 13.0726 39 13.0677 39C13.0628 39 13.058 39 13.0531 39C13.0482 39 13.0434 39 13.0385 39C13.0336 39 13.0288 39 13.0239 39C13.0191 39 13.0142 39 13.0094 39C13.0046 39 12.9997 39 12.9949 39C12.9901 39 12.9852 39 12.9804 39C12.9756 39 12.9708 39 12.966 39C12.9612 39 12.9564 39 12.9516 39C12.9468 39 12.942 39 12.9372 39C12.9324 39 12.9276 39 12.9229 39C12.9181 39 12.9133 39 12.9085 39C12.9038 39 12.899 39 12.8943 39C12.8895 39 12.8848 39 12.88 39C12.8753 39 12.8705 39 12.8658 39C12.8611 39 12.8563 39 12.8516 39C12.8469 39 12.8422 39 12.8375 39C12.8328 39 12.8281 39 12.8234 39C12.8187 39 12.814 39 12.8093 39C12.8046 39 12.7999 39 12.7953 39C12.7906 39 12.7859 39 12.7813 39C12.7766 39 12.7719 39 12.7673 39C12.7626 39 12.758 39 12.7533 39C12.7487 39 12.7441 39 12.7394 39C12.7348 39 12.7302 39 12.7256 39C12.721 39 12.7164 39 12.7118 39C12.7072 39 12.7026 39 12.698 39C12.6934 39 12.6888 39 12.6842 39C12.6796 39 12.6751 39 12.6705 39C12.6659 39 12.6614 39 12.6568 39C12.6523 39 12.6477 39 12.6432 39C12.6386 39 12.6341 39 12.6296 39C12.625 39 12.6205 39 12.616 39C12.6115 39 12.607 39 12.6025 39C12.598 39 12.5935 39 12.589 39C12.5845 39 12.58 39 12.5755 39C12.5711 39 12.5666 39 12.5621 39C12.5577 39 12.5532 39 12.5487 39C12.5443 39 12.5399 39 12.5354 39C12.531 39 12.5265 39 12.5221 39C12.5177 39 12.5133 39 12.5089 39C12.5045 39 12.5001 39 12.4957 39C12.4913 39 12.4869 39 12.4825 39C12.4781 39 12.4737 39 12.4694 39C12.465 39 12.4606 39 12.4563 39C12.4519 39 12.4476 39 12.4432 39C12.4389 39 12.4345 39 12.4302 39C12.4259 39 12.4216 39 12.4172 39C12.4129 39 12.4086 39 12.4043 39C12.4 39 12.3957 39 12.3914 39C12.3871 39 12.3829 39 12.3786 39C12.3743 39 12.3701 39 12.3658 39C12.3615 39 12.3573 39 12.3531 39C12.3488 39 12.3446 39 12.3403 39C12.3361 39 12.3319 39 12.3277 39C12.3235 39 12.3193 39 12.3151 39C12.3109 39 12.3067 39 12.3025 39C12.2983 39 12.2941 39 12.2899 39C12.2858 39 12.2816 39 12.2775 39C12.2733 39 12.2692 39 12.265 39C12.2609 39 12.2567 39 12.2526 39C12.2485 39 12.2444 39 12.2403 39C12.2362 39 12.2321 39 12.228 39C12.2239 39 12.2198 39 12.2157 39C12.2116 39 12.2075 39 12.2035 39C12.1994 39 12.1954 39 12.1913 39C12.1873 39 12.1832 39 12.1792 39C12.1752 39 12.1711 39 12.1671 39C12.1631 39 12.1591 39 12.1551 39C12.1511 39 12.1471 39 12.1431 39C12.1391 39 12.1352 39 12.1312 39C12.1272 39 12.1233 39 12.1193 39C12.1154 39 12.1114 39 12.1075 39C12.1035 39 12.0996 39 12.0957 39C12.0918 39 12.0878 39 12.0839 39C12.08 39 12.0761 39 12.0723 39C12.0684 39 12.0645 39 12.0606 39C12.0567 39 12.0529 39 12.049 39C12.0452 39 12.0413 39 12.0375 39C12.0337 39 12.0298 39 12.026 39C12.0222 39 12.0184 39 12.0146 39C12.0108 39 12.007 39 12.0032 39C11.9994 39 11.9956 39 11.9918 39C11.9881 39 11.9843 39 11.9806 39C11.9768 39 11.9731 39 11.9693 39C11.9656 39 11.9619 39 11.9581 39C11.9544 39 11.9507 39 11.947 39C11.9433 39 11.9396 39 11.9359 39C11.9322 39 11.9286 39 11.9249 39C11.9212 39 11.9176 39 11.9139 39C11.9103 39 11.9066 39 11.903 39C11.8994 39 11.8957 39 11.8921 39C11.8885 39 11.8849 39 11.8813 39C11.8777 39 11.8741 39 11.8706 39C11.867 39 11.8634 39 11.8599 39C11.8563 39 11.8527 39 11.8492 39C11.8457 39 11.8421 39 11.8386 39C11.8351 39 11.8316 39 11.8281 39C11.8246 39 11.8211 39 11.8176 39C11.8141 39 11.8106 39 11.8071 39C11.8037 39 11.8002 39 11.7968 39C11.7933 39 11.7899 39 11.7864 39C11.783 39 11.7796 39 11.7762 39C11.7728 39 11.7694 39 11.766 39C11.7626 39 11.7592 39 11.7558 39C11.7524 39 11.7491 39 11.7457 39C11.7424 39 11.739 39 11.7357 39C11.7323 39 11.729 39 11.7257 39C11.7224 39 11.7191 39 11.7158 39C11.7125 39 11.7092 39 11.7059 39C11.7026 39 11.6994 39 11.6961 39C11.6928 39 11.6896 39 11.6864 39C11.6831 39 11.6799 39 11.6767 39C11.6734 39 11.6702 39 11.667 39C11.6638 39 11.6606 39 11.6575 39C11.6543 39 11.6511 39 11.6479 39C11.6448 39 11.6416 39 11.6385 39C11.6353 39 11.6322 39 11.6291 39C11.626 39 11.6229 39 11.6198 39C11.6167 39 11.6136 39 11.6105 39C11.6074 39 11.6043 39 11.6013 39C11.5982 39 11.5952 39 11.5921 39C11.5891 39 11.5861 39 11.583 39C11.58 39 11.577 39 11.574 39C11.571 39 11.568 39 11.565 39C11.5621 39 11.5591 39 11.5561 39C11.5532 39 11.5502 39 11.5473 39C11.5444 39 11.5414 39 11.5385 39C11.5356 39 11.5327 39 11.5298 39C11.5269 39 11.524 39 11.5211 39C11.5183 39 11.5154 39 11.5125 39C11.5097 39 11.5069 39 11.504 39C11.5012 39 11.4984 39 11.4956 39C11.4927 39 11.4899 39 11.4872 39C11.4844 39 11.4816 39 11.4788 39C11.4761 39 11.4733 39 11.4705 39C11.4678 39 11.4651 39 11.4623 39C11.4596 39 11.4569 39 11.4542 39C11.4515 39 11.4488 39 11.4461 39C11.4434 39 11.4408 39 11.4381 39C11.4355 39 11.4328 39 11.4302 39C11.4275 39 11.4249 39 11.4223 39C11.4197 39 11.4171 39 11.4145 39C11.4119 39 11.4093 39 11.4067 39C11.4042 39 11.4016 39 11.3991 39C11.3965 39 11.394 39 11.3914 39C11.3889 39 11.3864 39 11.3839 39C11.3814 39 11.3789 39 11.3764 39C11.3739 39 11.3715 39 11.369 39C11.3666 39 11.3641 39 11.3617 39C11.3592 39 11.3568 39 11.3544 39C11.352 39 11.3496 39 11.3472 39C11.3448 39 11.3424 39 11.3401 39C11.3377 39 11.3353 39 11.333 39C11.3307 39 11.3283 39 11.326 39C11.3237 39 11.3214 39 11.3191 39C11.3168 39 11.3145 39 11.3122 39C11.3099 39 11.3077 39 11.3054 39C11.3032 39 11.3009 39 11.2987 39C11.2965 39 11.2943 39 11.2921 39C11.2899 39 11.2877 39 11.2855 39C11.2833 39 11.2812 39 11.279 39C11.2768 39 11.2747 39 11.2726 39C11.2704 39 11.2683 39 11.2662 39C11.2641 39 11.262 39 11.2599 39C11.2578 39 11.2558 39 11.2537 39C11.2516 39 11.2496 39 11.2476 39C11.2455 39 11.2435 39 11.2415 39C11.2395 39 11.2375 39 11.2355 39C11.2335 39 11.2315 39 11.2296 39C11.2276 39 11.2257 39 11.2237 39C11.2218 39 11.2199 39 11.2179 39C11.216 39 11.2141 39 11.2122 39C11.2104 39 11.2085 39 11.2066 39C11.2048 39 11.2029 39 11.2011 39C11.1992 39 11.1974 39 11.1956 39C11.1938 39 11.192 39 11.1902 39C11.1884 39 11.1866 39 11.1849 39C11.1831 39 11.1813 39 11.1796 39V41ZM19.0211 40.153L20.5281 30.4163L18.5517 30.1104L17.0447 39.847L19.0211 40.153ZM20.5266 30.4261C20.5458 30.3094 20.5792 30.2619 20.6081 30.2362C20.632 30.2149 20.7787 30.095 21.2622 30.095V28.095C20.4423 28.095 19.7696 28.3054 19.2792 28.7415C18.7938 29.1732 18.6177 29.7099 18.5533 30.1006L20.5266 30.4261ZM31.2013 12.4625C32.8519 12.4624 36.9328 15.5137 33.9511 22.0593L35.7712 22.8884C39.1764 15.413 34.7175 10.4624 31.2013 10.4625L31.2013 12.4625ZM33.9511 22.0593C32.4208 25.4187 30.2899 26.8794 28.0935 27.5464C25.8075 28.2405 23.4307 28.095 21.2622 28.095V30.095C23.2559 30.095 26.0273 30.264 28.6746 29.4601C31.4114 28.6291 33.9988 26.7792 35.7712 22.8884L33.9511 22.0593Z"
+                            fill="#80FFEC"/>
+                    </g>
+                    <defs>
+                        <filter id="filter0_d_507_355" x="0" y="0" width="41.9883" height="46" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                            <feFlood floodOpacity="0" result="BackgroundImageFix"/>
+                            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                            <feOffset/>
+                            <feGaussianBlur stdDeviation="2.5"/>
+                            <feColorMatrix type="matrix" values="0 0 0 0 0.203922 0 0 0 0 0.933333 0 0 0 0 1 0 0 0 1 0"/>
+                            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_507_355"/>
+                            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_507_355" result="shape"/>
+                        </filter>
+                    </defs>
+                </svg>
+            </a>
         </>
     );
 };
