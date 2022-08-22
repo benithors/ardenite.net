@@ -1,10 +1,4 @@
 import React, {useEffect, useState} from 'react'
-import SeboWana from "../public/static/images/SeboWana.png";
-import SeboGuitar from "../public/static/images/SeboGuitar.png";
-
-import Image from "next/image";
-
-import Mask from "../public/static/images/mask.png";
 import CrossFadeImage from "./CrossFadeImage";
 
 interface IProps {
@@ -48,11 +42,14 @@ const CrossFade = (props: IProps) => {
     return (
         <div className={'w-screen  flex flex-col items-center h-[calc(100vh)] relative overflow-hidden  '}>
             {props.children}
-            <CrossFadeImage animate={animStatusInstance === animStatus.ONE || animStatusInstance === animStatus.TWO} animateOpacity={animStatusInstance === animStatus.ONE} backgroundImage={("bg-[url('/static/images/SeboWana.png')] ")} animation={"translate-x-12"}/>
-            <CrossFadeImage animate={animStatusInstance === animStatus.TWO || animStatusInstance === animStatus.THREE} animateOpacity={animStatusInstance === animStatus.TWO} backgroundImage={("bg-[url('/static/images/oana.png')] ")} animation={"-translate-x-12"}/>
-            <CrossFadeImage animate={animStatusInstance === animStatus.THREE || animStatusInstance === animStatus.FOUR} animateOpacity={animStatusInstance === animStatus.THREE} backgroundImage={("bg-[url('/static/images/SeboGuitar.png')] ")} animation={"translate-y-12"}/>
-            <CrossFadeImage animate={animStatusInstance === animStatus.FOUR || animStatusInstance === animStatus.ONE}  animateOpacity={animStatusInstance === animStatus.FOUR} backgroundImage={("bg-[url('/static/images/mask.png')] ")} animation={"-translate-y-12"}/>
-
+            <CrossFadeImage animate={animStatusInstance === animStatus.ONE || animStatusInstance === animStatus.TWO} animateOpacity={animStatusInstance === animStatus.ONE} backgroundImage={("bg-[url('/static/images/sebowana.png')] ")}
+                            animation={"translate-x-12"}/>
+            <CrossFadeImage animate={animStatusInstance === animStatus.TWO || animStatusInstance === animStatus.THREE} animateOpacity={animStatusInstance === animStatus.TWO} backgroundImage={("bg-[url('/static/images/wana.png')] ")}
+                            animation={"-translate-x-12"}/>
+            <CrossFadeImage animate={animStatusInstance === animStatus.THREE || animStatusInstance === animStatus.FOUR} animateOpacity={animStatusInstance === animStatus.THREE} backgroundImage={("bg-[url('/static/images/seboguitar.png')] ")}
+                            animation={"translate-y-12"}/>
+            <CrossFadeImage animate={animStatusInstance === animStatus.FOUR || animStatusInstance === animStatus.ONE} animateOpacity={animStatusInstance === animStatus.FOUR} backgroundImage={("bg-[url('/static/images/mask.png')] ")}
+                            animation={"-translate-y-12"}/>
 
 
         </div>

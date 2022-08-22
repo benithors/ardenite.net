@@ -7,14 +7,15 @@ import ContentContainer from "../components/ContentContainer";
 import Backstabber from '../public/static/images/backstabber.png';
 import Flowers from '../public/static/images/flowersdontcare.png';
 
-import WakeUp from '../public/static/images/wakeup.jpg';
+import WakeUp from '../public/static/images/wakeup.png';
 import ArdeniteEntry, {EntryPosition} from "../components/ArdeniteEntry";
 import PopInButton from "../components/PopInButton";
-import {ArrowDown, ArrowDownCircle} from "react-feather";
+import {ArrowDown} from "react-feather";
 import Socials from "../components/Socials";
 import {FooterBar} from "../components/FooterBar";
 import {useInView} from "react-intersection-observer";
 import Section from "../components/Section";
+import {NextSeo} from "next-seo";
 
 const Home: NextPage = () => {
 
@@ -62,7 +63,27 @@ const Home: NextPage = () => {
     return (
         <>
             <FloatingNav floatingNavStatus={floatingNavStatus} scroller={scroller}/>
+            <NextSeo
+                title="Ardenite"
+                description="CYBER POP ROCK BAND FROM VIENNA"
+                openGraph={{
+                    url: "https://ardenite.net/",
+                    title: "Ardenite",
+                    description: "CYBER POP ROCK BAND FROM VIENNA",
+                    images: [
+                        {
+                            url: "https://asset.cloudinary.com/socialpoll/6c19417a869f269d45bef5d2ae96be6c",
+                            width: 1024,
+                            height: 682,
+                            alt: "Ardenite",
+                            type: "image/png",
+                        },
+                    ],
+                    site_name: "Ardenite",
 
+                }}
+
+            />
             <div className={"flex flex-col items-center w-screen h-full font-SourceSans "}>
                 <ArdeniteNavBar floatingNavStatus={floatingNavStatus} scroller={scroller}/>
                 <TopSection name="top">
