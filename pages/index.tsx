@@ -59,10 +59,33 @@ const Home: NextPage = () => {
             setFloatingNavStatus(FloatingNavStatus.TOP);
         }
 
+
     }, [contactInView.inView, aboutInView.inView, floatingNavStatus]);
+
+    const [showShopInfo, setShowShopInfo] = useState(false);
+
+
+    function showShopInfoHandler() {
+
+        setShowShopInfo(true);
+
+        setTimeout(function () {
+            setShowShopInfo(false);
+        }, 2000);
+    }
+
     return (
         <>
-            <FloatingNav floatingNavStatus={floatingNavStatus} scroller={scroller}/>
+            <div className={(!showShopInfo && ' opacity-0 ') + (' transition-opacity duration-1000 bg-brand-black-transparent flex flex-col items-center text-4xl z-50 text-white  justify-center fixed pointer-events-none w-screen h-screen ')}>
+                <ContentContainer>
+
+                    <div className={'text-center uppercase font-extrabold'}>
+                        SHOP is coming soon stay tuned
+                    </div>
+
+                </ContentContainer>
+            </div>
+            <FloatingNav showShopInfo={showShopInfoHandler} floatingNavStatus={floatingNavStatus} scroller={scroller}/>
             <NextSeo
                 title="Ardenite"
                 description="CYBER POP ROCK BAND FROM VIENNA"
@@ -85,7 +108,7 @@ const Home: NextPage = () => {
 
             />
             <div className={"flex flex-col items-center w-screen h-full font-SourceSans "}>
-                <ArdeniteNavBar floatingNavStatus={floatingNavStatus} scroller={scroller}/>
+                <ArdeniteNavBar showShop={showShopInfoHandler} floatingNavStatus={floatingNavStatus} scroller={scroller}/>
                 <TopSection name="top">
                     <CrossFade>
                         <div className={"w-screen  flex flex-col items-center justify-end h-full absolute z-10 "}>
@@ -124,7 +147,7 @@ const Home: NextPage = () => {
                                     </div>
                                     <div className={'w-full h-12'}>
 
-                                        <PopInButton className={'text-brand-black'} ariaLabel={'Link to spotify'} type={'button'} href={'shop.ardenite.net'}>
+                                        <PopInButton className={'text-brand-black'} ariaLabel={'Link to spotify'} type={'button'} onClick={showShopInfoHandler}>
                                             BUY NOW
                                         </PopInButton>
                                     </div>
@@ -144,11 +167,12 @@ const Home: NextPage = () => {
                 </AboutSection>
 
 
-                <ArdeniteEntry linkText={'Pre-Save Release'} linkUrl={'https://share.amuse.io/track/chypriann-wake-up'} backgroundColor={''} priority={true} subtitle={'New Single "WAKE UP" will be OUT on August 26th 2022 !'} image={WakeUp} title={'Wake Up'} animation={EntryPosition.right}>
-                  We can&apos;t wait to share this song with you, in the meantime make sure to pre-save the release!
+                <ArdeniteEntry linkText={'Pre-Save Release'} linkUrl={'https://share.amuse.io/track/chypriann-wake-up'} backgroundColor={''} priority={true} subtitle={'New Single "WAKE UP" will be OUT on August 26th 2022 !'} image={WakeUp}
+                               title={'Wake Up'} animation={EntryPosition.right}>
+                    We can&apos;t wait to share this song with you, in the meantime make sure to pre-save the release!
                 </ArdeniteEntry>
 
-                <ArdeniteEntry linkText={'Watch It'} linkUrl={'https://youtu.be/1muIRKbC5bo'}  backgroundColor={' '} priority={true} subtitle={'We enjoy surprising you'} image={Flowers} title={'Flowers Don´t Care'} animation={EntryPosition.left}>
+                <ArdeniteEntry linkText={'Watch It'} linkUrl={'https://youtu.be/1muIRKbC5bo'} backgroundColor={' '} priority={true} subtitle={'We enjoy surprising you'} image={Flowers} title={'Flowers Don´t Care'} animation={EntryPosition.left}>
                     In that sense “Flowers Don&apos;t Care” may seem like --- and probably is --- your new favourite summer party song! However this is just the bitter sweet package (which hopefully compels you to dance!) of its deeper meaning about life,
                     death
                     and dealing with the loss of a close soul.
@@ -157,7 +181,7 @@ const Home: NextPage = () => {
                 </ArdeniteEntry>
 
 
-                <ArdeniteEntry linkText={'Watch It'} linkUrl={'https://youtu.be/y9bczIoB9lw'}  backgroundColor={''} priority={false} subtitle={'An explosion of emotions'} image={Backstabber} title={'Backstabber'} animation={EntryPosition.right}>
+                <ArdeniteEntry linkText={'Watch It'} linkUrl={'https://youtu.be/y9bczIoB9lw'} backgroundColor={''} priority={false} subtitle={'An explosion of emotions'} image={Backstabber} title={'Backstabber'} animation={EntryPosition.right}>
                     Backstabber emerged in an explosion of emotions, caused by the betrayal of a very close person.
                     <br/>
                     As an anthem to the broken hearted, the dominant emotions of the single are rage and anger! <br/>
@@ -176,8 +200,20 @@ const Home: NextPage = () => {
                                     <br/>
                                     While they could not be any more different, they are united by their common sheer passion for music & the all around creativity, which comes with its production & marketing!
                                 </p>
-                                <div className={'flex flex-wrap'}>
-                                    <Socials   userName={'ardenite'} youtube={"https://www.youtube.com/c/ARDENITE"} facebook={"https://www.facebook.com/ardenite"} instagram={"https://www.instagram.com/ardeniteofficial"} bandcamp={'https://ardenite.bandcamp.com/'} paypal={'https://www.paypal.com/paypalme/ardeniteofficial'} tiktok={'https://www.tiktok.com/@ardeniteofficial'} spotify={'https://open.spotify.com/artist/3GXo8euWCGsniO8H7MrU9B?si=WgztQFU7SBW79PH41C-Uwg'} appleMusic={'https://music.apple.com/at/artist/ardenite/1454820051'} soundcloud={'https://soundcloud.com/ardenite-band'}/>
+                                <div className={'w-full h-12'}>
+
+                                    <PopInButton className={'text-brand-black'}
+                                                 href={"mailto:mailto:office@ardenite.net"}
+                                                 type={"mail"}
+                                                 ariaLabel={"Write an email to us"}>
+                                        Write us
+                                    </PopInButton>
+                                </div>
+                                <div className={'flex flex-wrap space-x-4'}>
+                                    <Socials userName={'ardenite'} youtube={"https://www.youtube.com/c/ARDENITE"} facebook={"https://www.facebook.com/ardenite"} instagram={"https://www.instagram.com/ardeniteofficial"}
+                                             bandcamp={'https://ardenite.bandcamp.com/'} paypal={'https://www.paypal.com/paypalme/ardeniteofficial'} tiktok={'https://www.tiktok.com/@ardeniteofficial'}
+                                             spotify={'https://open.spotify.com/artist/3GXo8euWCGsniO8H7MrU9B?si=WgztQFU7SBW79PH41C-Uwg'} appleMusic={'https://music.apple.com/at/artist/ardenite/1454820051'}
+                                             soundcloud={'https://soundcloud.com/ardenite-band'}/>
                                 </div>
                             </Section>
 

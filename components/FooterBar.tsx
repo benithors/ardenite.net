@@ -66,6 +66,8 @@ export const FooterBar = () => {
                             given.
                             The content of the linked pages is always the responsibility of the respective provider or operator of the pages.
                         </div>
+
+
                     </div>
                     <div className={"pt-8 text-xs"}>
                         Copyright © {new Date().getFullYear()} Ardenite. All

@@ -8,6 +8,7 @@ import {useInView} from "react-intersection-observer";
 interface IProps {
     floatingNavStatus: FloatingNavStatus;
     scroller: any
+    showShopInfo:any;
 }
 
 export enum FloatingNavStatus {
@@ -53,7 +54,7 @@ const FloatingNav = (props: IProps) => {
                 <div
 
                     className={
-                        "pointer-events-auto flex h-14 w-11/12 flex-row justify-around border-[1px] border-gray-700  bg-brand-black font-mono text-lg font-extrabold text-white sm:w-3/4 sm:text-md  md:text-xl" +
+                        "pointer-events-auto flex h-14 w-11/12 flex-row justify-around border-[1px] border-gray-700  bg-brand-black  text-lg font-extrabold text-white sm:w-3/4 sm:text-md  md:text-xl" +
 
                         getOpacityFromBottomTransition(didScroll)
                     }
@@ -94,7 +95,7 @@ const FloatingNav = (props: IProps) => {
                         floatingNavStatus={props.floatingNavStatus}
                         buttonType={FloatingNavStatus.CONTACT}
                         onClick={() => {
-                            props.scroller.scrollTo("Contact", {
+                            props.scroller.scrollTo("contact", {
                                 duration: 1500,
                                 delay: 100,
                                 smooth: true,
@@ -108,11 +109,7 @@ const FloatingNav = (props: IProps) => {
                         floatingNavStatus={props.floatingNavStatus}
                         buttonType={FloatingNavStatus.NONE}
                         onClick={() => {
-                            props.scroller.scrollTo("trainingsScrollToElement", {
-                                duration: 1500,
-                                delay: 100,
-                                smooth: true,
-                            });
+                         props.showShopInfo();
                         }}
                     >
                         Shop

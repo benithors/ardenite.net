@@ -8,6 +8,7 @@ import {FloatingNavStatus} from "./FloatingNav";
 interface IProps {
     floatingNavStatus: FloatingNavStatus;
     scroller: any
+    showShop:any;
 }
 
 const ArdeniteNavBar = (props: IProps) => {
@@ -74,12 +75,8 @@ const ArdeniteNavBar = (props: IProps) => {
                         borderColor={"border-transparent"}
                         floatingNavStatus={props.floatingNavStatus}
                         buttonType={FloatingNavStatus.NONE}
-                        onClick={() => {
-                            props.scroller.scrollTo("packagesScrollToElement", {
-                                duration: 1500,
-                                delay: 100,
-                                smooth: true,
-                            });
+                       onClick={() => {
+                        props.showShop()
                         }}
                     >
                         SHOP

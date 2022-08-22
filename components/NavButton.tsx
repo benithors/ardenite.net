@@ -3,10 +3,11 @@ import { FloatingNavStatus } from "./FloatingNav";
 
 interface IProps {
   children: any;
-  onClick: () => void;
+  onClick?: () => void;
   floatingNavStatus: FloatingNavStatus;
   buttonType: FloatingNavStatus;
   borderColor?: string;
+  className?: string;
 }
 
 const NavButton = (props: IProps) => {
@@ -14,8 +15,8 @@ const NavButton = (props: IProps) => {
     <button
       aria-label={"Scroll to " + props.buttonType}
       onClick={props.onClick}
-      className={
-        "h-full transition-colors  hover:text-brand-pink" +
+      className={ props.className +
+        " h-full transition-colors  hover:text-brand-pink" +
         " border-b-4 px-1 hover:border-brand-pink sm:px-6 " +
         (props.floatingNavStatus === props.buttonType
           ? " border-brand-pink text-brand-pink "
