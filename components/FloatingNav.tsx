@@ -1,9 +1,7 @@
 import React, {useEffect, useState} from "react";
 import NavButton from "./NavButton";
-import * as Scroll from "react-scroll";
 import {ArrowUpCircle} from "react-feather";
 import {getOpacityFromBottomTransition} from "../lib/Transitions";
-import {useInView} from "react-intersection-observer";
 
 interface IProps {
     floatingNavStatus: FloatingNavStatus;

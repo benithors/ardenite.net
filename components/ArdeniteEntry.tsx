@@ -61,7 +61,7 @@ const ArdeniteEntry = (props: IProps) => {
                     </div>
                     <div className={'w-full flex flex-col md:items-start items-center h-12'}>
 
-                                <PopInButton  className={'text-brand-black  '} href={props.linkUrl} ariaLabel={'wach the song on youtube'} type={'button'}>
+                                <PopInButton  className={'text-brand-black  '} href={props.linkUrl} ariaLabel={'watch the song on youtube'} type={'button'}>
                                     {props.linkText}   <ArrowUpRight className={'translate-x-2 opacity-75'}/>
                                 </PopInButton>
 
@@ -75,6 +75,7 @@ const ArdeniteEntry = (props: IProps) => {
 
 
                 <Image src={props.image} layout="fill"
+                       alt={props.title}
                        priority={props.priority}
                        className="object-center object-cover pointer-events-none"
                        objectFit="cover">

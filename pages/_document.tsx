@@ -4,13 +4,7 @@ export default function Document() {
     return (
         <Html lang="en">
             <Head>
-                <link
-                    rel="preload"
-                    href="/fonts/raleway-v22-latin-regular.woff2"
-                    as="font"
-                    type="font/woff2"
-                    crossOrigin="anonymous"
-                />
+
                 <link href="/static/favicons/favicon.ico" rel="shortcut icon"/>
                 <link href="/static/favicons/site.webmanifest" rel="manifest"/>
 

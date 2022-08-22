@@ -253,25 +253,39 @@ const Socials = (props: IProps) => {
                 aria-label={"Open bandcamp of " + props.userName}
 
             >
-                   <svg className={
+
+                 <svg className={
                         " hover:scale-110 delay-[450ms] " +
                         getOpacityFromBottomTransition(socialsInView.inView)
-                    } width="48" height="47" viewBox="0 0 48 47" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g filter="url(#filter0_d_508_2)">
-                        <path d="M24.3954 6C0.543378 6 -0.797831 41 24.3954 41C48.2113 41 47.5226 6 24.3954 6Z" stroke="#80FFEC" strokeWidth="2" strokeLinejoin="round"/>
+                    } width="49" height="48" viewBox="0 0 49 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g filter="url(#filter0_d_512_53)">
+                        <path d="M25.0467 6C2.04657 6 -2.45337 40.5 24.5467 41C48.0428 41.4351 47.5467 6 25.0467 6Z" stroke="#80FFEC" strokeWidth="2" strokeLinejoin="round"/>
+                    </g>
+                    <g filter="url(#filter1_d_512_53)">
+                        <path d="M12.5 30.5L18.5 17H35L29 30.5H12.5Z" stroke="#80FFEC" strokeWidth="2" strokeLinejoin="round"/>
                     </g>
                     <defs>
-                        <filter id="filter0_d_508_2" x="0" y="0" width="48" height="47" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                        <filter id="filter0_d_512_53" x="0" y="0" width="48.0452" height="47.0039" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
                             <feFlood floodOpacity="0" result="BackgroundImageFix"/>
                             <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
                             <feOffset/>
                             <feGaussianBlur stdDeviation="2.5"/>
-                            <feColorMatrix type="matrix" values="0 0 0 0 0.203922 0 0 0 0 0.933333 0 0 0 0 1 0 0 0 1 0"/>
-                            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_508_2"/>
-                            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_508_2" result="shape"/>
+                            <feColorMatrix type="matrix" values="0 0 0 0 0.205 0 0 0 0 0.933323 0 0 0 0 1 0 0 0 1 0"/>
+                            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_512_53"/>
+                            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_512_53" result="shape"/>
+                        </filter>
+                        <filter id="filter1_d_512_53" x="6.5" y="11" width="34.5" height="25.5" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                            <feFlood floodOpacity="0" result="BackgroundImageFix"/>
+                            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                            <feOffset/>
+                            <feGaussianBlur stdDeviation="2.5"/>
+                            <feColorMatrix type="matrix" values="0 0 0 0 0.205 0 0 0 0 0.933323 0 0 0 0 1 0 0 0 1 0"/>
+                            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_512_53"/>
+                            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_512_53" result="shape"/>
                         </filter>
                     </defs>
                 </svg>
+
 
             </a>
 
