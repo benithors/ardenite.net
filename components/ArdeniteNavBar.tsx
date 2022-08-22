@@ -41,7 +41,7 @@ const ArdeniteNavBar = (props: IProps) => {
 
                 <div className={"hidden  md:flex h-full h-full flex-row  items-center self-end"}>
                     <NavButton
-                        borderColor={"border-brand-black"}
+                        borderColor={"border-transparent"}
                         floatingNavStatus={props.floatingNavStatus}
                         buttonType={FloatingNavStatus.ABOUT}
                         onClick={() => {
@@ -57,11 +57,11 @@ const ArdeniteNavBar = (props: IProps) => {
                     </NavButton>
 
                     <NavButton
-                        borderColor={"border-brand-black"}
+                        borderColor={"border-transparent"}
                         floatingNavStatus={props.floatingNavStatus}
-                        buttonType={FloatingNavStatus.PACKAGES}
+                        buttonType={FloatingNavStatus.CONTACT}
                         onClick={() => {
-                            props.scroller.scrollTo("packagesScrollToElement", {
+                            props.scroller.scrollTo("contact", {
                                 duration: 1500,
                                 delay: 100,
                                 smooth: true,
@@ -71,9 +71,9 @@ const ArdeniteNavBar = (props: IProps) => {
                         CONTACT
                     </NavButton>
                          <NavButton
-                        borderColor={"border-brand-black"}
+                        borderColor={"border-transparent"}
                         floatingNavStatus={props.floatingNavStatus}
-                        buttonType={FloatingNavStatus.PACKAGES}
+                        buttonType={FloatingNavStatus.NONE}
                         onClick={() => {
                             props.scroller.scrollTo("packagesScrollToElement", {
                                 duration: 1500,
@@ -82,7 +82,7 @@ const ArdeniteNavBar = (props: IProps) => {
                             });
                         }}
                     >
-                        MERCH
+                        SHOP
                     </NavButton>
                 </div>
             </ContentContainer>

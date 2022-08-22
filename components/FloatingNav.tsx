@@ -12,9 +12,6 @@ interface IProps {
 
 export enum FloatingNavStatus {
     TOP = "start",
-    PACKAGES = "packages",
-    WORKSHOPS = "workshops",
-    TRAININGS = "trainings",
     ABOUT = "about",
     CONTACT = "contact",
     NONE = "none",
@@ -95,9 +92,9 @@ const FloatingNav = (props: IProps) => {
                     <NavButton
                         borderColor={"border-brand-black"}
                         floatingNavStatus={props.floatingNavStatus}
-                        buttonType={FloatingNavStatus.WORKSHOPS}
+                        buttonType={FloatingNavStatus.CONTACT}
                         onClick={() => {
-                            props.scroller.scrollTo("workshopsScrollToElement", {
+                            props.scroller.scrollTo("Contact", {
                                 duration: 1500,
                                 delay: 100,
                                 smooth: true,
@@ -109,7 +106,7 @@ const FloatingNav = (props: IProps) => {
                     <NavButton
                         borderColor={"border-brand-black"}
                         floatingNavStatus={props.floatingNavStatus}
-                        buttonType={FloatingNavStatus.TRAININGS}
+                        buttonType={FloatingNavStatus.NONE}
                         onClick={() => {
                             props.scroller.scrollTo("trainingsScrollToElement", {
                                 duration: 1500,

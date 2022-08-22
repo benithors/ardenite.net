@@ -14,6 +14,7 @@ import {ArrowDown, ArrowDownCircle} from "react-feather";
 import Socials from "../components/Socials";
 import {FooterBar} from "../components/FooterBar";
 import {useInView} from "react-intersection-observer";
+import Section from "../components/Section";
 
 const Home: NextPage = () => {
 
@@ -21,6 +22,8 @@ const Home: NextPage = () => {
     let scroller = Scroll.scroller;
 
     const AboutSection = Scroll.Element;
+    const ContactSection = Scroll.Element;
+
 
     const TopSection = Scroll.Element;
 
@@ -29,11 +32,12 @@ const Home: NextPage = () => {
         rootMargin: "-200px 0px",
     });
 
-    const aboutAnimationInView = useInView({
-
-        triggerOnce: true,
-        rootMargin: "-0px 0px",
+    const contactInView = useInView({
+        triggerOnce: false,
+        rootMargin: "-200px 0px",
     });
+
+
     const [floatingNavStatus, setFloatingNavStatus] = useState<FloatingNavStatus>(
         FloatingNavStatus.TOP
     );
@@ -48,7 +52,13 @@ const Home: NextPage = () => {
             setFloatingNavStatus(FloatingNavStatus.TOP);
         }
 
-    }, [aboutInView.inView, floatingNavStatus]);
+        if (contactInView.inView) {
+            setFloatingNavStatus(FloatingNavStatus.CONTACT);
+        } else if (floatingNavStatus === FloatingNavStatus.CONTACT) {
+            setFloatingNavStatus(FloatingNavStatus.TOP);
+        }
+
+    }, [contactInView.inView, aboutInView.inView, floatingNavStatus]);
     return (
         <>
             <FloatingNav floatingNavStatus={floatingNavStatus} scroller={scroller}/>
@@ -77,21 +87,7 @@ const Home: NextPage = () => {
                     <div ref={aboutInView.ref}>
                         <ContentContainer className={" h-full  flex flex-col-reverse   w-full py-20 md:py-32 lg:py-40"}>
 
-                            <div ref={aboutAnimationInView.ref} className={' text-white flex flex-col transition-all duration-1000 items-center w-full space-y-8  h-full ' + (!aboutAnimationInView.inView ? " translate-y-52 opacity-0" : ' translate-y-0' +
-                                ' opacity-100 ')}>
-                                <h2 className={'opacity-70'}>
-                                   Vienese Band
-                                </h2>
-
-                                <h1 className={'text-2xl md:text-4xl lg:text-6xl font-InterSans font-bold  '}>
-                                   CYBER POP ROCK
-                                </h1>
-
-                                <div className={'border-b-[12px] border-gray-300 w-1/3 opacity-40'}>
-
-                                </div>
-
-
+                            <Section subtitle={'Vienese Band'} title={'CYBER POP ROCK'}>
                                 <p className={'text-center opacity-70'}>
                                     This Cyber Pop Rock band from Vienna, composed out of Wana White & Sebo Green, is about to revolutionize the Austrian music scene!
                                     <br/>
@@ -119,8 +115,7 @@ const Home: NextPage = () => {
                                     </div>
 
                                 </div>
-
-                            </div>
+                            </Section>
 
                         </ContentContainer>
                     </div>
@@ -128,7 +123,7 @@ const Home: NextPage = () => {
                 </AboutSection>
 
 
-                <ArdeniteEntry backgroundColor={''} priority={true} subtitle={'We enjoy surprising you'} image={WakeUp} title={'Wake Up'} animation={EntryPosition.right} >
+                <ArdeniteEntry backgroundColor={''} priority={true} subtitle={'We enjoy surprising you'} image={WakeUp} title={'Wake Up'} animation={EntryPosition.right}>
                     In that sense “Flowers Don&apos;t Care” may seem like --- and probably is --- your new favourite summer party song! However this is just the bitter sweet package (which hopefully compels you to dance!) of its deeper meaning about life,
                     death
                     and dealing with the loss of a close soul.
@@ -136,7 +131,7 @@ const Home: NextPage = () => {
                     Bittersweet, addictive and liberating all at once! What more could one ask for?
                 </ArdeniteEntry>
 
-                <ArdeniteEntry backgroundColor={' '} priority={true} subtitle={'We enjoy surprising you'} image={Flowers} title={'Flowers Don´t Care'} animation={EntryPosition.left} >
+                <ArdeniteEntry backgroundColor={' '} priority={true} subtitle={'We enjoy surprising you'} image={Flowers} title={'Flowers Don´t Care'} animation={EntryPosition.left}>
                     In that sense “Flowers Don&apos;t Care” may seem like --- and probably is --- your new favourite summer party song! However this is just the bitter sweet package (which hopefully compels you to dance!) of its deeper meaning about life,
                     death
                     and dealing with the loss of a close soul.
@@ -145,7 +140,7 @@ const Home: NextPage = () => {
                 </ArdeniteEntry>
 
 
-                <ArdeniteEntry backgroundColor={''} priority={false} subtitle={'An explosion of emotions'} image={Backstabber}  title={'Backstabber'} animation={EntryPosition.right}>
+                <ArdeniteEntry backgroundColor={''} priority={false} subtitle={'An explosion of emotions'} image={Backstabber} title={'Backstabber'} animation={EntryPosition.right}>
                     Backstabber emerged in an explosion of emotions, caused by the betrayal of a very close person.
                     <br/>
                     As an anthem to the broken hearted, the dominant emotions of the single are rage and anger! <br/>
@@ -153,13 +148,32 @@ const Home: NextPage = () => {
                     The protagonist of the song however also struggles with feelings of helplessness & sorrow, while processing the void of an ending relationship.
                 </ArdeniteEntry>
 
+
+                <ContactSection name={'contact'}>
+                    <div ref={contactInView.ref}>
+                        <ContentContainer className={" h-full  flex flex-col-reverse   w-full py-20 md:py-32 lg:py-40"}>
+
+                            <Section subtitle={'Do you want to meet us?'} title={'CONTACT'}>
+                                <p className={'text-center opacity-70'}>
+                                    This Cyber Pop Rock band from Vienna, composed out of Wana White & Sebo Green, is about to revolutionize the Austrian music scene!
+                                    <br/>
+                                    While they could not be any more different, they are united by their common sheer passion for music & the all around creativity, which comes with its production & marketing!
+                                </p>
+                                <div className={'flex flex-row w-full items-center justify-center space-x-4'}>
+                                    <Socials inView={true} userName={'ardenite'} youtube={"https://www.youtube.com/c/ARDENITE"} facebook={"https://www.facebook.com/ardenite"} instagram={"https://www.instagram.com/ardeniteofficial"}/>
+                                </div>
+                            </Section>
+
+                        </ContentContainer>
+                    </div>
+
+                </ContactSection>
+
                 <ContentContainer className={" h-full  flex flex-col   w-full py-8 md:py-32 lg:py-40"}>
 
                     <div className={' text-white flex flex-col  items-center w-full space-y-8  h-full '}>
 
-                        <div className={'flex flex-row w-full items-center justify-center space-x-4'}>
-                            <Socials inView={true} userName={'ardenite'} youtube={"https://www.youtube.com/c/ARDENITE"} facebook={"https://www.facebook.com/ardenite"} instagram={"https://www.instagram.com/ardeniteofficial"}/>
-                        </div>
+
                         <FooterBar/>
                     </div>
                 </ContentContainer>
