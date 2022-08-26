@@ -36,11 +36,31 @@ export default function Document() {
                     content="/static/favicons/browserconfig.xml"
                     name="msapplication-config"
                 />
-                <link rel="preconnect" href="https://fonts.googleapis.com"/>
-                    <link rel="preconnect" href="https://fonts.gstatic.com" />
-                    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Source+Sans+Pro:wght@300&display=swap" rel="stylesheet"/>
+                <link
+                    rel="preload"
+                    href="/fonts/SourceSansPro-Regular.ttf"
+                    as="font"
+                    type="font/ttf"
+                    crossOrigin="anonymous"
+                />
+
+                <link
+                    rel="preload"
+                    href="/fonts/Inter-Medium.ttf"
+                    as="font"
+                    type="font/ttf"
+                    crossOrigin="anonymous"
+                />
+                <link
+                    rel="preload"
+                    href="/fonts/Inter-Bold.ttf"
+                    as="font"
+                    type="font/ttf"
+                    crossOrigin="anonymous"
+                />
+
                 <script async defer data-website-id="c8a469c6-ac0b-45bb-a716-8399f805bba3" src="https://kylo-analytics.vercel.app/umami.js"
-                 data-domains="ardenite.net"
+                        data-domains="ardenite.net"
                 ></script>
             </Head>
             <body className="bg-brand-black min-w-full h-screen min-w-max overflow-x-hidden ">
@@ -48,5 +68,5 @@ export default function Document() {
             <NextScript/>
             </body>
         </Html>
-);
+    );
 }

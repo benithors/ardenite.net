@@ -56,7 +56,7 @@ const ArdeniteEntry = (props: IProps) => {
                     </div>
 
 
-                    <div>
+                    <div >
                         {props.children}
                     </div>
                     <div className={'w-full flex flex-col md:items-start items-center h-12'}>

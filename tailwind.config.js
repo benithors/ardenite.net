@@ -1,10 +1,9 @@
 const {fontFamily} = require('tailwindcss/defaultTheme');
 
 module.exports = {
-    purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
-    darkMode: false, // or 'media' or 'class'
+    content: ['./pages/**/*.tsx', './components/**/*.tsx'],
+    darkMode: 'class',
     theme: {
-
         extend: {
             colors: {
                 pink: '#FDC4F0',
@@ -46,7 +45,6 @@ module.exports = {
                     xl: '0px 0px 15px rgba(253, 196, 240, 1)',
                     xxl: '0px 2px 20px rgba(128, 255, 236, 1)',
                 }
-
             },
         }
     },

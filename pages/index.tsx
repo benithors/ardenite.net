@@ -132,16 +132,26 @@ const Home: NextPage = () => {
                         <ContentContainer className={" h-full  flex flex-col-reverse   w-full py-20 md:py-32 lg:py-40"}>
 
                             <Section subtitle={'Vienese Band'} title={'CYBER POP ROCK'}>
-                                <p className={'text-center opacity-70'}>
-                                    This Cyber Pop Rock band from Vienna, composed out of Wana White & Sebo Green, is about to revolutionize the Austrian music scene!
+                                <div className={'text-center opacity-70'}>
+                                    We are ARDENITE, a Cyber Pop Rock band from Vienna and we are not afraid to get our hands dirty! We’re also about to revolutionize the Austrian music scene!
                                     <br/>
-                                    While they could not be any more different, they are united by their common sheer passion for music & the all around creativity, which comes with its production & marketing!
-                                </p>
-                                <div className={'bg-brand-black   flex space-y-4 pb-4 md:space-y-0  flex-col  md:flex-row items-center w-full  md:w-full lg:w-full  md:space-x-5 justify-center lg:space-x-7   '}>
+                                    “Opposites attract” gets a new meaning with us, as we created a whole new music genre, which we call: Cyber Pop Rock! Be ready for surprising & heavily
+                                    distorted synthesisers, badass 7 string guitar, 5 string bass riffs and the a deep mezzo-soprano signature voice combined with extreme vocals, disarming vulnerability & empowering honesty!
+                                    <br/>
+                                    <div className={'mt-4'}>
+
+                                    We invite everyone to take part in our journey of an uprising band, by doing Instagram story vlogs & actively interacting with our community of ARDENITEs!
+                                    Not convinced? Check out our vlogs, music videos & live performance and build your own opinion!
+                                    </div>
+
+                                </div>
+
+
+                                <div className={'bg-brand-black   flex space-y-4 pb-4 pt-2 md:space-y-0  flex-col  md:flex-row items-center w-full  md:w-full lg:w-full  md:space-x-5 justify-center lg:space-x-7   '}>
 
                                     <div className={'w-full h-12'}>
 
-                                        <PopInButton className={'text-brand-black'} ariaLabel={'Link to spotify'} type={'button'} href={'https://www.youtube.com/c/ARDENITE/featured'}>
+                                        <PopInButton className={' text-brand-black'} ariaLabel={'Link to spotify'} type={'button'} href={'https://www.youtube.com/c/ARDENITE/featured'}>
                                             WATCH NOW
                                         </PopInButton>
                                     </div>
@@ -167,13 +177,19 @@ const Home: NextPage = () => {
                 </AboutSection>
 
 
-                <ArdeniteEntry linkText={'Pre-Save Release'} linkUrl={'https://share.amuse.io/track/chypriann-wake-up'} backgroundColor={''} priority={true} subtitle={'New Single "WAKE UP" will be OUT on August 26th 2022 !'} image={WakeUp}
+                <ArdeniteEntry linkText={'Watch it'} linkUrl={'https://youtu.be/nHP_EexOfO4'} backgroundColor={''} priority={true} subtitle={'New Single "WAKE UP" is OUT NOW !!'} image={WakeUp}
                                title={'Wake Up'} animation={EntryPosition.right}>
-                    We can&apos;t wait to share this song with you, in the meantime make sure to pre-save the release!
+              With everything that is going on in the world right now, we felt like it was our duty to write this song as a form of protest and contribution!
+We stand with all of the ones who are suffering right now, because of decisions they didn&apos;t make themselves, yet still have to bear the horrible consequences! We see you and we feel your pain!
+You are not alone and what is happening is not ok!
+                    <div className={'pt-2'}>
+                        Right now more than ever we should stand united like the brothers and sisters that we are! Right now more than ever we need each other to face the challenges lying ahead of us!
+                    </div>
+
                 </ArdeniteEntry>
 
-                <ArdeniteEntry linkText={'Watch It'} linkUrl={'https://youtu.be/1muIRKbC5bo'} backgroundColor={' '} priority={true} subtitle={'We enjoy surprising you'} image={Flowers} title={'Flowers Don´t Care'} animation={EntryPosition.left}>
-                    In that sense “Flowers Don&apos;t Care” may seem like --- and probably is --- your new favourite summer party song! However this is just the bitter sweet package (which hopefully compels you to dance!) of its deeper meaning about life,
+                <ArdeniteEntry linkText={'Watch It'} linkUrl={'https://youtu.be/1muIRKbC5bo'} backgroundColor={' '} priority={true} subtitle={'We enjoy surprising you!'} image={Flowers} title={'Flowers Don´t Care'} animation={EntryPosition.left}>
+                     Flowers Don&apos;t Care may seem like --- and probably is --- your new favourite summer party song! However this is just the bitter sweet package (which hopefully compels you to dance!) of its deeper meaning about life,
                     death
                     and dealing with the loss of a close soul.
                     <br/>
@@ -183,10 +199,12 @@ const Home: NextPage = () => {
 
                 <ArdeniteEntry linkText={'Watch It'} linkUrl={'https://youtu.be/y9bczIoB9lw'} backgroundColor={''} priority={false} subtitle={'An explosion of emotions'} image={Backstabber} title={'Backstabber'} animation={EntryPosition.right}>
                     Backstabber emerged in an explosion of emotions, caused by the betrayal of a very close person.
-                    <br/>
                     As an anthem to the broken hearted, the dominant emotions of the single are rage and anger! <br/>
-                    These are noticeable in the chorus and the ironically intonated rap parts. <br/>
-                    The protagonist of the song however also struggles with feelings of helplessness & sorrow, while processing the void of an ending relationship.
+                    These are noticeable in the chorus and the ironically intonated rap parts.
+                    <div className={'pt-2'}>
+
+                        The protagonist of the song however also struggles with feelings of helplessness & sorrow, while processing the void of an ending relationship.
+                    </div>
                 </ArdeniteEntry>
 
 
@@ -194,22 +212,20 @@ const Home: NextPage = () => {
                     <div ref={contactInView.ref}>
                         <ContentContainer className={" h-full w-full  flex flex-col-reverse   w-full py-20 md:py-32 lg:py-40"}>
 
-                            <Section subtitle={'Do you want to meet us?'} title={'CONTACT'}>
+                            <Section subtitle={'We want to meet YOU !'} title={'CONTACT'}>
                                 <p className={'text-center opacity-70'}>
-                                    This Cyber Pop Rock band from Vienna, composed out of Wana White & Sebo Green, is about to revolutionize the Austrian music scene!
-                                    <br/>
-                                    While they could not be any more different, they are united by their common sheer passion for music & the all around creativity, which comes with its production & marketing!
+                        Would you like to reach out or book us for your event?
                                 </p>
-                                <div className={'w-full h-12'}>
+                                <div className={'w-full h-12 flex flex-col items-center'}>
 
                                     <PopInButton className={'text-brand-black'}
-                                                 href={"mailto:mailto:office@ardenite.net"}
+                                                 href={"mailto:office@ardenite.net"}
                                                  type={"mail"}
                                                  ariaLabel={"Write an email to us"}>
-                                        Write us
+                                        GET IN TOUCH
                                     </PopInButton>
                                 </div>
-                                <div className={'flex flex-wrap space-x-4'}>
+                                <div className={'flex flex-wrap items-center justify-center space-x-4 pt-32 '}>
                                     <Socials userName={'ardenite'} youtube={"https://www.youtube.com/c/ARDENITE"} facebook={"https://www.facebook.com/ardenite"} instagram={"https://www.instagram.com/ardeniteofficial"}
                                              bandcamp={'https://ardenite.bandcamp.com/'} paypal={'https://www.paypal.com/paypalme/ardeniteofficial'} tiktok={'https://www.tiktok.com/@ardeniteofficial'}
                                              spotify={'https://open.spotify.com/artist/3GXo8euWCGsniO8H7MrU9B?si=WgztQFU7SBW79PH41C-Uwg'} appleMusic={'https://music.apple.com/at/artist/ardenite/1454820051'}
