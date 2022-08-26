@@ -60,7 +60,6 @@ export default function Document() {
                 />
 
                 <script async defer data-website-id="c8a469c6-ac0b-45bb-a716-8399f805bba3" src="https://kylo-analytics.vercel.app/umami.js"
-                        data-domains="ardenite.net"
                 ></script>
             </Head>
             <body className="bg-brand-black min-w-full h-screen min-w-max overflow-x-hidden ">
