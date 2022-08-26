@@ -131,9 +131,9 @@ const Home: NextPage = () => {
                     <div ref={aboutInView.ref}>
                         <ContentContainer className={" h-full  flex flex-col-reverse   w-full py-20 md:py-32 lg:py-40"}>
 
-                            <Section subtitle={'Vienese Band'} title={'CYBER POP ROCK'}>
+                            <Section subtitle={'New Single WAKE UP is OUT NOW !'} title={'CYBER POP ROCK'}>
                                 <div className={'text-center opacity-70'}>
-                                    We are ARDENITE, a Cyber Pop Rock band from Vienna and we are not afraid to get our hands dirty! We’re also about to revolutionize the Austrian music scene!
+                                    We are ARDENITE, a Cyber Pop Rock band from Vienna, Austria and we are not afraid to get our hands dirty! We’re also about to revolutionize the music scene!
                                     <br/>
                                     “Opposites attract” gets a new meaning with us, as we created a whole new music genre, which we call: Cyber Pop Rock! Be ready for surprising & heavily
                                     distorted synthesisers, badass 7 string guitar, 5 string bass riffs and the a deep mezzo-soprano signature voice combined with extreme vocals, disarming vulnerability & empowering honesty!
@@ -177,7 +177,8 @@ const Home: NextPage = () => {
                 </AboutSection>
 
 
-                <ArdeniteEntry linkText={'Watch it'} linkUrl={'https://youtu.be/nHP_EexOfO4'} backgroundColor={''} priority={true} subtitle={'New Single "WAKE UP" is OUT NOW !!'} image={WakeUp}
+                <ArdeniteEntry linkText={'Watch it'} linkUrl={'https://youtu.be/nHP_EexOfO4'} backgroundColor={''} priority={true} subtitle={'New Single WAKE UP is OUT NOW !'} image={WakeUp}
+
                                title={'Wake Up'} animation={EntryPosition.right}>
               With everything that is going on in the world right now, we felt like it was our duty to write this song as a form of protest and contribution!
 We stand with all of the ones who are suffering right now, because of decisions they didn&apos;t make themselves, yet still have to bear the horrible consequences! We see you and we feel your pain!

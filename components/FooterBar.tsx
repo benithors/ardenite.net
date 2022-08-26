@@ -44,7 +44,9 @@ export const FooterBar = () => {
                         <GradientHeader>ARDENITE</GradientHeader>
                         <div className={" "}>
 
-                            Oana Moraru and Sebastian Grün Vienna
+                            Oana Moraru and Sebastian Grün
+                            <br/>
+                            Vienna, Austria
                         </div>
 
                         <GradientHeader>Contact</GradientHeader>
