@@ -37,7 +37,6 @@ export default function Document() {
                     name="msapplication-config"
                 />
                 <link
-                    rel="preload"
                     href="/fonts/SourceSansPro-Regular.ttf"
                     as="font"
                     type="font/ttf"
@@ -45,14 +44,12 @@ export default function Document() {
                 />
 
                 <link
-                    rel="preload"
                     href="/fonts/Inter-Medium.ttf"
                     as="font"
                     type="font/ttf"
                     crossOrigin="anonymous"
                 />
                 <link
-                    rel="preload"
                     href="/fonts/Inter-Bold.ttf"
                     as="font"
                     type="font/ttf"
