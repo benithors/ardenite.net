@@ -95,11 +95,11 @@ const Home: NextPage = () => {
                     description: "CYBER POP ROCK BAND FROM VIENNA",
                     images: [
                         {
-                            url: "https://asset.cloudinary.com/socialpoll/6c19417a869f269d45bef5d2ae96be6c",
-                            width: 1024,
-                            height: 682,
-                            alt: "Ardenite",
-                            type: "image/png",
+                            url: "https://asset.cloudinary.com/socialpoll/8f8ed62afa0bd533a62d1669a00c5930",
+                            width: 1000,
+                            height: 1000,
+                            alt: "Ardenite Band",
+                            type: "image/jpg",
                         },
                     ],
                     site_name: "Ardenite",
@@ -140,8 +140,8 @@ const Home: NextPage = () => {
                                     <br/>
                                     <div className={'mt-4'}>
 
-                                    We invite everyone to take part in our journey of an uprising band, by doing Instagram story vlogs & actively interacting with our community of ARDENITEs!
-                                    Not convinced? Check out our vlogs, music videos & live performance and build your own opinion!
+                                        We invite everyone to take part in our journey of an uprising band, by doing Instagram story vlogs & actively interacting with our community of ARDENITEs!
+                                        Not convinced? Check out our vlogs, music videos & live performance and build your own opinion!
                                     </div>
 
                                 </div>
@@ -180,9 +180,9 @@ const Home: NextPage = () => {
                 <ArdeniteEntry linkText={'Watch it'} linkUrl={'https://youtu.be/nHP_EexOfO4'} backgroundColor={''} priority={true} subtitle={'New Single WAKE UP is OUT NOW !'} image={WakeUp}
 
                                title={'Wake Up'} animation={EntryPosition.right}>
-              With everything that is going on in the world right now, we felt like it was our duty to write this song as a form of protest and contribution!
-We stand with all of the ones who are suffering right now, because of decisions they didn&apos;t make themselves, yet still have to bear the horrible consequences! We see you and we feel your pain!
-You are not alone and what is happening is not ok!
+                    With everything that is going on in the world right now, we felt like it was our duty to write this song as a form of protest and contribution!
+                    We stand with all of the ones who are suffering right now, because of decisions they didn&apos;t make themselves, yet still have to bear the horrible consequences! We see you and we feel your pain!
+                    You are not alone and what is happening is not ok!
                     <div className={'pt-2'}>
                         Right now more than ever we should stand united like the brothers and sisters that we are! Right now more than ever we need each other to face the challenges lying ahead of us!
                     </div>
@@ -190,7 +190,7 @@ You are not alone and what is happening is not ok!
                 </ArdeniteEntry>
 
                 <ArdeniteEntry linkText={'Watch It'} linkUrl={'https://youtu.be/1muIRKbC5bo'} backgroundColor={' '} priority={true} subtitle={'We enjoy surprising you!'} image={Flowers} title={'Flowers Don´t Care'} animation={EntryPosition.left}>
-                     Flowers Don&apos;t Care may seem like --- and probably is --- your new favourite summer party song! However this is just the bitter sweet package (which hopefully compels you to dance!) of its deeper meaning about life,
+                    Flowers Don&apos;t Care may seem like --- and probably is --- your new favourite summer party song! However this is just the bitter sweet package (which hopefully compels you to dance!) of its deeper meaning about life,
                     death
                     and dealing with the loss of a close soul.
                     <br/>
@@ -215,7 +215,7 @@ You are not alone and what is happening is not ok!
 
                             <Section subtitle={'We want to meet YOU !'} title={'CONTACT'}>
                                 <p className={'text-center opacity-70'}>
-                        Would you like to reach out or book us for your event?
+                                    Would you like to reach out or book us for your event?
                                 </p>
                                 <div className={'w-full h-12 flex flex-col items-center'}>
 
