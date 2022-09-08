@@ -4,7 +4,7 @@ import React from 'react'
 const ArdeniteText = () => {
 
     return (
-        <svg width="100%" height="100%" preserveAspectRatio="xMinYMid" className={"bg-blend-color-dodge"} viewBox="0 0 493 112" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg width="100%"  preserveAspectRatio="xMinYMid" className={"w-full h-full  md:h-20  bg-blend-color-dodge"} viewBox="0 0 493 112" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g className={"bg-blend-color-dodge stroke-[6px] sm:stroke-[6px]"} filter="url(#filter0_f_533_60)">
                 <path d="M51.0329 23.8457H56.476L83.6916 88.7925H76.8646L68.3771 68.4852H38.9473L30.552 88.7925H23.6328L51.0329 23.8457ZM66.901 63.4541L53.7083 31.3466L40.3312 63.4541H66.901Z" stroke="#80FFEC" strokeLinecap="round"
                       strokeLinejoin="round"/>

@@ -16,7 +16,7 @@ const ArdeniteNavBar = (props: IProps) => {
     return (
         <nav
             className={
-                " fixed top-0 left-0 z-20  h-20 w-full flex-row justify-center bg-brand-black-transparent  text-white  md:flex"
+                " fixed top-0 left-0 z-20  h-20  w-full flex-row justify-center bg-brand-black-transparent  text-white  md:flex"
             }
         >
             <ContentContainer

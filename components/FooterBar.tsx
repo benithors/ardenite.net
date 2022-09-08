@@ -68,7 +68,34 @@ export const FooterBar = () => {
                             given.
                             The content of the linked pages is always the responsibility of the respective provider or operator of the pages.
                         </div>
+                        <GradientHeader>Pictures</GradientHeader>
+                        <div>
+                            The pictures on this website were shot by {' '}
+    <a
+                                target={"_blank"}
+                                rel="noreferrer"
+                                href={"https://www.instagram.com/nachtfrostphotography/"}
+                                className={"  underline "}
+                            >
+                                Radka Klein
+                            </a>
+                                 {' '} & {' '}
+                            <a
+                                target={"_blank"}
+                                rel="noreferrer"
+                                href={"https://bulkin.photo/"}
+                                className={"  underline "}
+                            >
+                                Yan Bululukov
+                            </a>
 
+
+
+
+
+                            .
+
+                        </div>
 
                     </div>
                     <div className={"pt-8 text-xs"}>
