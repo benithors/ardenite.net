@@ -95,7 +95,7 @@ const Home: NextPage = () => {
                     description: "CYBER POP ROCK BAND FROM VIENNA",
                     images: [
                         {
-                            url: "https://res.cloudinary.com/socialpoll/image/upload/v1661598179/opengraphArdenite_cmwusw.jpg",
+                            url: "https://res.cloudinary.com/bt101/image/upload/v1661598179/opengraphArdenite_cmwusw.jpg",
                             width: 1000,
                             height: 1000,
                             alt: "Ardenite Band",
