@@ -177,6 +177,18 @@ const Home: NextPage = () => {
                 </AboutSection>
 
 
+                <ArdeniteEntry linkText={'PRESAVE "Diamond" NOW'} linkUrl={'https://share.amuse.io/track/ardenite-diamond-1'} backgroundColor={''} priority={true} subtitle={'New Single „Diamond“ WILL BE YOURS ON October 28th!'} image={WakeUp}
+                               title={'Diamond'} animation={EntryPosition.left}>
+                   This one is such a special one!
+Can’t wait to hear your thoughts on it!
+💗💙
+😱
+                    <div className={'pt-2'}>
+                     We can already promise you: you’ve never seen this side of ARDENITE before!
+                    </div>
+
+                </ArdeniteEntry>
+
                 <ArdeniteEntry linkText={'Watch it'} linkUrl={'https://youtu.be/nHP_EexOfO4'} backgroundColor={''} priority={true} subtitle={'New Single WAKE UP is OUT NOW !'} image={WakeUp}
 
                                title={'Wake Up'} animation={EntryPosition.right}>
@@ -189,7 +201,7 @@ You are not alone and what is happening is not ok!
 
                 </ArdeniteEntry>
 
-                <ArdeniteEntry linkText={'Watch It'} linkUrl={'https://youtu.be/1muIRKbC5bo'} backgroundColor={' '} priority={true} subtitle={'We enjoy surprising you!'} image={Flowers} title={'Flowers Don´t Care'} animation={EntryPosition.left}>
+                <ArdeniteEntry linkText={'Watch It'} linkUrl={'https://youtu.be/1muIRKbC5bo'} backgroundColor={' '} priority={false} subtitle={'We enjoy surprising you!'} image={Flowers} title={'Flowers Don´t Care'} animation={EntryPosition.left}>
                      Flowers Don&apos;t Care may seem like --- and probably is --- your new favourite summer party song! However this is just the bitter sweet package (which hopefully compels you to dance!) of its deeper meaning about life,
                     death
                     and dealing with the loss of a close soul.
