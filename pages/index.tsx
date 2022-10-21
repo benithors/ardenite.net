@@ -252,6 +252,7 @@ const Home: NextPage = () => {
 
                                     <PopInButton className={'text-brand-black'}
                                                  href={"/static/PressreleaseArdenite.pdf"}
+                                                 type={'download'}
                                                  ariaLabel={"Presskit"}>
                                         Download Press Kit
                                     </PopInButton>
