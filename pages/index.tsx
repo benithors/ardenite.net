@@ -6,6 +6,7 @@ import FloatingNav, {FloatingNavStatus} from "../components/FloatingNav";
 import ContentContainer from "../components/ContentContainer";
 import Backstabber from '../public/static/images/backstabber.png';
 import Flowers from '../public/static/images/flowersdontcare.png';
+import Diamond from '../public/static/images/diamond.jpg';
 
 import WakeUp from '../public/static/images/wakeup.png';
 import ArdeniteEntry, {EntryPosition} from "../components/ArdeniteEntry";
@@ -140,8 +141,8 @@ const Home: NextPage = () => {
                                     <br/>
                                     <div className={'mt-4'}>
 
-                                    We invite everyone to take part in our journey of an uprising band, by doing Instagram story vlogs & actively interacting with our community of ARDENITEs!
-                                    Not convinced? Check out our vlogs, music videos & live performance and build your own opinion!
+                                        We invite everyone to take part in our journey of an uprising band, by doing Instagram story vlogs & actively interacting with our community of ARDENITEs!
+                                        Not convinced? Check out our vlogs, music videos & live performance and build your own opinion!
                                     </div>
 
                                 </div>
@@ -177,24 +178,31 @@ const Home: NextPage = () => {
                 </AboutSection>
 
 
-                <ArdeniteEntry linkText={'PRESAVE "Diamond" NOW'} linkUrl={'https://share.amuse.io/track/ardenite-diamond-1'} backgroundColor={''} priority={true} subtitle={'New Single „Diamond“ WILL BE YOURS ON October 28th!'} image={WakeUp}
+                <ArdeniteEntry linkText={'PRESAVE "Diamond" NOW'} linkUrl={'https://share.amuse.io/track/ardenite-diamond-1'} backgroundColor={''} priority={true} subtitle={'New Single „Diamond“ WILL BE YOURS ON October 28th!'} image={Diamond}
                                title={'Diamond'} animation={EntryPosition.left}>
-                   This one is such a special one!
-Can’t wait to hear your thoughts on it!
-💗💙
-😱
+                    An Anthem of Vulnerability and Courage! - “When I was a teen, I thought about killing myself, a lot. The thoughts in
+                    my head, of not belonging and never being enough, no matter what I did, were almost unbearable. I wrote this song as
+                    the embrace I needed to feel back then. Hope this helps somebody out there. You are not alone.” (Wana White, singer
+                    of ARDENITE)
                     <div className={'pt-2'}>
-                     We can already promise you: you’ve never seen this side of ARDENITE before!
+                        Diamond” is a collaboration between the Uruguayan Lo-Fi Producer Claudia Blackstar and the Cyber Pop Rock Band
+                        ARDENITE from Vienna, Austria. While each of us faces our own demons on a daily basis, “Diamond” aims to reach
+                        through to the listener&apos;s heart. The soothing Lo-Fi beats combined with the heartfelt singing convey a sense of
+                        reassurance and relief.
                     </div>
 
+                    <div className={'pt-2'}>
+                        The band invites their listeners to share this song with anyone dealing with the harsh reality of mental health issues.
+                        Together we can break the silence and the barriers between us!
+                    </div>
                 </ArdeniteEntry>
 
                 <ArdeniteEntry linkText={'Watch it'} linkUrl={'https://youtu.be/nHP_EexOfO4'} backgroundColor={''} priority={true} subtitle={'New Single WAKE UP is OUT NOW !'} image={WakeUp}
 
                                title={'Wake Up'} animation={EntryPosition.right}>
-              With everything that is going on in the world right now, we felt like it was our duty to write this song as a form of protest and contribution!
-We stand with all of the ones who are suffering right now, because of decisions they didn&apos;t make themselves, yet still have to bear the horrible consequences! We see you and we feel your pain!
-You are not alone and what is happening is not ok!
+                    With everything that is going on in the world right now, we felt like it was our duty to write this song as a form of protest and contribution!
+                    We stand with all of the ones who are suffering right now, because of decisions they didn&apos;t make themselves, yet still have to bear the horrible consequences! We see you and we feel your pain!
+                    You are not alone and what is happening is not ok!
                     <div className={'pt-2'}>
                         Right now more than ever we should stand united like the brothers and sisters that we are! Right now more than ever we need each other to face the challenges lying ahead of us!
                     </div>
@@ -202,7 +210,7 @@ You are not alone and what is happening is not ok!
                 </ArdeniteEntry>
 
                 <ArdeniteEntry linkText={'Watch It'} linkUrl={'https://youtu.be/1muIRKbC5bo'} backgroundColor={' '} priority={false} subtitle={'We enjoy surprising you!'} image={Flowers} title={'Flowers Don´t Care'} animation={EntryPosition.left}>
-                     Flowers Don&apos;t Care may seem like --- and probably is --- your new favourite summer party song! However this is just the bitter sweet package (which hopefully compels you to dance!) of its deeper meaning about life,
+                    Flowers Don&apos;t Care may seem like --- and probably is --- your new favourite summer party song! However this is just the bitter sweet package (which hopefully compels you to dance!) of its deeper meaning about life,
                     death
                     and dealing with the loss of a close soul.
                     <br/>
@@ -227,8 +235,9 @@ You are not alone and what is happening is not ok!
 
                             <Section subtitle={'We want to meet YOU !'} title={'CONTACT'}>
                                 <p className={'text-center opacity-70'}>
-                        Would you like to reach out or book us for your event?
+                                    Would you like to reach out or book us for your event?
                                 </p>
+
                                 <div className={'w-full h-12 flex flex-col items-center'}>
 
                                     <PopInButton className={'text-brand-black'}
@@ -237,6 +246,16 @@ You are not alone and what is happening is not ok!
                                                  ariaLabel={"Write an email to us"}>
                                         GET IN TOUCH
                                     </PopInButton>
+
+                                </div>
+                                <div className={'w-full h-12 flex flex-col items-center'}>
+
+                                    <PopInButton className={'text-brand-black'}
+                                                 href={"/static/PressreleaseArdenite.pdf"}
+                                                 ariaLabel={"Presskit"}>
+                                        Download Press Kit
+                                    </PopInButton>
+
                                 </div>
                                 <div className={'flex flex-wrap items-center justify-center space-x-4 pt-32 '}>
                                     <Socials userName={'ardenite'} youtube={"https://www.youtube.com/c/ARDENITE"} facebook={"https://www.facebook.com/ardenite"} instagram={"https://www.instagram.com/ardeniteofficial"}
