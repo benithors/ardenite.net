@@ -134,15 +134,15 @@ const Home: NextPage = () => {
 
                             <Section subtitle={'New Single WAKE UP is OUT NOW !'} title={'CYBER POP ROCK'}>
                                 <div className={'text-center opacity-70'}>
-                                    We are ARDENITE, a Cyber Pop Rock band from Vienna, Austria and we are not afraid to get our hands dirty! We’re also about to revolutionize the music scene!
+                             We are ARDENITE, a Cyber Pop Rock band from Vienna, Austria, and we are not afraid to get our hands dirty!
                                     <br/>
-                                    “Opposites attract” gets a new meaning with us, as we created a whole new music genre, which we call: Cyber Pop Rock! Be ready for surprising & heavily
-                                    distorted synthesisers, badass 7 string guitar, 5 string bass riffs and the a deep mezzo-soprano signature voice combined with extreme vocals, disarming vulnerability & empowering honesty!
                                     <br/>
+                                    What can you expect from ARDENITE?
+                                    <br/>
+                                    Pink-turquoise Cyberpunk aesthetics, surprising new sounds, heavily distorted synthesisers, the badass 7 string guitar & 5 string bass of Sebo and the deep mezzo-soprano signature voice of Wana combined with extreme vocals. Our emotional lyrics aim to establish a direct heart-to-heart connection - disarming through vulnerability & empowering through honesty!
                                     <div className={'mt-4'}>
 
-                                        We invite everyone to take part in our journey of an uprising band, by doing Instagram story vlogs & actively interacting with our community of ARDENITEs!
-                                        Not convinced? Check out our vlogs, music videos & live performance and build your own opinion!
+                                        Our goal is to unite as many people & hearts as possible around the globe through our music! We invite everyone to take part in our journey, by doing Instagram story vlogs & actively interacting with our growing community of ARDENITEs! We believe that there is enough success for everybody and aim to inspire and motivate many others to follow their dreams!
                                     </div>
 
                                 </div>
@@ -178,7 +178,7 @@ const Home: NextPage = () => {
                 </AboutSection>
 
 
-                <ArdeniteEntry linkText={'PRESAVE "Diamond" NOW'} linkUrl={'https://share.amuse.io/track/ardenite-diamond-1'} backgroundColor={''} priority={true} subtitle={'New Single „Diamond“ WILL BE YOURS ON October 28th!'} image={Diamond}
+                <ArdeniteEntry linkText={'PRESAVE NOW'} linkUrl={'https://share.amuse.io/track/ardenite-diamond-1'} backgroundColor={''} priority={true} subtitle={'New Single „Diamond“ WILL BE YOURS ON October 28th!'} image={Diamond}
                                title={'Diamond'} animation={EntryPosition.left}>
                     An Anthem of Vulnerability and Courage! - “When I was a teen, I thought about killing myself, a lot. The thoughts in
                     my head, of not belonging and never being enough, no matter what I did, were almost unbearable. I wrote this song as
