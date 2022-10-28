@@ -178,7 +178,7 @@ const Home: NextPage = () => {
                 </AboutSection>
 
 
-                <ArdeniteEntry linkText={'PRESAVE NOW'} linkUrl={'https://share.amuse.io/track/ardenite-diamond-1'} backgroundColor={''} priority={true} subtitle={'New Single „Diamond“ WILL BE YOURS ON October 28th!'} image={Diamond}
+                <ArdeniteEntry linkText={'Watch it'} linkUrl={'https://youtu.be/JILBJIJ146Y'} backgroundColor={''} priority={true} subtitle={'New Single Diamond is OUT NOW'} image={Diamond}
                                title={'Diamond'} animation={EntryPosition.left}>
                     An Anthem of Vulnerability and Courage! - “When I was a teen, I thought about killing myself, a lot. The thoughts in
                     my head, of not belonging and never being enough, no matter what I did, were almost unbearable. I wrote this song as
@@ -197,7 +197,7 @@ const Home: NextPage = () => {
                     </div>
                 </ArdeniteEntry>
 
-                <ArdeniteEntry linkText={'Watch it'} linkUrl={'https://youtu.be/nHP_EexOfO4'} backgroundColor={''} priority={true} subtitle={'New Single WAKE UP is OUT NOW !'} image={WakeUp}
+                <ArdeniteEntry linkText={'watch it'} linkUrl={'https://youtu.be/nHP_EexOfO4'} backgroundColor={''} priority={true} subtitle={'New Single WAKE UP is OUT NOW !'} image={WakeUp}
 
                                title={'Wake Up'} animation={EntryPosition.right}>
                     With everything that is going on in the world right now, we felt like it was our duty to write this song as a form of protest and contribution!
