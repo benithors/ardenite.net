@@ -2,11 +2,11 @@ import React, {useEffect, useState} from "react";
 import NavButton from "./NavButton";
 import {ArrowUpCircle} from "react-feather";
 import {getOpacityFromBottomTransition} from "../lib/Transitions";
+import {useRouter} from "next/router";
 
 interface IProps {
     floatingNavStatus: FloatingNavStatus;
     scroller: any
-    showShopInfo:any;
 }
 
 export enum FloatingNavStatus {
@@ -17,6 +17,7 @@ export enum FloatingNavStatus {
 }
 
 const FloatingNav = (props: IProps) => {
+    const router = useRouter();
     const [didScroll, setDidScroll] = useState(false);
     useEffect(() => {
         let previousScrollYPosition = window.scrollY;
@@ -107,7 +108,7 @@ const FloatingNav = (props: IProps) => {
                         floatingNavStatus={props.floatingNavStatus}
                         buttonType={FloatingNavStatus.NONE}
                         onClick={() => {
-                         props.showShopInfo();
+                            router.push('https://shop.ardenite.net/')
                         }}
                     >
                         Shop

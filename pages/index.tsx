@@ -63,30 +63,13 @@ const Home: NextPage = () => {
 
     }, [contactInView.inView, aboutInView.inView, floatingNavStatus]);
 
-    const [showShopInfo, setShowShopInfo] = useState(false);
 
 
-    function showShopInfoHandler() {
-
-        setShowShopInfo(true);
-
-        setTimeout(function () {
-            setShowShopInfo(false);
-        }, 2000);
-    }
 
     return (
         <>
-            <div className={(!showShopInfo && ' opacity-0 ') + (' transition-opacity duration-1000 bg-brand-black-transparent flex flex-col items-center text-4xl z-50 text-white  justify-center fixed pointer-events-none w-screen h-screen ')}>
-                <ContentContainer>
 
-                    <div className={'text-center uppercase font-extrabold'}>
-                        SHOP is coming soon stay tuned
-                    </div>
-
-                </ContentContainer>
-            </div>
-            <FloatingNav showShopInfo={showShopInfoHandler} floatingNavStatus={floatingNavStatus} scroller={scroller}/>
+            <FloatingNav floatingNavStatus={floatingNavStatus} scroller={scroller}/>
             <NextSeo
                 title="Ardenite"
                 description="CYBER POP ROCK BAND FROM VIENNA"
@@ -109,7 +92,7 @@ const Home: NextPage = () => {
 
             />
             <div className={"flex flex-col items-center w-screen h-full font-SourceSans "}>
-                <ArdeniteNavBar showShop={showShopInfoHandler} floatingNavStatus={floatingNavStatus} scroller={scroller}/>
+                <ArdeniteNavBar floatingNavStatus={floatingNavStatus} scroller={scroller}/>
                 <TopSection name="top">
                     <CrossFade>
                         <div className={"w-screen  flex flex-col items-center justify-end h-full absolute z-10 "}>
@@ -132,7 +115,7 @@ const Home: NextPage = () => {
                     <div ref={aboutInView.ref}>
                         <ContentContainer className={" h-full  flex flex-col-reverse   w-full py-20 md:py-32 lg:py-40"}>
 
-                            <Section subtitle={'New Single WAKE UP is OUT NOW !'} title={'CYBER POP ROCK'}>
+                            <Section subtitle={'New Single DIAMOND is OUT NOW !'} title={'CYBER POP ROCK'}>
                                 <div className={'text-center opacity-70'}>
                              We are ARDENITE, a Cyber Pop Rock band from Vienna, Austria, and we are not afraid to get our hands dirty!
                                     <br/>
@@ -158,7 +141,7 @@ const Home: NextPage = () => {
                                     </div>
                                     <div className={'w-full h-12'}>
 
-                                        <PopInButton className={'text-brand-black'} ariaLabel={'Link to spotify'} type={'button'} onClick={showShopInfoHandler}>
+                                        <PopInButton className={'text-brand-black'} ariaLabel={'Link to spotify'} type={'button'} href={'https://shop.ardenite.net/'}>
                                             BUY NOW
                                         </PopInButton>
                                     </div>

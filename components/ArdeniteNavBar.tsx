@@ -3,16 +3,16 @@ import ArdeniteText from "./ArdeniteText";
 import ContentContainer from "./ContentContainer";
 import NavButton from "./NavButton";
 import {FloatingNavStatus} from "./FloatingNav";
+import {useRouter} from "next/router";
 
 
 interface IProps {
     floatingNavStatus: FloatingNavStatus;
     scroller: any
-    showShop:any;
 }
 
 const ArdeniteNavBar = (props: IProps) => {
-
+    const router = useRouter();
     return (
         <nav
             className={
@@ -71,12 +71,12 @@ const ArdeniteNavBar = (props: IProps) => {
                     >
                         CONTACT
                     </NavButton>
-                         <NavButton
+                    <NavButton
                         borderColor={"border-transparent"}
                         floatingNavStatus={props.floatingNavStatus}
                         buttonType={FloatingNavStatus.NONE}
-                       onClick={() => {
-                        props.showShop()
+                        onClick={() => {
+                            router.push('https://shop.ardenite.net/')
                         }}
                     >
                         SHOP
