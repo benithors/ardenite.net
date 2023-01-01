@@ -100,7 +100,7 @@ const ArdeniteNavBar = (props: IProps) => {
                         <a className={'md:text-lg tracking-wide  font-InterSans text-brand-turquoise' +
                             ' animate-pulse text-center'} href={'https://www.oeticket.com/event/ardenite-release-show-aera-16341876/'} target="_blank" rel="noopener noreferrer">
 
-                                ARDENITE Release Show
+                                ARDENITE Release Show {' '}
                             <br className={'md:hidden'}/>
                             <span className={'font-extrabold'}>Tickets Available NOW</span>!
                                 <br/>
