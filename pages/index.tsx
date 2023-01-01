@@ -115,6 +115,7 @@ const Home: NextPage = () => {
                         priceCurrency: 'EUR',
                         priceValidUntil: '2023-02-18T22:55:00.000Z',
                         url: 'https://www.oeticket.com/event/ardenite-release-show-aera-16341876/',
+                        availability: 'In stock',
                         seller: {
                             name: 'oeticket',
                         },
