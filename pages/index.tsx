@@ -16,7 +16,7 @@ import Socials from "../components/Socials";
 import {FooterBar} from "../components/FooterBar";
 import {useInView} from "react-intersection-observer";
 import Section from "../components/Section";
-import {NextSeo} from "next-seo";
+import {EventJsonLd, NextSeo, SocialProfileJsonLd} from "next-seo";
 
 const Home: NextPage = () => {
 
@@ -90,6 +90,68 @@ const Home: NextPage = () => {
 
                 }}
 
+            />
+            <EventJsonLd
+                name="ARDENITE Release Show"
+                startDate="2023-02-18T19:17:00.000Z"
+                endDate="2023-02-18T22:55:00.000Z"
+                location={{
+                    name: 'Aera',
+                    sameAs: 'https://aera.at/',
+                    address: {
+                        streetAddress: 'Gonzagagasse 11',
+                        addressLocality: 'Vienna',
+                        addressRegion: 'VIENNA',
+                        postalCode: '1100',
+                        addressCountry: 'AT',
+                    },
+                }}
+                url="https://www.oeticket.com/event/ardenite-release-show-aera-16341876/"
+                images={['https://www.oeticket.com/obj/media/AT-eventim/teaser/222x222/2022/ARDENITE_Release_Show_tickets_c_Radka_Klein_ARDENITE_m.jpg']}
+                description="Get ready for the ARDENITE Release Show on 18th February 2023! Get your tickets now on oeticket.com"
+                offers={[
+                    {
+                        price: '20.00',
+                        priceCurrency: 'EUR',
+                        priceValidUntil: '2023-02-18T22:55:00.000Z',
+                        url: 'https://www.oeticket.com/event/ardenite-release-show-aera-16341876/',
+                        seller: {
+                            name: 'oeticket',
+                        },
+                        validFrom: '2023-01-01T19:26:04.898Z',
+                    },
+                ]}
+                performers={[
+                    {
+                        name: 'WANA WHITE',
+                    },
+                    {
+                        name: 'SEBO GREEN',
+                    },
+                ]}
+                organizer={{
+                    type: 'Organization ',
+                    name: 'Ardenite',
+                    url: 'https://ardenite.net/',
+                }}
+                eventStatus="EventScheduled"
+                eventAttendanceMode="OfflineEventAttendanceMode"
+            />
+            <SocialProfileJsonLd
+                type="Organization"
+                name="Ardenite"
+                url="https://ardenite.net/"
+                sameAs={[
+                    'https://www.facebook.com/ardenite',
+                    'https://www.instagram.com/ardeniteofficial/',
+                    'https://www.tiktok.com/@ardeniteofficial',
+                    'https://twitter.com/weareARDENITE',
+                    'https://www.youtube.com/c/ARDENITE',
+                    'https://open.spotify.com/artist/3GXo8euWCGsniO8H7MrU9B',
+                    'https://music.apple.com/at/artist/ardenite/1454820051',
+                    'https://soundcloud.com/ardenite-band'
+
+                ]}
             />
             <div className={"flex flex-col items-center w-screen h-full font-SourceSans "}>
                 <ArdeniteNavBar floatingNavStatus={floatingNavStatus} scroller={scroller}/>
