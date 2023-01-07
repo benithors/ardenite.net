@@ -43,7 +43,7 @@ const ArdeniteEntry = (props: IProps) => {
                 <div className={' flex flex-col w-full md:w-[calc(100vw/3)]  justify-center transition-all duration-1000  items-center md:items-start space-y-8 ' + (entryInView.inView ? " opacity-100 translate-x-0 " +
                     " translate-y-0 " : " opacity-0 " + animationDir)}>
 
-                    <h2 className={'opacity-70'}>
+                    <h2 className={'text-center md:text-left opacity-70'}>
                         {props.subtitle}
                     </h2>
 
