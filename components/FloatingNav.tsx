@@ -108,7 +108,7 @@ const FloatingNav = (props: IProps) => {
                         floatingNavStatus={props.floatingNavStatus}
                         buttonType={FloatingNavStatus.NONE}
                         onClick={() => {
-                            router.push('https://shop.ardenite.net/')
+                            window.open ('https://shop.ardenite.net/', '_ blank');
                         }}
                     >
                         Shop
