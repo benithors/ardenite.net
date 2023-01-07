@@ -179,7 +179,7 @@ const Home: NextPage = () => {
                     <div ref={aboutInView.ref}>
                         <ContentContainer className={" h-full  flex flex-col-reverse   w-full py-20 md:py-32 lg:py-40"}>
 
-                            <Section subtitle={'New Single Youre So Dumb out on Friday 13th!'} title={'CYBER POP ROCK'}>
+                            <Section subtitle={'New Single YOU’RE SO DUMB out on Friday 13th!'} title={'CYBER POP ROCK'}>
                                 <div className={'text-center opacity-70'}>
                              We are ARDENITE, a Cyber Pop Rock band from Vienna, Austria, and we are not afraid to get our hands dirty!
                                     <br/>
@@ -223,8 +223,8 @@ const Home: NextPage = () => {
                     </div>
 
                 </AboutSection>
-                <ArdeniteEntry linkText={'Pre Save!'} linkUrl={'https://share.amuse.io/track/ardenite-youre-so-dumb'} backgroundColor={''} priority={true} subtitle={'New Single Youre So Dumb out on Friday 13th'} image={youresodumb}
-                               title={'Youre So Dumb'} animation={EntryPosition.right}>
+                <ArdeniteEntry linkText={'Pre Save!'} linkUrl={'https://share.amuse.io/track/ardenite-youre-so-dumb'} backgroundColor={''} priority={true} subtitle={'New Single YOU’RE SO DUMB out on Friday 13th'} image={youresodumb}
+                               title={'You’re So Dumb'} animation={EntryPosition.right}>
                     &quot;You’re So Dumb&quot; portrays the inner world of somebody, who’s had enough of being the nice person,
                     while navigating conflicts with unfair and ignorant people around them.
                     <div className={'pt-2'}>
