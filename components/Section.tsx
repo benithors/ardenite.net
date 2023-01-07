@@ -16,7 +16,7 @@ const Section = (props: IProps) => {
     return (
         <div ref={aboutAnimationInView.ref} className={' text-white flex flex-col transition-all duration-1000 items-center w-full space-y-8  h-full ' + (!aboutAnimationInView.inView ? " translate-y-52 opacity-0" : ' translate-y-0' +
             ' opacity-100 ')}>
-            <h2 className={'opacity-70'}>
+            <h2 className={'opacity-70 md:text-left text-center'}>
                 {props.subtitle}
             </h2>
 
