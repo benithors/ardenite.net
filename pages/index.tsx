@@ -225,7 +225,7 @@ const Home: NextPage = () => {
                 </AboutSection>
                 <ArdeniteEntry linkText={'Pre Save!'} linkUrl={'https://share.amuse.io/track/ardenite-youre-so-dumb'} backgroundColor={''} priority={true} subtitle={'New Single Youre So Dumb out on Friday 13th'} image={youresodumb}
                                title={'Youre So Dumb'} animation={EntryPosition.right}>
-                    You’re So Dumb” portrays the inner world of somebody, who’s had enough of being the nice person,
+                    &quot;You’re So Dumb&quot; portrays the inner world of somebody, who’s had enough of being the nice person,
                     while navigating conflicts with unfair and ignorant people around them.
                     <div className={'pt-2'}>
                         A song for those fed up with staying nice & small, keeping their mouths shut for the sake of peace & harmony.
