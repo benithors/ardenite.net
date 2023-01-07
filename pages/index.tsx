@@ -7,6 +7,7 @@ import ContentContainer from "../components/ContentContainer";
 import Backstabber from '../public/static/images/backstabber.png';
 import Flowers from '../public/static/images/flowersdontcare.png';
 import Diamond from '../public/static/images/diamond.jpg';
+import youresodumb from '../public/static/images/youresodumb.webp';
 
 import WakeUp from '../public/static/images/wakeup.png';
 import ArdeniteEntry, {EntryPosition} from "../components/ArdeniteEntry";
@@ -178,7 +179,7 @@ const Home: NextPage = () => {
                     <div ref={aboutInView.ref}>
                         <ContentContainer className={" h-full  flex flex-col-reverse   w-full py-20 md:py-32 lg:py-40"}>
 
-                            <Section subtitle={'New Single DIAMOND is OUT NOW !'} title={'CYBER POP ROCK'}>
+                            <Section subtitle={'New Single Youre So Dumb out on Friday 13th!'} title={'CYBER POP ROCK'}>
                                 <div className={'text-center opacity-70'}>
                              We are ARDENITE, a Cyber Pop Rock band from Vienna, Austria, and we are not afraid to get our hands dirty!
                                     <br/>
@@ -222,9 +223,21 @@ const Home: NextPage = () => {
                     </div>
 
                 </AboutSection>
+                <ArdeniteEntry linkText={'Pre Save!'} linkUrl={'https://share.amuse.io/track/ardenite-youre-so-dumb'} backgroundColor={''} priority={true} subtitle={'New Single Youre So Dumb out on Friday 13th'} image={youresodumb}
+                               title={'Youre So Dumb'} animation={EntryPosition.right}>
+                    You’re So Dumb” portrays the inner world of somebody, who’s had enough of being the nice person,
+                    while navigating conflicts with unfair and ignorant people around them.
+                    <div className={'pt-2'}>
+                        A song for those fed up with staying nice & small, keeping their mouths shut for the sake of peace & harmony.
+                    </div>
+
+                    <div className={'pt-2'}>
+                        Take in the badass vibe of the song to push your self-confidence and muster up the courage to Stand Up for Yourself!
+                    </div>
+                </ArdeniteEntry>
 
 
-                <ArdeniteEntry linkText={'Watch it'} linkUrl={'https://youtu.be/JILBJIJ146Y'} backgroundColor={''} priority={true} subtitle={'New Single Diamond is OUT NOW'} image={Diamond}
+                <ArdeniteEntry linkText={'Watch it'} linkUrl={'https://youtu.be/JILBJIJ146Y'} backgroundColor={''} priority={true} subtitle={'The harsh reality of mental health issues'} image={Diamond}
                                title={'Diamond'} animation={EntryPosition.left}>
                     An Anthem of Vulnerability and Courage! - “When I was a teen, I thought about killing myself, a lot. The thoughts in
                     my head, of not belonging and never being enough, no matter what I did, were almost unbearable. I wrote this song as
@@ -243,7 +256,7 @@ const Home: NextPage = () => {
                     </div>
                 </ArdeniteEntry>
 
-                <ArdeniteEntry linkText={'watch it'} linkUrl={'https://youtu.be/nHP_EexOfO4'} backgroundColor={''} priority={true} subtitle={'New Single WAKE UP is OUT NOW !'} image={WakeUp}
+                <ArdeniteEntry linkText={'watch it'} linkUrl={'https://youtu.be/nHP_EexOfO4'} backgroundColor={''} priority={true} subtitle={'A song as a form of protest and contribution!'} image={WakeUp}
 
                                title={'Wake Up'} animation={EntryPosition.right}>
                     With everything that is going on in the world right now, we felt like it was our duty to write this song as a form of protest and contribution!
