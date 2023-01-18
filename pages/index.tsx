@@ -217,9 +217,15 @@ const Home: NextPage = () => {
                                     </div>
 
                                 </div>
+                                <div className={'w-full flex items-center justify-center h-12'}>
+                                    <PopInButton className={'text-brand-black'} ariaLabel={'Link to spotify'} type={'button'} href={'https://ardenite.substack.com/'}>
+                                       Subscribe to our Newsletter
+                                    </PopInButton>
+                                </div>
                             </Section>
 
                         </ContentContainer>
+
                     </div>
 
                 </AboutSection>
