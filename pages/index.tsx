@@ -132,7 +132,7 @@ const Home: NextPage = () => {
                     <div ref={aboutInView.ref}>
                         <ContentContainer className={" h-full  flex flex-col-reverse   w-full py-20 md:py-32 lg:py-40"}>
 
-                            <Section subtitle={'New Single YOU’RE SO DUMB out on NOW!'} title={'CYBER POP ROCK'}>
+                            <Section subtitle={'New Single Don\'t Wanna Stay Friends out on FEB. 14th'} title={'CYBER POP ROCK'}>
                                 <div className={'text-center opacity-70'}>
                                     We are ARDENITE, a Cyber Pop Rock band from Vienna, Austria, and we are not afraid to get our hands dirty!
                                     <br/>
