@@ -47,7 +47,7 @@ const ArdeniteEntry = (props: IProps) => {
                         {props.subtitle}
                     </h2>
 
-                    <h1 className={'text-2xl md:text-4xl lg:text-6xl font-InterSans font-bold '}>
+                    <h1 className={'text-2xl md:text-4xl lg:text-6xl font-InterSans font-bold text-center md:text-left'}>
                         {props.title}
                     </h1>
 

@@ -8,6 +8,7 @@ module.exports = {
             colors: {
                 pink: '#FDC4F0',
                 'brand-turquoise': '#80FFEC',
+                'brand-turquoise2': '#00d6c8',
                 'brand-pink': '#FF01B8',
                 'brand-black': '#100F0F',
                 'brand-black-transparent': 'rgba(16, 15, 15, 0.5)',

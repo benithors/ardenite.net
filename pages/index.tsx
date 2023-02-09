@@ -132,7 +132,7 @@ const Home: NextPage = () => {
                     <div ref={aboutInView.ref}>
                         <ContentContainer className={" h-full  flex flex-col-reverse   w-full py-20 md:py-32 lg:py-40"}>
 
-                            <Section subtitle={'New Single Don\'t Wanna Stay Friends out on FEB. 14th'} title={'CYBER POP ROCK'}>
+                            <Section subtitle={'New Single "Don\'t Wanna Stay Friends" Out On Feb.14th!'} title={'CYBER POP ROCK'}>
                                 <div className={'text-center opacity-70'}>
                                     We are ARDENITE, a Cyber Pop Rock band from Vienna, Austria, and we are not afraid to get our hands dirty!
                                     <br/>
@@ -150,7 +150,7 @@ const Home: NextPage = () => {
                                 </div>
 
 
-                                <div className={'bg-brand-black   flex space-y-4 pb-4 pt-2 md:space-y-0  flex-col  md:flex-row items-center w-full  md:w-full lg:w-full  md:space-x-5 justify-center lg:space-x-7   '}>
+                                <div className={'bg-brand-black   flex space-y-4 pb-4 pt-2 md:space-y-0  flex-col  md:flex-row items-start w-full  md:w-full lg:w-full  md:space-x-5 justify-center lg:space-x-7   '}>
 
                                     <div className={'w-full h-12'}>
 
@@ -158,12 +158,24 @@ const Home: NextPage = () => {
                                             WATCH NOW
                                         </PopInButton>
                                     </div>
-                                    <div className={'w-full h-12'}>
+                                    <div className={'w-full h-24 space-y-8'}>
 
-                                        <PopInButton className={'text-brand-black'} ariaLabel={'Link to spotify'} type={'button'} href={'https://shop.ardenite.net/'}>
-                                            BUY NOW
-                                        </PopInButton>
+                                        <div className={'w-full h-12'}>
+
+                                            <PopInButton className={'text-brand-black'} ariaLabel={'Link to spotify'} type={'button'} href={'https://shop.ardenite.net/'}>
+                                                BUY NOW
+                                            </PopInButton>
+                                        </div>
+                                        <div className={'w-full  flex items-center justify-center h-12'}>
+                                            <PopInButton
+
+                                                backgroundColor={'bg-brand-turquoise2'}
+                                                className={' text-brand-black'} ariaLabel={'Link to newsletter'} type={'button'} href={'https://ardenite.substack.com/'}>
+                                                Subscribe to Newsletter
+                                            </PopInButton>
+                                        </div>
                                     </div>
+
                                     <div className={'w-full h-12'}>
 
                                         <PopInButton className={'text-brand-black'} ariaLabel={'Link to spotify'} type={'button'} href={'https://open.spotify.com/artist/3GXo8euWCGsniO8H7MrU9B?si=vdrvFbwoT8ewY92OVtPNRg'}>
@@ -172,11 +184,7 @@ const Home: NextPage = () => {
                                     </div>
 
                                 </div>
-                                <div className={'w-full flex items-center justify-center h-12'}>
-                                    <PopInButton className={'text-brand-black'} ariaLabel={'Link to spotify'} type={'button'} href={'https://ardenite.substack.com/'}>
-                                        Subscribe to our Newsletter
-                                    </PopInButton>
-                                </div>
+
                             </Section>
 
                         </ContentContainer>
@@ -184,7 +192,7 @@ const Home: NextPage = () => {
                     </div>
 
                 </AboutSection>
-                <ArdeniteEntry linkText={'Pre Save It!'} linkUrl={'https://share.amuse.io/track/ardenite-dont-wanna-stay-friends'} backgroundColor={''} priority={true} subtitle={'New Single Don\'t Wanna Stay Friends out on FEB. 14th'}
+                <ArdeniteEntry linkText={'Pre Save It!'} linkUrl={'https://share.amuse.io/track/ardenite-dont-wanna-stay-friends'} backgroundColor={''} priority={true} subtitle={'New Single "Don\'t Wanna Stay Friends" Out On Feb.14th!'}
                                image={dontwannastayfriends}
                                title={"Don't Wanna Stay Friends"} animation={EntryPosition.left}>
                     The refreshing take on breakups, make it an anthem for anyone who&rsquo;s ever felt trapped in an unfulfilling relationship.
@@ -295,10 +303,21 @@ const Home: NextPage = () => {
                                     <PopInButton className={'text-brand-black'}
                                                  href={"/static/PressreleaseArdenite.pdf"}
                                                  type={'download'}
-                                                 ariaLabel={"Presskit"}>
+                                                 ariaLabel={"Presskit"}
+                                    >
                                         Download Press Kit
                                     </PopInButton>
 
+
+
+                                </div>
+
+                                <div className={'w-full  flex items-center justify-center h-12'}>
+                                    <PopInButton
+                                        backgroundColor={'bg-brand-turquoise2'}
+                                        className={'text-brand-black'} ariaLabel={'Link to newsletter'} type={'button'} href={'https://ardenite.substack.com/'}>
+                                        Subscribe to Newsletter
+                                    </PopInButton>
                                 </div>
                                 <div className={'flex flex-wrap items-center justify-center space-x-4 pt-32 '}>
                                     <Socials userName={'ardenite'} youtube={"https://www.youtube.com/c/ARDENITE"} facebook={"https://www.facebook.com/ardenite"} instagram={"https://www.instagram.com/ardeniteofficial"}
