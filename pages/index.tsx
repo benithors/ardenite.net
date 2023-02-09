@@ -8,6 +8,7 @@ import Backstabber from '../public/static/images/backstabber.png';
 import Flowers from '../public/static/images/flowersdontcare.png';
 import Diamond from '../public/static/images/diamond.jpg';
 import youresodumb from '../public/static/images/youresodumb.webp';
+import dontwannastayfriends from '../public/static/images/dontwannastayfriends.avif';
 
 import WakeUp from '../public/static/images/wakeup.png';
 import ArdeniteEntry, {EntryPosition} from "../components/ArdeniteEntry";
@@ -17,7 +18,7 @@ import Socials from "../components/Socials";
 import {FooterBar} from "../components/FooterBar";
 import {useInView} from "react-intersection-observer";
 import Section from "../components/Section";
-import {EventJsonLd, NextSeo, SocialProfileJsonLd} from "next-seo";
+import {NextSeo, SocialProfileJsonLd} from "next-seo";
 
 const Home: NextPage = () => {
 
@@ -65,8 +66,6 @@ const Home: NextPage = () => {
     }, [contactInView.inView, aboutInView.inView, floatingNavStatus]);
 
 
-
-
     return (
         <>
 
@@ -92,53 +91,7 @@ const Home: NextPage = () => {
                 }}
 
             />
-            <EventJsonLd
-                name="ARDENITE Release Show"
-                startDate="2023-02-18T19:17:00.000Z"
-                endDate="2023-02-18T22:55:00.000Z"
-                location={{
-                    name: 'Aera',
-                    sameAs: 'https://aera.at/',
-                    address: {
-                        streetAddress: 'Gonzagagasse 11',
-                        addressLocality: 'Vienna',
-                        addressRegion: 'VIENNA',
-                        postalCode: '1100',
-                        addressCountry: 'AT',
-                    },
-                }}
-                url="https://www.oeticket.com/event/ardenite-release-show-aera-16341876/"
-                images={['https://www.oeticket.com/obj/media/AT-eventim/teaser/222x222/2022/ARDENITE_Release_Show_tickets_c_Radka_Klein_ARDENITE_m.jpg']}
-                description="Get ready for the ARDENITE Release Show on 18th February 2023! Get your tickets now on oeticket.com"
-                offers={[
-                    {
-                        price: '20.00',
-                        priceCurrency: 'EUR',
-                        priceValidUntil: '2023-02-18T22:55:00.000Z',
-                        url: 'https://www.oeticket.com/event/ardenite-release-show-aera-16341876/',
-                        availability: 'In stock',
-                        seller: {
-                            name: 'oeticket',
-                        },
-                        validFrom: '2023-01-01T19:26:04.898Z',
-                    },
-                ]}
-                performers={[
-                    {
-                        name: 'WANA WHITE',
-                    },
-                    {
-                        name: 'SEBO GREEN',
-                    },
-                ]}
-                organizer={{
-                    type: 'Organization ',
-                    name: 'Ardenite',
-                    url: 'https://ardenite.net/',
-                }}
-                eventStatus="EventScheduled"
-                eventAttendanceMode="OfflineEventAttendanceMode"
-            />
+
             <SocialProfileJsonLd
                 type="Organization"
                 name="Ardenite"
@@ -181,15 +134,17 @@ const Home: NextPage = () => {
 
                             <Section subtitle={'New Single YOU’RE SO DUMB out on NOW!'} title={'CYBER POP ROCK'}>
                                 <div className={'text-center opacity-70'}>
-                             We are ARDENITE, a Cyber Pop Rock band from Vienna, Austria, and we are not afraid to get our hands dirty!
+                                    We are ARDENITE, a Cyber Pop Rock band from Vienna, Austria, and we are not afraid to get our hands dirty!
                                     <br/>
                                     <br/>
                                     What can you expect from ARDENITE?
                                     <br/>
-                                    Pink-turquoise Cyberpunk aesthetics, surprising new sounds, heavily distorted synthesisers, the badass 7 string guitar & 5 string bass of Sebo and the deep mezzo-soprano signature voice of Wana combined with extreme vocals. Our emotional lyrics aim to establish a direct heart-to-heart connection - disarming through vulnerability & empowering through honesty!
+                                    Pink-turquoise Cyberpunk aesthetics, surprising new sounds, heavily distorted synthesisers, the badass 7 string guitar & 5 string bass of Sebo and the deep mezzo-soprano signature voice of Wana combined with extreme
+                                    vocals. Our emotional lyrics aim to establish a direct heart-to-heart connection - disarming through vulnerability & empowering through honesty!
                                     <div className={'mt-4'}>
 
-                                        Our goal is to unite as many people & hearts as possible around the globe through our music! We invite everyone to take part in our journey, by doing Instagram story vlogs & actively interacting with our growing community of ARDENITEs! We believe that there is enough success for everybody and aim to inspire and motivate many others to follow their dreams!
+                                        Our goal is to unite as many people & hearts as possible around the globe through our music! We invite everyone to take part in our journey, by doing Instagram story vlogs & actively interacting with our growing
+                                        community of ARDENITEs! We believe that there is enough success for everybody and aim to inspire and motivate many others to follow their dreams!
                                     </div>
 
                                 </div>
@@ -219,7 +174,7 @@ const Home: NextPage = () => {
                                 </div>
                                 <div className={'w-full flex items-center justify-center h-12'}>
                                     <PopInButton className={'text-brand-black'} ariaLabel={'Link to spotify'} type={'button'} href={'https://ardenite.substack.com/'}>
-                                       Subscribe to our Newsletter
+                                        Subscribe to our Newsletter
                                     </PopInButton>
                                 </div>
                             </Section>
@@ -229,7 +184,29 @@ const Home: NextPage = () => {
                     </div>
 
                 </AboutSection>
-                <ArdeniteEntry linkText={'Watch it'} linkUrl={'https://www.youtube.com/watch?v=VzuVsN0veQ4&feature=youtu.be'} backgroundColor={''} priority={true} subtitle={'New Single YOU’RE SO DUMB out NOW'} image={youresodumb}
+                <ArdeniteEntry linkText={'Pre Save It!'} linkUrl={'https://share.amuse.io/track/ardenite-dont-wanna-stay-friends'} backgroundColor={''} priority={true} subtitle={'New Single Don\'t Wanna Stay Friends out on FEB. 14th'}
+                               image={dontwannastayfriends}
+                               title={"Don't Wanna Stay Friends"} animation={EntryPosition.left}>
+                    The refreshing take on breakups, make it an anthem for anyone who&rsquo;s ever felt trapped in an unfulfilling relationship.
+                    while navigating conflicts with unfair and ignorant people around them.
+                    <div className={'pt-2'}>
+                        With its Avril Lavigne style infectious chorus & raw lyrics, this song is a celebration of growth & self-discovery for anyone who&rsquo;s ready to move on.
+
+                    </div>
+
+                    <div className={'pt-2'}>
+                        Turn up the volume, sing along, & embrace the freedom of a happy breakup!
+
+                    </div>
+                    <div className={'pt-2'}>
+                        Official Music Video out on our Youtube channel @ARDENITE on Valentine&rsquo;s Day 2023!
+                    </div>
+
+
+                </ArdeniteEntry>
+
+                <ArdeniteEntry linkText={'Watch it'} linkUrl={'https://www.youtube.com/watch?v=VzuVsN0veQ4&feature=youtu.be'} backgroundColor={''} priority={true} subtitle={'Push your self-confidence and muster up the courage to Stand Up for Yourself!'}
+                               image={youresodumb}
                                title={'You’re So Dumb'} animation={EntryPosition.right}>
                     &quot;You’re So Dumb&quot; portrays the inner world of somebody, who’s had enough of being the nice person,
                     while navigating conflicts with unfair and ignorant people around them.
@@ -243,7 +220,7 @@ const Home: NextPage = () => {
                 </ArdeniteEntry>
 
 
-                <ArdeniteEntry linkText={'Watch it'} linkUrl={'https://youtu.be/JILBJIJ146Y'} backgroundColor={''} priority={true} subtitle={'The harsh reality of mental health issues'} image={Diamond}
+                <ArdeniteEntry linkText={'Watch it'} linkUrl={'https://youtu.be/JILBJIJ146Y'} backgroundColor={''} priority={false} subtitle={'The harsh reality of mental health issues'} image={Diamond}
                                title={'Diamond'} animation={EntryPosition.left}>
                     An Anthem of Vulnerability and Courage! - “When I was a teen, I thought about killing myself, a lot. The thoughts in
                     my head, of not belonging and never being enough, no matter what I did, were almost unbearable. I wrote this song as
@@ -262,7 +239,7 @@ const Home: NextPage = () => {
                     </div>
                 </ArdeniteEntry>
 
-                <ArdeniteEntry linkText={'watch it'} linkUrl={'https://youtu.be/nHP_EexOfO4'} backgroundColor={''} priority={true} subtitle={'A song as a form of protest and contribution!'} image={WakeUp}
+                <ArdeniteEntry linkText={'watch it'} linkUrl={'https://youtu.be/nHP_EexOfO4'} backgroundColor={''} priority={false} subtitle={'A song as a form of protest and contribution!'} image={WakeUp}
 
                                title={'Wake Up'} animation={EntryPosition.right}>
                     With everything that is going on in the world right now, we felt like it was our duty to write this song as a form of protest and contribution!
