@@ -192,7 +192,7 @@ const Home: NextPage = () => {
                     </div>
 
                 </AboutSection>
-                <ArdeniteEntry linkText={'Watch it'} linkUrl={'https://youtu.be/6qS6x5dVDbw'} backgroundColor={''} priority={true} subtitle={'New Single "Don\'t Wanna Stay Friends" OUT NOW'}
+                <ArdeniteEntry linkText={'Watch it'} linkUrl={'https://youtu.be/6qS6x5dVDbw'} backgroundColor={''} priority={true} subtitle={'New Single "Don\'t Wanna Stay Friends" OUT NOW!'}
                                image={dontwannastayfriends}
                                title={"Don't Wanna Stay Friends"} animation={EntryPosition.left}>
                     The refreshing take on breakups, make it an anthem for anyone who&rsquo;s ever felt trapped in an unfulfilling relationship.
