@@ -132,7 +132,7 @@ const Home: NextPage = () => {
                     <div ref={aboutInView.ref}>
                         <ContentContainer className={" h-full  flex flex-col-reverse   w-full py-20 md:py-32 lg:py-40"}>
 
-                            <Section subtitle={'New Single "Don\'t Wanna Stay Friends" Out On Feb.14th!'} title={'CYBER POP ROCK'}>
+                            <Section subtitle={'New Single "Don\'t Wanna Stay Friends" OUT NOW!'} title={'CYBER POP ROCK'}>
                                 <div className={'text-center opacity-70'}>
                                     We are ARDENITE, a Cyber Pop Rock band from Vienna, Austria, and we are not afraid to get our hands dirty!
                                     <br/>
@@ -192,7 +192,7 @@ const Home: NextPage = () => {
                     </div>
 
                 </AboutSection>
-                <ArdeniteEntry linkText={'Pre Save It!'} linkUrl={'https://share.amuse.io/track/ardenite-dont-wanna-stay-friends'} backgroundColor={''} priority={true} subtitle={'New Single "Don\'t Wanna Stay Friends" Out On Feb.14th!'}
+                <ArdeniteEntry linkText={'Watch it'} linkUrl={'https://youtu.be/6qS6x5dVDbw'} backgroundColor={''} priority={true} subtitle={'New Single "Don\'t Wanna Stay Friends" OUT NOW'}
                                image={dontwannastayfriends}
                                title={"Don't Wanna Stay Friends"} animation={EntryPosition.left}>
                     The refreshing take on breakups, make it an anthem for anyone who&rsquo;s ever felt trapped in an unfulfilling relationship.
