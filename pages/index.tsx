@@ -8,7 +8,7 @@ import Backstabber from '../public/static/images/backstabber.png';
 import Flowers from '../public/static/images/flowersdontcare.png';
 import Diamond from '../public/static/images/diamond.jpg';
 import youresodumb from '../public/static/images/youresodumb.webp';
-import dontwannastayfriends from '../public/static/images/dontwannastayfriends.avif';
+import dontwannastayfriends from '../public/static/images/dontwannastayfriends.webp';
 
 import WakeUp from '../public/static/images/wakeup.png';
 import ArdeniteEntry, {EntryPosition} from "../components/ArdeniteEntry";
