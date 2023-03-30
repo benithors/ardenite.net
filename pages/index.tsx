@@ -152,36 +152,27 @@ const Home: NextPage = () => {
 
                                 <div className={'bg-brand-black   flex space-y-4 pb-4 pt-2 md:space-y-0  flex-col  md:flex-row items-start w-full  md:w-full lg:w-full  md:space-x-5 justify-center lg:space-x-7   '}>
 
-                                    <div className={'w-full h-12'}>
+                                    <div className={'w-full space-y-4'}>
 
+                                        <div className={'w-full h-12'}>
                                         <PopInButton className={' text-brand-black'} ariaLabel={'Link to spotify'} type={'button'} href={'https://www.youtube.com/c/ARDENITE/featured'}>
                                             WATCH NOW
                                         </PopInButton>
-                                    </div>
-                                    <div className={'w-full h-24 space-y-8'}>
-
+                                        </div>
                                         <div className={'w-full h-12'}>
 
                                             <PopInButton className={'text-brand-black'} ariaLabel={'Link to spotify'} type={'button'} href={'https://shop.ardenite.net/'}>
                                                 BUY NOW
                                             </PopInButton>
                                         </div>
-                                        <div className={'w-full hidden  flex items-center justify-center h-12'}>
-                                            <PopInButton
-
-                                                backgroundColor={'bg-brand-turquoise2'}
-                                                className={' text-brand-black'} ariaLabel={'Link to newsletter'} type={'button'} href={'https://ardenite.substack.com/'}>
-                                                Subscribe to Newsletter
+                                        <div className={'w-full h-12'}>
+                                            <PopInButton className={'text-brand-black'} ariaLabel={'Link to spotify'} type={'button'} href={'https://open.spotify.com/artist/3GXo8euWCGsniO8H7MrU9B?si=vdrvFbwoT8ewY92OVtPNRg'}>
+                                                LISTEN NOW
                                             </PopInButton>
                                         </div>
                                     </div>
 
-                                    <div className={'w-full h-12'}>
 
-                                        <PopInButton className={'text-brand-black'} ariaLabel={'Link to spotify'} type={'button'} href={'https://open.spotify.com/artist/3GXo8euWCGsniO8H7MrU9B?si=vdrvFbwoT8ewY92OVtPNRg'}>
-                                            LISTEN NOW
-                                        </PopInButton>
-                                    </div>
 
                                 </div>
 
