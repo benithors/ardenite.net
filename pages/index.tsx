@@ -166,7 +166,7 @@ const Home: NextPage = () => {
                                                 BUY NOW
                                             </PopInButton>
                                         </div>
-                                        <div className={'w-full  flex items-center justify-center h-12'}>
+                                        <div className={'w-full hidden  flex items-center justify-center h-12'}>
                                             <PopInButton
 
                                                 backgroundColor={'bg-brand-turquoise2'}
@@ -312,7 +312,7 @@ const Home: NextPage = () => {
 
                                 </div>
 
-                                <div className={'w-full  flex items-center justify-center h-12'}>
+                                <div className={'w-full hidden flex items-center justify-center h-12'}>
                                     <PopInButton
                                         backgroundColor={'bg-brand-turquoise2'}
                                         className={'text-brand-black'} ariaLabel={'Link to newsletter'} type={'button'} href={'https://ardenite.substack.com/'}>
