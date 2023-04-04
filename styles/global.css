@@ -24,14 +24,14 @@
  .popOutBtn {
     position: relative;
     display: inline-block;
-    background-color: #80ffec;
+    background-color: #00FFD9;
   }
 
   .popOutBtn:before,
   .popOutBtn:after {
     content: "";
     display: block;
-    background-color: #80ffec;
+    background-color: #00FFD9;
     width: 8px;
     height: 8px;
     position: absolute;
