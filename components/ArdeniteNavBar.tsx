@@ -39,7 +39,7 @@ const ArdeniteNavBar = (props: IProps) => {
                         }}
                     >
 
-                        <div className={'lg:pt-8 z-50 w-[200px] z-[50] lg:w-[280px] h-fit'}>
+                        <div className={'pt-4 z-50 w-[200px] z-[50] lg:w-[280px] h-fit'}>
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 xmlSpace="preserve"
