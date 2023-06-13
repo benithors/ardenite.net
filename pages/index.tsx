@@ -191,7 +191,7 @@ const Home: NextPage = () => {
                     </div>
 
                 </AboutSection>
-                <ArdeniteEntry linkText={'PRESAVE NOW'} linkUrl={'https://share.amuse.io/track/ardenite-youre-the-one-i-want'} backgroundColor={''} priority={true} subtitle={'New Single "You\'re The One I Want" PRE SAVE NOW!'}
+                <ArdeniteEntry linkText={'PRESAVE NOW'} linkUrl={'https://share.amuse.io/track/ardenite-youre-the-one-i-want'} backgroundColor={''} priority={true} subtitle={'New Single "You\'re The One I Want" PRESAVE NOW!'}
                                image={youretheoneiwant}
                                title={"You\'re The One I Want"} animation={EntryPosition.right}>
                     ARDENITE & VALKIRIA Synth bring you &quot;You&rsquo;re The One I Want&quot;! This song is a must-have for every Pop, Dance, Party, and Workout/Fitness Playlist!
