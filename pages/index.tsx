@@ -9,6 +9,8 @@ import Flowers from '../public/static/images/flowersdontcare.png';
 import Diamond from '../public/static/images/diamond.jpg';
 import youresodumb from '../public/static/images/youresodumb.webp';
 import dontwannastayfriends from '../public/static/images/dontwannastayfriends.webp';
+import youretheoneiwant from '../public/static/images/youretheoneiwant.webp';
+
 
 import WakeUp from '../public/static/images/wakeup.png';
 import ArdeniteEntry, {EntryPosition} from "../components/ArdeniteEntry";
@@ -153,35 +155,63 @@ const Home: NextPage = () => {
                                 <div className={'bg-brand-black   flex space-y-4 pb-4 pt-2 md:space-y-0  flex-col  md:flex-row items-start w-full  md:w-full lg:w-full  md:space-x-5 justify-center lg:space-x-7   '}>
 
 
-                                        <div className={'w-full h-12'}>
+                                        <div className={'w-full flex flex-col items-center h-12'}>
                                         <PopInButton className={' text-brand-black'} ariaLabel={'Link to spotify'} type={'button'} href={'https://www.youtube.com/c/ARDENITE/featured'}>
                                             WATCH NOW
                                         </PopInButton>
                                         </div>
-                                        <div className={'w-full h-12'}>
+                                        <div className={'w-full flex flex-col items-center h-12'}>
 
                                             <PopInButton className={'text-brand-black'} ariaLabel={'Link to spotify'} type={'button'} href={'https://shop.ardenite.net/'}>
                                                 BUY NOW
                                             </PopInButton>
                                         </div>
-                                        <div className={'w-full h-12'}>
+                                        <div className={'w-full flex flex-col items-center h-12'}>
                                             <PopInButton className={'text-brand-black'} ariaLabel={'Link to spotify'} type={'button'} href={'https://open.spotify.com/artist/3GXo8euWCGsniO8H7MrU9B?si=vdrvFbwoT8ewY92OVtPNRg'}>
                                                 LISTEN NOW
                                             </PopInButton>
                                         </div>
 
+                                    <div className={'w-full flex flex-col items-center h-12 '}>
+                                        <PopInButton className={'  text-brand-black'} ariaLabel={'Link to patreon'} type={'button'}
+                                                     backgroundColor={'bg-brand-turquoise2'} href={'https://www.patreon.com/ardenite/'}>
+                                            Become a Patron 💖
+                                        </PopInButton>
+                                    </div>
 
 
                                 </div>
 
+
                             </Section>
+
 
                         </ContentContainer>
 
                     </div>
 
                 </AboutSection>
-                <ArdeniteEntry linkText={'Watch it'} linkUrl={'https://youtu.be/6qS6x5dVDbw'} backgroundColor={''} priority={true} subtitle={'New Single "Don\'t Wanna Stay Friends" OUT NOW!'}
+                <ArdeniteEntry linkText={'PRESAVE NOW'} linkUrl={'https://share.amuse.io/track/ardenite-youre-the-one-i-want'} backgroundColor={''} priority={true} subtitle={'New Single "You\'re The One I Want" PRE SAVE NOW!'}
+                               image={youretheoneiwant}
+                               title={"You\'re The One I Want"} animation={EntryPosition.right}>
+                    ARDENITE & VALKIRIA Synth bring you &quot;You&rsquo;re The One I Want&quot;! This song is a must-have for every Pop, Dance, Party, and Workout/Fitness Playlist!
+                    <div className={'pt-2'}>
+                        With its pulsating beats and catchy melodies, &quot;You&rsquo;re The One I Want&quot; captures the essence of a carefree summer filled with love and excitement. It will transport you to the era of 80s nostalgia, while keeping you in the present moment.
+
+                    </div>
+
+                    <div className={'pt-2'}>
+                        If you enjoy songs like Lady Gaga&rsquo;s &quot;Just Dance&quot; or &quot;Bad Romance&quot;, Dua Lipa&rsquo;s &quot;Levitating&quot;, or Cascada&rsquo;s &quot;Everytime We Touch&quot;, then &quot;You&rsquo;re The One I Want&quot; is right up your alley.
+                    </div>
+
+                    <div className={'pt-2'}>
+                        So get ready to immerse yourself in a world of joy, love, and energetic vibes. Enjoy the song and let it be the soundtrack of your unforgettable summer moments! ❤️
+                    </div>
+
+
+                </ArdeniteEntry>
+
+                <ArdeniteEntry linkText={'Watch it'} linkUrl={'https://youtu.be/6qS6x5dVDbw'} backgroundColor={''} priority={true} subtitle={'An Empowering Anthem of Growth and Freedom!'}
                                image={dontwannastayfriends}
                                title={"Don't Wanna Stay Friends"} animation={EntryPosition.left}>
                     The refreshing take on breakups, make it an anthem for anyone who&rsquo;s ever felt trapped in an unfulfilling relationship.
@@ -202,7 +232,7 @@ const Home: NextPage = () => {
 
                 </ArdeniteEntry>
 
-                <ArdeniteEntry linkText={'Watch it'} linkUrl={'https://www.youtube.com/watch?v=VzuVsN0veQ4&feature=youtu.be'} backgroundColor={''} priority={true} subtitle={'Push your self-confidence and muster up the courage to Stand Up for Yourself!'}
+                <ArdeniteEntry linkText={'Watch it'} linkUrl={'https://www.youtube.com/watch?v=VzuVsN0veQ4&feature=youtu.be'} backgroundColor={''} priority={false} subtitle={'Push your self-confidence and muster up the courage to Stand Up for Yourself!'}
                                image={youresodumb}
                                title={'You’re So Dumb'} animation={EntryPosition.right}>
                     &quot;You’re So Dumb&quot; portrays the inner world of somebody, who’s had enough of being the nice person,
