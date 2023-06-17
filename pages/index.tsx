@@ -134,7 +134,7 @@ const Home: NextPage = () => {
                     <div ref={aboutInView.ref}>
                         <ContentContainer className={" h-full  flex flex-col-reverse   w-full py-20 md:py-32 lg:py-40"}>
 
-                            <Section subtitle={'New Single "You\'re The One I Want" PRESAVE NOW!'} title={'CYBER POP ROCK'}>
+                            <Section subtitle={'New Single "You\'re The One I Want" LISTEN NOW!'} title={'CYBER POP ROCK'}>
                                 <div className={'text-center opacity-70'}>
                                     We are ARDENITE, a Cyber Pop Rock band from Vienna, Austria, and we are not afraid to get our hands dirty!
                                     <br/>
@@ -191,7 +191,7 @@ const Home: NextPage = () => {
                     </div>
 
                 </AboutSection>
-                <ArdeniteEntry linkText={'PRESAVE NOW'} linkUrl={'https://share.amuse.io/track/ardenite-youre-the-one-i-want'} backgroundColor={''} priority={true} subtitle={'New Single "You\'re The One I Want" PRESAVE NOW!'}
+                <ArdeniteEntry linkText={'LISTEN NOW'} linkUrl={'https://open.spotify.com/intl-de/track/6uleeCHtqRtmt8MorLKWvT?si=65f6bb3093dd47fb'} backgroundColor={''} priority={true} subtitle={'New Single "You\'re The One I Want" LISTEN NOW!'}
                                image={youretheoneiwant}
                                title={"You\'re The One I Want"} animation={EntryPosition.right}>
                     ARDENITE & VALKIRIA Synth bring you &quot;You&rsquo;re The One I Want&quot;! This song is a must-have for every Pop, Dance, Party, and Workout/Fitness Playlist!
@@ -320,7 +320,7 @@ const Home: NextPage = () => {
                                 <div className={'w-full h-12 flex flex-col items-center'}>
 
                                     <PopInButton className={'text-brand-black'}
-                                                 href={"/static/PressreleaseArdenite.pdf"}
+                                                 href={"https://drive.google.com/drive/folders/1uQt_QMQhYIH8qBP1Zhi2MhjmqLygqhHF"}
                                                  type={'download'}
                                                  ariaLabel={"Presskit"}
                                     >
