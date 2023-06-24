@@ -134,7 +134,7 @@ const Home: NextPage = () => {
                     <div ref={aboutInView.ref}>
                         <ContentContainer className={" h-full  flex flex-col-reverse   w-full py-20 md:py-32 lg:py-40"}>
 
-                            <Section subtitle={'New Single "You\'re The One I Want" LISTEN NOW!'} title={'CYBER POP ROCK'}>
+                            <Section subtitle={'New Single "You\'re The One I Want" Watch It NOW!'} title={'CYBER POP ROCK'}>
                                 <div className={'text-center opacity-70'}>
                                     We are ARDENITE, a Cyber Pop Rock band from Vienna, Austria, and we are not afraid to get our hands dirty!
                                     <br/>
@@ -156,13 +156,13 @@ const Home: NextPage = () => {
 
 
                                         <div className={'w-full flex flex-col items-center h-12'}>
-                                        <PopInButton className={' text-brand-black'} ariaLabel={'Link to spotify'} type={'button'} href={'https://www.youtube.com/c/ARDENITE/featured'}>
+                                        <PopInButton className={' text-brand-black'} ariaLabel={'Link to youtube'} type={'button'} href={'https://www.youtube.com/c/ARDENITE/featured'}>
                                             WATCH NOW
                                         </PopInButton>
                                         </div>
                                         <div className={'w-full flex flex-col items-center h-12'}>
 
-                                            <PopInButton className={'text-brand-black'} ariaLabel={'Link to spotify'} type={'button'} href={'https://shop.ardenite.net/'}>
+                                            <PopInButton className={'text-brand-black'} ariaLabel={'Link to ardenite shop'} type={'button'} href={'https://shop.ardenite.net/'}>
                                                 BUY NOW
                                             </PopInButton>
                                         </div>
@@ -191,7 +191,7 @@ const Home: NextPage = () => {
                     </div>
 
                 </AboutSection>
-                <ArdeniteEntry linkText={'LISTEN NOW'} linkUrl={'https://open.spotify.com/intl-de/track/6uleeCHtqRtmt8MorLKWvT?si=65f6bb3093dd47fb'} backgroundColor={''} priority={true} subtitle={'New Single "You\'re The One I Want" LISTEN NOW!'}
+                <ArdeniteEntry linkText={'Watch Now'} linkUrl={'https://youtu.be/N7EXHiPlQUY'} backgroundColor={''} priority={true} subtitle={'New Single "You\'re The One I Want" Watch It Now!'}
                                image={youretheoneiwant}
                                title={"You\'re The One I Want"} animation={EntryPosition.right}>
                     ARDENITE & VALKIRIA Synth bring you &quot;You&rsquo;re The One I Want&quot;! This song is a must-have for every Pop, Dance, Party, and Workout/Fitness Playlist!
@@ -211,7 +211,7 @@ const Home: NextPage = () => {
 
                 </ArdeniteEntry>
 
-                <ArdeniteEntry linkText={'Watch it'} linkUrl={'https://youtu.be/6qS6x5dVDbw'} backgroundColor={''} priority={true} subtitle={'An Empowering Anthem of Growth and Freedom!'}
+                <ArdeniteEntry linkText={'Watch Now'} linkUrl={'https://youtu.be/6qS6x5dVDbw'} backgroundColor={''} priority={true} subtitle={'An Empowering Anthem of Growth and Freedom!'}
                                image={dontwannastayfriends}
                                title={"Don't Wanna Stay Friends"} animation={EntryPosition.left}>
                     The refreshing take on breakups, make it an anthem for anyone who&rsquo;s ever felt trapped in an unfulfilling relationship.
@@ -232,7 +232,7 @@ const Home: NextPage = () => {
 
                 </ArdeniteEntry>
 
-                <ArdeniteEntry linkText={'Watch it'} linkUrl={'https://www.youtube.com/watch?v=VzuVsN0veQ4&feature=youtu.be'} backgroundColor={''} priority={false} subtitle={'Push your self-confidence and muster up the courage to Stand Up for Yourself!'}
+                <ArdeniteEntry linkText={'Watch Now'} linkUrl={'https://www.youtube.com/watch?v=VzuVsN0veQ4&feature=youtu.be'} backgroundColor={''} priority={false} subtitle={'Push your self-confidence and muster up the courage to Stand Up for Yourself!'}
                                image={youresodumb}
                                title={'You’re So Dumb'} animation={EntryPosition.right}>
                     &quot;You’re So Dumb&quot; portrays the inner world of somebody, who’s had enough of being the nice person,
@@ -247,7 +247,7 @@ const Home: NextPage = () => {
                 </ArdeniteEntry>
 
 
-                <ArdeniteEntry linkText={'Watch it'} linkUrl={'https://youtu.be/JILBJIJ146Y'} backgroundColor={''} priority={false} subtitle={'The harsh reality of mental health issues'} image={Diamond}
+                <ArdeniteEntry linkText={'Watch Now'} linkUrl={'https://youtu.be/JILBJIJ146Y'} backgroundColor={''} priority={false} subtitle={'The harsh reality of mental health issues'} image={Diamond}
                                title={'Diamond'} animation={EntryPosition.left}>
                     An Anthem of Vulnerability and Courage! - “When I was a teen, I thought about killing myself, a lot. The thoughts in
                     my head, of not belonging and never being enough, no matter what I did, were almost unbearable. I wrote this song as
@@ -266,7 +266,7 @@ const Home: NextPage = () => {
                     </div>
                 </ArdeniteEntry>
 
-                <ArdeniteEntry linkText={'watch it'} linkUrl={'https://youtu.be/nHP_EexOfO4'} backgroundColor={''} priority={false} subtitle={'A song as a form of protest and contribution!'} image={WakeUp}
+                <ArdeniteEntry linkText={'Watch Now'} linkUrl={'https://youtu.be/nHP_EexOfO4'} backgroundColor={''} priority={false} subtitle={'A song as a form of protest and contribution!'} image={WakeUp}
 
                                title={'Wake Up'} animation={EntryPosition.right}>
                     With everything that is going on in the world right now, we felt like it was our duty to write this song as a form of protest and contribution!
@@ -278,7 +278,7 @@ const Home: NextPage = () => {
 
                 </ArdeniteEntry>
 
-                <ArdeniteEntry linkText={'Watch It'} linkUrl={'https://youtu.be/1muIRKbC5bo'} backgroundColor={' '} priority={false} subtitle={'We enjoy surprising you!'} image={Flowers} title={'Flowers Don´t Care'} animation={EntryPosition.left}>
+                <ArdeniteEntry linkText={'Watch Now'} linkUrl={'https://youtu.be/1muIRKbC5bo'} backgroundColor={' '} priority={false} subtitle={'We enjoy surprising you!'} image={Flowers} title={'Flowers Don´t Care'} animation={EntryPosition.left}>
                     Flowers Don&apos;t Care may seem like --- and probably is --- your new favourite summer party song! However this is just the bitter sweet package (which hopefully compels you to dance!) of its deeper meaning about life,
                     death
                     and dealing with the loss of a close soul.
@@ -287,7 +287,7 @@ const Home: NextPage = () => {
                 </ArdeniteEntry>
 
 
-                <ArdeniteEntry linkText={'Watch It'} linkUrl={'https://youtu.be/y9bczIoB9lw'} backgroundColor={''} priority={false} subtitle={'An explosion of emotions'} image={Backstabber} title={'Backstabber'} animation={EntryPosition.right}>
+                <ArdeniteEntry linkText={'Watch Now'} linkUrl={'https://youtu.be/y9bczIoB9lw'} backgroundColor={''} priority={false} subtitle={'An explosion of emotions'} image={Backstabber} title={'Backstabber'} animation={EntryPosition.right}>
                     Backstabber emerged in an explosion of emotions, caused by the betrayal of a very close person.
                     As an anthem to the broken hearted, the dominant emotions of the single are rage and anger! <br/>
                     These are noticeable in the chorus and the ironically intonated rap parts.
