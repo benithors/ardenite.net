@@ -133,11 +133,11 @@ const ArdeniteNavBar = (props: IProps) => {
                 >
 
                         <a className={'md:text-lg tracking-wide  font-InterSans text-brand-turquoise' +
-                            ' animate-pulse text-center'} href={'https://www.oeticket.com/event/ardenite-release-show-aera-16341876/'} target="_blank" rel="noopener noreferrer">
+                            ' animate-pulse text-center'} href={'https://www.eventim-light.com/at/a/63979355e5a87f05a7362a37/e/64b4d9a05456d72ee17e1410'} target="_blank" rel="noopener noreferrer">
 
-                                ARDENITE Release Show {' '}
+
                             <br className={'md:hidden'}/>
-                            <span className={'font-extrabold'}>Tickets Available NOW</span>!
+                            <span className={'font-extrabold'}>Get Tickets to our next Live Show in Vienna</span>!
                                 <br/>
                             <span className={'font-extrabold'}>CLICK HERE</span> to be part of it!
                         </a>
