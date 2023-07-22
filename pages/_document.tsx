@@ -56,7 +56,7 @@ export default function Document() {
                     crossOrigin="anonymous"
                 />
 
-
+                <meta name="facebook-domain-verification" content="f0v7ebhp729mj1qro123wts1cxapnv" />
             </Head>
             <body className="bg-brand-black min-w-full h-screen min-w-max overflow-x-hidden ">
             <Main/>
