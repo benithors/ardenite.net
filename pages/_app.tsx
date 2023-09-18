@@ -21,6 +21,7 @@ function MyApp({ Component, pageProps }: AppProps) {
             Fathom.trackPageview();
         }
 
+
         // Record a pageview when route changes
         router.events.on('routeChangeComplete', onRouteChangeComplete);
 
