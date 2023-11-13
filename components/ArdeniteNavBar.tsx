@@ -121,7 +121,7 @@ const ArdeniteNavBar = (props: IProps) => {
                 </ContentContainer>
 
             </nav>
-            <div
+           {/* <div
                 className={
                     " fixed top-[80px]  left-0 z-20  h-20  w-full flex-row justify-center bg-brand-black-transparent  text-white  md:flex"
                 }
@@ -143,7 +143,7 @@ const ArdeniteNavBar = (props: IProps) => {
                         </a>
                 </ContentContainer>
             </div>
-
+*/}
         </>
 
 
