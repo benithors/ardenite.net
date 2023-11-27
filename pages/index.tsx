@@ -10,6 +10,8 @@ import Diamond from '../public/static/images/diamond.jpg';
 import youresodumb from '../public/static/images/youresodumb.webp';
 import dontwannastayfriends from '../public/static/images/dontwannastayfriends.webp';
 import youretheoneiwant from '../public/static/images/youretheoneiwant.webp';
+import darkesthour from '../public/static/images/darkesthour.webp';
+
 
 
 import WakeUp from '../public/static/images/wakeup.png';
@@ -191,6 +193,25 @@ const Home: NextPage = () => {
                     </div>
 
                 </AboutSection>
+
+
+
+
+
+                <ArdeniteEntry linkText={'Watch Now'} linkUrl={'https://www.youtube.com/watch?v=5DXs0_BrKUc'} backgroundColor={''} priority={true} subtitle={'New Collab "Darkest Hour" Listen To It Now!'}
+                               image={darkesthour}
+                               title={"Darkest Hour"} animation={EntryPosition.left}>
+                    &quot;Darkest Hour&quot; a relentless industrial masterpiece & sonic voyage through the dystopian world of cyberpunk, featuring unforgiving harsh vocals & vengeful lyrics. If you crave the dark and edgy, this is your anthem.
+
+                    <div className={'pt-2'}>
+                        If you&rsquo;re a curator seeking the boldest and most cutting-edge industrial sounds for your playlist, &quot;Darkest Hour&quot; demands your attention.
+                    </div>
+
+                    <div className={'pt-2'}>
+                        It&rsquo;s not just a song, but a visceral experience transporting your audience to the heart of a cyberpunk revolution.
+                    </div>
+                </ArdeniteEntry>
+
                 <ArdeniteEntry linkText={'Watch Now'} linkUrl={'https://youtu.be/N7EXHiPlQUY'} backgroundColor={''} priority={true} subtitle={'New Single "You\'re The One I Want" Watch It Now!'}
                                image={youretheoneiwant}
                                title={"You\'re The One I Want"} animation={EntryPosition.right}>

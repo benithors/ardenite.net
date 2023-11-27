@@ -1,10 +1,7 @@
 import React from 'react'
-import ArdeniteText from "./ArdeniteText";
 import ContentContainer from "./ContentContainer";
 import NavButton from "./NavButton";
 import {FloatingNavStatus} from "./FloatingNav";
-import {useRouter} from "next/router";
-import Image from "next/image";
 
 
 interface IProps {
@@ -13,7 +10,6 @@ interface IProps {
 }
 
 const ArdeniteNavBar = (props: IProps) => {
-    const router = useRouter();
     return (
         <>
             <nav
@@ -112,7 +108,7 @@ const ArdeniteNavBar = (props: IProps) => {
                             floatingNavStatus={props.floatingNavStatus}
                             buttonType={FloatingNavStatus.NONE}
                             onClick={() => {
-                                window.open ('https://shop.ardenite.net/', '_ blank');
+                                window.open('https://shop.ardenite.net/', '_ blank');
                             }}
                         >
                             SHOP
@@ -121,7 +117,7 @@ const ArdeniteNavBar = (props: IProps) => {
                 </ContentContainer>
 
             </nav>
-           {/* <div
+            {/* <div
                 className={
                     " fixed top-[80px]  left-0 z-20  h-20  w-full flex-row justify-center bg-brand-black-transparent  text-white  md:flex"
                 }
@@ -145,7 +141,6 @@ const ArdeniteNavBar = (props: IProps) => {
             </div>
 */}
         </>
-
 
 
     );
