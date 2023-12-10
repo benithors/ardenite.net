@@ -10,7 +10,7 @@ module.exports = {
                 'brand-turquoise': '#00FFD9',
                 'brand-turquoise2': '#00d6c8',
                 'brand-pink': '#FF01B8',
-                'brand-black': '#100F0F',
+                'brand-black': '#000000',
                 'brand-black-transparent': 'rgba(16, 15, 15, 0.5)',
             },
             opacity: {
