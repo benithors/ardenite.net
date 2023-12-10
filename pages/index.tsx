@@ -197,7 +197,7 @@ const Home: NextPage = () => {
 
                 <ArdeniteEntry linkText={'Listen Now'} linkUrl={'https://open.spotify.com/track/6xg6GqGi3Pr2kbcEHo2x8e?si=e60e3407f19f47c9'} backgroundColor={''} priority={true} subtitle={'Our New Self-Titled Single "ARDENITE" Listen To It Now!'}
                                image={ardenite}
-                               title={"Ardenite"} animation={EntryPosition.right}>
+                               title={"ARDENITE"} animation={EntryPosition.right}>
                     ARDENITE&rsquo;s self-titled single is a powerful anthem of unity, community, and support. With a message of togetherness and overcoming challenges, this track resonates with a wide audience.
                     <div className={'pt-2'}>
                         We believe it would be a perfect fit for playlists that celebrate unity, motivation, and positive vibes.
