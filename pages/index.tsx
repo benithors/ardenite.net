@@ -11,7 +11,7 @@ import youresodumb from '../public/static/images/youresodumb.webp';
 import dontwannastayfriends from '../public/static/images/dontwannastayfriends.webp';
 import youretheoneiwant from '../public/static/images/youretheoneiwant.webp';
 import darkesthour from '../public/static/images/darkesthour.webp';
-
+import ardenite from '../public/static/images/ardenite.webp';
 
 
 import WakeUp from '../public/static/images/wakeup.png';
@@ -195,10 +195,21 @@ const Home: NextPage = () => {
                 </AboutSection>
 
 
+                <ArdeniteEntry linkText={'Listen Now'} linkUrl={'https://open.spotify.com/track/6xg6GqGi3Pr2kbcEHo2x8e?si=e60e3407f19f47c9'} backgroundColor={''} priority={true} subtitle={'Our New Self-Titled Single "ARDENITE" Listen To It Now!'}
+                               image={ardenite}
+                               title={"Ardenite"} animation={EntryPosition.right}>
+                    ARDENITE&rsquo;s self-titled single is a powerful anthem of unity, community, and support. With a message of togetherness and overcoming challenges, this track resonates with a wide audience.
+                    <div className={'pt-2'}>
+                        We believe it would be a perfect fit for playlists that celebrate unity, motivation, and positive vibes.
+                        <br/>
+                        We dedicate this Rock Anthem of unity, positive vibes and inspiration to our incredible ARDENITE Community!
+                        <br/>
+                        Help us share the ARDENITE philosophy with the world!
+                    </div>
+                </ArdeniteEntry>
 
 
-
-                <ArdeniteEntry linkText={'Watch Now'} linkUrl={'https://www.youtube.com/watch?v=5DXs0_BrKUc'} backgroundColor={''} priority={true} subtitle={'New Collab "Darkest Hour" Listen To It Now!'}
+                <ArdeniteEntry linkText={'Watch Now'} linkUrl={'https://www.youtube.com/watch?v=5DXs0_BrKUc'} backgroundColor={''} priority={false} subtitle={'New Collab "Darkest Hour" Watch It Now!'}
                                image={darkesthour}
                                title={"Darkest Hour"} animation={EntryPosition.left}>
                     &quot;Darkest Hour&quot; a relentless industrial masterpiece & sonic voyage through the dystopian world of cyberpunk, featuring unforgiving harsh vocals & vengeful lyrics. If you crave the dark and edgy, this is your anthem.
@@ -212,7 +223,7 @@ const Home: NextPage = () => {
                     </div>
                 </ArdeniteEntry>
 
-                <ArdeniteEntry linkText={'Watch Now'} linkUrl={'https://youtu.be/N7EXHiPlQUY'} backgroundColor={''} priority={true} subtitle={'New Single "You\'re The One I Want" Watch It Now!'}
+                <ArdeniteEntry linkText={'Watch Now'} linkUrl={'https://youtu.be/N7EXHiPlQUY'} backgroundColor={''} priority={false} subtitle={'New Single "You\'re The One I Want" Watch It Now!'}
                                image={youretheoneiwant}
                                title={"You\'re The One I Want"} animation={EntryPosition.right}>
                     ARDENITE & VALKIRIA Synth bring you &quot;You&rsquo;re The One I Want&quot;! This song is a must-have for every Pop, Dance, Party, and Workout/Fitness Playlist!
@@ -232,7 +243,7 @@ const Home: NextPage = () => {
 
                 </ArdeniteEntry>
 
-                <ArdeniteEntry linkText={'Watch Now'} linkUrl={'https://youtu.be/6qS6x5dVDbw'} backgroundColor={''} priority={true} subtitle={'An Empowering Anthem of Growth and Freedom!'}
+                <ArdeniteEntry linkText={'Watch Now'} linkUrl={'https://youtu.be/6qS6x5dVDbw'} backgroundColor={''} priority={false} subtitle={'An Empowering Anthem of Growth and Freedom!'}
                                image={dontwannastayfriends}
                                title={"Don't Wanna Stay Friends"} animation={EntryPosition.left}>
                     The refreshing take on breakups, make it an anthem for anyone who&rsquo;s ever felt trapped in an unfulfilling relationship.
